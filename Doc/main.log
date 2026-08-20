@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.19)  20 AUG 2026 22:50
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.19)  20 AUG 2026 23:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/Seminar donationweb/proj1/Document/6a2c202d986b6ce03f84155d/main.tex"
-(e:/Seminar donationweb/proj1/Document/6a2c202d986b6ce03f84155d/main.tex
+**"e:/Seminar donationweb/proj1/Document/Doc/main.tex"
+(e:/Seminar donationweb/proj1/Document/Doc/main.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-07-20>
 (cskkuproject.cls
@@ -1007,14 +1007,14 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
  [6
 
 
-] (main.lot)
+] (main.lot [7
+
+
+])
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [7
-
-
-]
+ [8]
 Chapter 1.
 (chapter1.tex
 LaTeX Font Info:    Font shape `TU/Sarabun(0)/m/it' will be
@@ -1257,21 +1257,56 @@ Underfull \hbox (badness 6978) in paragraph at lines 286--286
 []|\TU/Sarabun(0)/b/n/12 Main Success Sce-
  []
 
-) [47]
+[47]
+Overfull \hbox (11.82309pt too wide) in paragraph at lines 311--311
+[]|\TU/Sarabun(0)/m/n/12 RunningExperience| 
+ []
+
+[48]
+Overfull \hbox (7.43831pt too wide) in paragraph at lines 317--317
+[]|\TU/Sarabun(0)/m/n/12 FloorRewardCoins| 
+ []
+
+
+Overfull \hbox (12.29349pt too wide) in paragraph at lines 317--317
+[]|\TU/Sarabun(0)/m/n/12 FloorRewardItemId| 
+ []
+
+[49] [50] [51] [52]
+Overfull \hbox (15.18307pt too wide) in paragraph at lines 329--329
+[]|\TU/Sarabun(0)/m/n/12 PictureFrameItemId| 
+ []
+
+
+Overfull \hbox (1.22234pt too wide) in paragraph at lines 330--330
+[]|\TU/Sarabun(0)/m/n/12 RequiredBadgeId| 
+ []
+
+[53]
+Overfull \hbox (1.17194pt too wide) in paragraph at lines 332--332
+[]|\TU/Sarabun(0)/m/n/12 MuscleCondition| 
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 332--332
+[]|\TU/Sarabun(0)/m/n/12 คะแนน สุขภาพ โดย รวม (1–
+ []
+
+[54] [55] [56]) [57]
 Chapter 5.
-(chapter5.tex) [48
+(chapter5.tex) [58
 
 ] (main.bbl
 LaTeX Font Info:    Font shape `TU/DroidSansMono(0)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 50.
-) (appendices.tex [49
+) (appendices.tex [59
 
 
-] [50
+] [60
 
-] [51
+] [61
 
-]) [52] (biography.tex) [53
+]) [62] (biography.tex) [63
 
 ] (main.aux)
  ***********
@@ -1279,15 +1314,15 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2026-07-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3E1ED0C784C6F72219889385B50C1B4A;16741.
+(rerunfilecheck)             Checksum: D73B1499E55305CB29795D2CBD18C213;16983.
  ) 
 Here is how much of TeX's memory you used:
- 31910 strings out of 402620
- 634464 string characters out of 5438883
- 1241842 words of memory out of 5000000
- 60441 multiletter control sequences out of 15000+600000
+ 31941 strings out of 402620
+ 634640 string characters out of 5438883
+ 1244605 words of memory out of 5000000
+ 60472 multiletter control sequences out of 15000+600000
  635156 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,11n,118p,1066b,739s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,11n,118p,1045b,739s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (62 pages).
+Output written on main.pdf (73 pages).

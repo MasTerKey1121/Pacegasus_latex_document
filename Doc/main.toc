@@ -2,8 +2,8 @@
 \contentsline {chapter}{ABSTRACT}{ข}{Doc-Start}%
 \contentsline {chapter}{กิตติกรรมประกาศ}{ค}{chapter*.1}%
 \contentsline {chapter}{สารบัญ}{ง}{chapter*.2}%
-\contentsline {chapter}{สารบัญภาพ}{ช}{chapter*.3}%
-\contentsline {chapter}{สารบัญตาราง}{ซ}{chapter*.4}%
+\contentsline {chapter}{สารบัญภาพ}{ฉ}{chapter*.3}%
+\contentsline {chapter}{สารบัญตาราง}{ช}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}บทนำ}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}ความเป็นมาและความสำคัญของปัญหา}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}วัตถุประสงค์}{2}{section.1.2}%
@@ -46,40 +46,33 @@
 \contentsline {subsection}{\numberline {4.2.2}เกณฑ์หน่วยกิตและข้อจำกัดรายสัปดาห์}{12}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}กฎการลงทะเบียนและการบังคับใช้โดยระบบ}{12}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}ตารางข้อมูล Side Quest}{13}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}ผลการพัฒนาแอปพลิเคชัน}{21}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}การเข้าสู่ระบบและการสมัครสมาชิก}{21}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}การเก็บข้อมูลพื้นฐานและข้อมูลสุขภาพ}{23}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}การกำหนดเป้าหมายการวิ่ง}{23}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}หน้าหลักและ Daily Wellness Check-in}{25}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}การวิ่งและผลลัพธ์หลังวิ่ง}{26}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}ระบบรางวัลและ Gamification}{27}{subsection.4.3.6}%
-\contentsline {section}{\numberline {4.4}ผลการออกแบบระบบ (System Design)}{28}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Use Case Diagram}{28}{subsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {(1)}Authentication System}{28}{subsubsection.4.4.1.1}%
-\contentsline {subsubsection}{\numberline {(2)}กรอกข้อมูลพื้นฐาน}{29}{subsubsection.4.4.1.2}%
-\contentsline {subsubsection}{\numberline {(3)}Daily Wellness Check-in}{30}{subsubsection.4.4.1.3}%
-\contentsline {subsubsection}{\numberline {(4)}Running Session}{31}{subsubsection.4.4.1.4}%
-\contentsline {subsubsection}{\numberline {(5)}แบบทดสอบหลังวิ่ง}{32}{subsubsection.4.4.1.5}%
-\contentsline {subsubsection}{\numberline {(6)}Mission / Chapter}{33}{subsubsection.4.4.1.6}%
-\contentsline {subsubsection}{\numberline {(7)}Club Create}{34}{subsubsection.4.4.1.7}%
-\contentsline {subsubsection}{\numberline {(8)}Club Member}{35}{subsubsection.4.4.1.8}%
-\contentsline {subsubsection}{\numberline {(9)}Add Friends}{36}{subsubsection.4.4.1.9}%
-\contentsline {subsubsection}{\numberline {(10)}Coin และ Item Shop}{37}{subsubsection.4.4.1.10}%
-\contentsline {subsubsection}{\numberline {(11)}Avatar 2.5D และ Avatar Dressing}{38}{subsubsection.4.4.1.11}%
-\contentsline {subsubsection}{\numberline {(12)}Leaderboard}{39}{subsubsection.4.4.1.12}%
-\contentsline {subsection}{\numberline {4.4.2}Use Case Description}{40}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Entity Relationship Diagram (ERD)}{47}{subsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {(1)}Data Dictionary}{47}{subsubsection.4.4.3.1}%
-\contentsline {section}{\numberline {4.5}สรุปผลการพัฒนา}{57}{section.4.5}%
-\contentsline {chapter}{\numberline {5}สรุปผลการดำเนินงาน}{58}{chapter.5}%
-\contentsline {section}{\numberline {5.1}สรุปผลการดำเนินโครงงาน}{58}{section.5.1}%
-\contentsline {section}{\numberline {5.2}ข้อจำกัดของระบบ}{58}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}ข้อจำกัดด้านการทำงาน}{58}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}ข้อจำกัดด้านฮาร์ดแวร์และซอฟต์แวร์}{58}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}ปัญหาอุปสรรค และแนวทางแก้ไข}{58}{section.5.3}%
-\contentsline {section}{\numberline {5.4}ข้อเสนอแนะ ในการพัฒนาต่อไป}{58}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}การปรับปรุงฟังก์ชันการทำงาน}{58}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}แนวทางการวิจัยต่อยอด}{58}{subsection.5.4.2}%
-\contentsline {chapter}{เอกสารอ้างอิง}{59}{subsection.5.4.2}%
-\contentsline {chapter}{ภาคผนวก~\relax ก: ตัวอย่าง UI หรือ Prototype}{61}{chapter.0}%
-\contentsline {chapter}{ประวัติผู้เขียน}{63}{appendix*.36}%
+\contentsline {section}{\numberline {4.3}ผลการออกแบบระบบ (System Design)}{21}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Use Case Diagram}{21}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {(1)}Authentication System}{21}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {(2)}กรอกข้อมูลพื้นฐาน}{22}{subsubsection.4.3.1.2}%
+\contentsline {subsubsection}{\numberline {(3)}Daily Wellness Check-in}{23}{subsubsection.4.3.1.3}%
+\contentsline {subsubsection}{\numberline {(4)}Running Session}{24}{subsubsection.4.3.1.4}%
+\contentsline {subsubsection}{\numberline {(5)}แบบทดสอบหลังวิ่ง}{25}{subsubsection.4.3.1.5}%
+\contentsline {subsubsection}{\numberline {(6)}Mission / Chapter}{26}{subsubsection.4.3.1.6}%
+\contentsline {subsubsection}{\numberline {(7)}Club Create}{27}{subsubsection.4.3.1.7}%
+\contentsline {subsubsection}{\numberline {(8)}Club Member}{28}{subsubsection.4.3.1.8}%
+\contentsline {subsubsection}{\numberline {(9)}Add Friends}{29}{subsubsection.4.3.1.9}%
+\contentsline {subsubsection}{\numberline {(10)}Coin และ Item Shop}{30}{subsubsection.4.3.1.10}%
+\contentsline {subsubsection}{\numberline {(11)}Avatar 2.5D และ Avatar Dressing}{31}{subsubsection.4.3.1.11}%
+\contentsline {subsubsection}{\numberline {(12)}Leaderboard}{32}{subsubsection.4.3.1.12}%
+\contentsline {subsection}{\numberline {4.3.2}Use Case Description}{33}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Entity Relationship Diagram (ERD)}{40}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {(1)}Data Dictionary}{40}{subsubsection.4.3.3.1}%
+\contentsline {section}{\numberline {4.4}สรุปผลการพัฒนา}{50}{section.4.4}%
+\contentsline {chapter}{\numberline {5}สรุปผลการดำเนินงาน}{51}{chapter.5}%
+\contentsline {section}{\numberline {5.1}สรุปผลการดำเนินโครงงาน}{51}{section.5.1}%
+\contentsline {section}{\numberline {5.2}ข้อจำกัดของระบบ}{51}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}ข้อจำกัดด้านการทำงาน}{51}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}ข้อจำกัดด้านฮาร์ดแวร์และซอฟต์แวร์}{51}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}ปัญหาอุปสรรค และแนวทางแก้ไข}{51}{section.5.3}%
+\contentsline {section}{\numberline {5.4}ข้อเสนอแนะ ในการพัฒนาต่อไป}{51}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}การปรับปรุงฟังก์ชันการทำงาน}{51}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}แนวทางการวิจัยต่อยอด}{51}{subsection.5.4.2}%
+\contentsline {chapter}{เอกสารอ้างอิง}{52}{subsection.5.4.2}%
+\contentsline {chapter}{ภาคผนวก~\relax ก: ตัวอย่าง UI หรือ Prototype}{54}{chapter.0}%
+\contentsline {chapter}{ประวัติผู้เขียน}{62}{appendix*.34}%

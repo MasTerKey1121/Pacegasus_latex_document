@@ -8,54 +8,54 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5}{\ignorespaces สรุปทฤษฎีและแนวทางการนำมาประยุกต์ใช้ในระบบ Pacegasus}}{11}{table.caption.9}%
 \contentsline {table}{\numberline {6}{\ignorespaces ตารางข้อมูล Side Quest}}{13}{table.4.6}%
-\contentsline {table}{\numberline {7}{\ignorespaces Use Case Description: สมัครสมาชิก}}{40}{table.4.7}%
-\contentsline {table}{\numberline {8}{\ignorespaces Use Case Description: เข้าสู่ระบบ}}{41}{table.4.8}%
-\contentsline {table}{\numberline {9}{\ignorespaces Use Case Description: เข้าสู่ระบบด้วย Google}}{41}{table.4.9}%
-\contentsline {table}{\numberline {10}{\ignorespaces Use Case Description: ออกจากระบบ}}{42}{table.4.10}%
-\contentsline {table}{\numberline {11}{\ignorespaces Use Case Description: กรอกข้อมูลพื้นฐาน}}{42}{table.4.11}%
-\contentsline {table}{\numberline {12}{\ignorespaces Use Case Description: เลือกอาการบาดเจ็บและโรคประจำตัว}}{42}{table.4.12}%
-\contentsline {table}{\numberline {13}{\ignorespaces Use Case Description: กรอกประวัติการวิ่ง}}{43}{table.4.13}%
-\contentsline {table}{\numberline {14}{\ignorespaces Use Case Description: ตั้งเป้าหมายการวิ่ง}}{43}{table.4.14}%
-\contentsline {table}{\numberline {15}{\ignorespaces Use Case Description: บันทึกโปรไฟล์}}{44}{table.4.15}%
-\contentsline {table}{\numberline {16}{\ignorespaces Use Case Description: Daily Wellness Check-in}}{44}{table.4.16}%
-\contentsline {table}{\numberline {17}{\ignorespaces Use Case Description: เริ่มเซสชันการวิ่ง}}{44}{table.4.17}%
-\contentsline {table}{\numberline {18}{\ignorespaces Use Case Description: ทำภารกิจระหว่างวิ่ง}}{45}{table.4.18}%
-\contentsline {table}{\numberline {19}{\ignorespaces Use Case Description: กดจบเซสชันการวิ่ง}}{45}{table.4.19}%
-\contentsline {table}{\numberline {20}{\ignorespaces Use Case Description: ดูผลลัพธ์การวิ่ง}}{45}{table.4.20}%
-\contentsline {table}{\numberline {21}{\ignorespaces Use Case Description: ทำแบบทดสอบหลังวิ่ง}}{46}{table.4.21}%
-\contentsline {table}{\numberline {22}{\ignorespaces Use Case Description: เลือกบท}}{46}{table.4.22}%
-\contentsline {table}{\numberline {23}{\ignorespaces Use Case Description: ทำภารกิจ}}{46}{table.4.23}%
-\contentsline {table}{\numberline {24}{\ignorespaces Use Case Description: กดจบภารกิจ}}{47}{table.4.24}%
-\contentsline {table}{\numberline {25}{\ignorespaces Data Dictionary: User}}{48}{table.4.25}%
-\contentsline {table}{\numberline {26}{\ignorespaces Data Dictionary: UserProfile}}{48}{table.4.26}%
-\contentsline {table}{\numberline {27}{\ignorespaces Data Dictionary: UserGamification}}{48}{table.4.27}%
-\contentsline {table}{\numberline {28}{\ignorespaces Data Dictionary: UserTickets}}{48}{table.4.28}%
-\contentsline {table}{\numberline {29}{\ignorespaces Data Dictionary: Club}}{49}{table.4.29}%
-\contentsline {table}{\numberline {30}{\ignorespaces Data Dictionary: ClubMember}}{49}{table.4.30}%
-\contentsline {table}{\numberline {31}{\ignorespaces Data Dictionary: ClubLeaderboard}}{49}{table.4.31}%
-\contentsline {table}{\numberline {32}{\ignorespaces Data Dictionary: TowerFloor}}{49}{table.4.32}%
-\contentsline {table}{\numberline {33}{\ignorespaces Data Dictionary: TowerMission}}{50}{table.4.33}%
-\contentsline {table}{\numberline {34}{\ignorespaces Data Dictionary: UserFloorProgress}}{50}{table.4.34}%
-\contentsline {table}{\numberline {35}{\ignorespaces Data Dictionary: UserMissionProgress}}{50}{table.4.35}%
-\contentsline {table}{\numberline {36}{\ignorespaces Data Dictionary: TowerAttemptLog}}{51}{table.4.36}%
-\contentsline {table}{\numberline {37}{\ignorespaces Data Dictionary: TicketTransaction}}{51}{table.4.37}%
-\contentsline {table}{\numberline {38}{\ignorespaces Data Dictionary: Friendship}}{51}{table.4.38}%
-\contentsline {table}{\numberline {39}{\ignorespaces Data Dictionary: FriendActivity}}{51}{table.4.39}%
-\contentsline {table}{\numberline {40}{\ignorespaces Data Dictionary: OutterAPI}}{52}{table.4.40}%
-\contentsline {table}{\numberline {41}{\ignorespaces Data Dictionary: TotalStats}}{52}{table.4.41}%
-\contentsline {table}{\numberline {42}{\ignorespaces Data Dictionary: Badge}}{52}{table.4.42}%
-\contentsline {table}{\numberline {43}{\ignorespaces Data Dictionary: BadgeCondition}}{53}{table.4.43}%
-\contentsline {table}{\numberline {44}{\ignorespaces Data Dictionary: Avatar}}{53}{table.4.44}%
-\contentsline {table}{\numberline {45}{\ignorespaces Data Dictionary: AvatarItem}}{53}{table.4.45}%
-\contentsline {table}{\numberline {46}{\ignorespaces Data Dictionary: Leaderboard}}{54}{table.4.46}%
-\contentsline {table}{\numberline {47}{\ignorespaces Data Dictionary: DailyWellness}}{54}{table.4.47}%
-\contentsline {table}{\numberline {48}{\ignorespaces Data Dictionary: InjuryReport}}{54}{table.4.48}%
-\contentsline {table}{\numberline {49}{\ignorespaces Data Dictionary: TrainingPlan}}{55}{table.4.49}%
-\contentsline {table}{\numberline {50}{\ignorespaces Data Dictionary: PostRunSurvey}}{55}{table.4.50}%
-\contentsline {table}{\numberline {51}{\ignorespaces Data Dictionary: TrainingSession}}{55}{table.4.51}%
-\contentsline {table}{\numberline {52}{\ignorespaces Data Dictionary: RunningActivity}}{56}{table.4.52}%
-\contentsline {table}{\numberline {53}{\ignorespaces Data Dictionary: PersonalRecord}}{56}{table.4.53}%
-\contentsline {table}{\numberline {54}{\ignorespaces Data Dictionary: PlanRule}}{56}{table.4.54}%
+\contentsline {table}{\numberline {7}{\ignorespaces Use Case Description: สมัครสมาชิก}}{33}{table.4.7}%
+\contentsline {table}{\numberline {8}{\ignorespaces Use Case Description: เข้าสู่ระบบ}}{34}{table.4.8}%
+\contentsline {table}{\numberline {9}{\ignorespaces Use Case Description: เข้าสู่ระบบด้วย Google}}{34}{table.4.9}%
+\contentsline {table}{\numberline {10}{\ignorespaces Use Case Description: ออกจากระบบ}}{35}{table.4.10}%
+\contentsline {table}{\numberline {11}{\ignorespaces Use Case Description: กรอกข้อมูลพื้นฐาน}}{35}{table.4.11}%
+\contentsline {table}{\numberline {12}{\ignorespaces Use Case Description: เลือกอาการบาดเจ็บและโรคประจำตัว}}{35}{table.4.12}%
+\contentsline {table}{\numberline {13}{\ignorespaces Use Case Description: กรอกประวัติการวิ่ง}}{36}{table.4.13}%
+\contentsline {table}{\numberline {14}{\ignorespaces Use Case Description: ตั้งเป้าหมายการวิ่ง}}{36}{table.4.14}%
+\contentsline {table}{\numberline {15}{\ignorespaces Use Case Description: บันทึกโปรไฟล์}}{37}{table.4.15}%
+\contentsline {table}{\numberline {16}{\ignorespaces Use Case Description: Daily Wellness Check-in}}{37}{table.4.16}%
+\contentsline {table}{\numberline {17}{\ignorespaces Use Case Description: เริ่มเซสชันการวิ่ง}}{37}{table.4.17}%
+\contentsline {table}{\numberline {18}{\ignorespaces Use Case Description: ทำภารกิจระหว่างวิ่ง}}{38}{table.4.18}%
+\contentsline {table}{\numberline {19}{\ignorespaces Use Case Description: กดจบเซสชันการวิ่ง}}{38}{table.4.19}%
+\contentsline {table}{\numberline {20}{\ignorespaces Use Case Description: ดูผลลัพธ์การวิ่ง}}{38}{table.4.20}%
+\contentsline {table}{\numberline {21}{\ignorespaces Use Case Description: ทำแบบทดสอบหลังวิ่ง}}{39}{table.4.21}%
+\contentsline {table}{\numberline {22}{\ignorespaces Use Case Description: เลือกบท}}{39}{table.4.22}%
+\contentsline {table}{\numberline {23}{\ignorespaces Use Case Description: ทำภารกิจ}}{39}{table.4.23}%
+\contentsline {table}{\numberline {24}{\ignorespaces Use Case Description: กดจบภารกิจ}}{40}{table.4.24}%
+\contentsline {table}{\numberline {25}{\ignorespaces Data Dictionary: User}}{41}{table.4.25}%
+\contentsline {table}{\numberline {26}{\ignorespaces Data Dictionary: UserProfile}}{41}{table.4.26}%
+\contentsline {table}{\numberline {27}{\ignorespaces Data Dictionary: UserGamification}}{41}{table.4.27}%
+\contentsline {table}{\numberline {28}{\ignorespaces Data Dictionary: UserTickets}}{41}{table.4.28}%
+\contentsline {table}{\numberline {29}{\ignorespaces Data Dictionary: Club}}{42}{table.4.29}%
+\contentsline {table}{\numberline {30}{\ignorespaces Data Dictionary: ClubMember}}{42}{table.4.30}%
+\contentsline {table}{\numberline {31}{\ignorespaces Data Dictionary: ClubLeaderboard}}{42}{table.4.31}%
+\contentsline {table}{\numberline {32}{\ignorespaces Data Dictionary: TowerFloor}}{42}{table.4.32}%
+\contentsline {table}{\numberline {33}{\ignorespaces Data Dictionary: TowerMission}}{43}{table.4.33}%
+\contentsline {table}{\numberline {34}{\ignorespaces Data Dictionary: UserFloorProgress}}{43}{table.4.34}%
+\contentsline {table}{\numberline {35}{\ignorespaces Data Dictionary: UserMissionProgress}}{43}{table.4.35}%
+\contentsline {table}{\numberline {36}{\ignorespaces Data Dictionary: TowerAttemptLog}}{44}{table.4.36}%
+\contentsline {table}{\numberline {37}{\ignorespaces Data Dictionary: TicketTransaction}}{44}{table.4.37}%
+\contentsline {table}{\numberline {38}{\ignorespaces Data Dictionary: Friendship}}{44}{table.4.38}%
+\contentsline {table}{\numberline {39}{\ignorespaces Data Dictionary: FriendActivity}}{44}{table.4.39}%
+\contentsline {table}{\numberline {40}{\ignorespaces Data Dictionary: OutterAPI}}{45}{table.4.40}%
+\contentsline {table}{\numberline {41}{\ignorespaces Data Dictionary: TotalStats}}{45}{table.4.41}%
+\contentsline {table}{\numberline {42}{\ignorespaces Data Dictionary: Badge}}{45}{table.4.42}%
+\contentsline {table}{\numberline {43}{\ignorespaces Data Dictionary: BadgeCondition}}{46}{table.4.43}%
+\contentsline {table}{\numberline {44}{\ignorespaces Data Dictionary: Avatar}}{46}{table.4.44}%
+\contentsline {table}{\numberline {45}{\ignorespaces Data Dictionary: AvatarItem}}{46}{table.4.45}%
+\contentsline {table}{\numberline {46}{\ignorespaces Data Dictionary: Leaderboard}}{47}{table.4.46}%
+\contentsline {table}{\numberline {47}{\ignorespaces Data Dictionary: DailyWellness}}{47}{table.4.47}%
+\contentsline {table}{\numberline {48}{\ignorespaces Data Dictionary: InjuryReport}}{47}{table.4.48}%
+\contentsline {table}{\numberline {49}{\ignorespaces Data Dictionary: TrainingPlan}}{48}{table.4.49}%
+\contentsline {table}{\numberline {50}{\ignorespaces Data Dictionary: PostRunSurvey}}{48}{table.4.50}%
+\contentsline {table}{\numberline {51}{\ignorespaces Data Dictionary: TrainingSession}}{48}{table.4.51}%
+\contentsline {table}{\numberline {52}{\ignorespaces Data Dictionary: RunningActivity}}{49}{table.4.52}%
+\contentsline {table}{\numberline {53}{\ignorespaces Data Dictionary: PersonalRecord}}{49}{table.4.53}%
+\contentsline {table}{\numberline {54}{\ignorespaces Data Dictionary: PlanRule}}{49}{table.4.54}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {55}{\ignorespaces สรุปผลเทียบกับวัตถุประสงค์}}{58}{table.caption.31}%
-\contentsline {table}{\numberline {56}{\ignorespaces ปัญหาอุปสรรคและแนวทางแก้ไข}}{58}{table.caption.32}%
+\contentsline {table}{\numberline {55}{\ignorespaces สรุปผลเทียบกับวัตถุประสงค์}}{51}{table.caption.22}%
+\contentsline {table}{\numberline {56}{\ignorespaces ปัญหาอุปสรรคและแนวทางแก้ไข}}{51}{table.caption.23}%

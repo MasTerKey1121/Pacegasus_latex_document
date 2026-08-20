@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.19)  20 AUG 2026 23:54
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.19)  21 AUG 2026 00:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1299,14 +1299,10 @@ Chapter 5.
 ] (main.bbl
 LaTeX Font Info:    Font shape `TU/DroidSansMono(0)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 50.
-) (appendices.tex [59
+) [59
 
 
-] [60
-
-] [61
-
-]) [62] (biography.tex) [63
+] (biography.tex) [60
 
 ] (main.aux)
  ***********
@@ -1314,15 +1310,15 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2026-07-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D73B1499E55305CB29795D2CBD18C213;16983.
+(rerunfilecheck)             Checksum: C5F2816184DF6F581F5A8FD8ECFD6A5D;16678.
  ) 
 Here is how much of TeX's memory you used:
- 31941 strings out of 402620
- 634640 string characters out of 5438883
- 1244605 words of memory out of 5000000
- 60472 multiletter control sequences out of 15000+600000
+ 31930 strings out of 402620
+ 634430 string characters out of 5438883
+ 1244164 words of memory out of 5000000
+ 60464 multiletter control sequences out of 15000+600000
  635156 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  107i,11n,118p,1045b,739s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (73 pages).
+Output written on main.pdf (70 pages).

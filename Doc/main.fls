@@ -629,11 +629,6 @@ INPUT chapter5.tex
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
-INPUT .\appendices.tex
-INPUT .\appendices.tex
-INPUT .\appendices.tex
-INPUT .\appendices.tex
-INPUT appendices.tex
 INPUT .\biography.tex
 INPUT .\biography.tex
 INPUT .\biography.tex

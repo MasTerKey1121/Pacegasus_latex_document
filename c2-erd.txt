@@ -1,0 +1,831 @@
+                                                                                     92
+
+
+
+
+4.4.3   Entity Relationship Diagram (ERD)
+          จัดทำ Entity Relationship Diagram (ERD) เพื่อแสดงโครงสร้างฐานข้อมูลของระบบ
+Pacegasus อย่างครบถ้วน โดยประกอบด้วยตารางข้อมูลทั้งหมด 30 ตาราง แบ่งตามกลุ่มการทำงาน ดัง
+ภาพที่ 43
+
+
+
+
+           ภาพที่ 43 Entity Relationship Diagram ของระบบ Pacegasus
+                                                                                                     93
+
+
+
+
+            4.4.3.1 Data Dictionary
+
+
+ตารางที่ 34 Data Dictionary: User
+
+
+     Field Name            Data Type             Length        Key                     Description
+UserId                   String            36             PK           รหัสผู้ใช้งาน
+Username                 String            50             -            ชื่อผู้ใช้งาน
+Email                    String            100            -            อีเมลผูใ้ ช้งาน
+Password                 String            255            -            รหัสผ่าน (เข้ารหัสแล้ว)
+Role                     String            20             -            บทบาทของผู้ใช้งาน
+CreatedAt                DateTime          -              -            วันที่สร้างบัญชี
+UpdateAt                 DateTime          -              -            วันที่อัปเดตล่าสุด
+
+
+ตารางที่ 35 Data Dictionary: UserProfile
+
+
+     Field Name            Data Type             Length        Key                     Description
+ProfileId               String             36             PK         รหัสโปรไฟล์
+UserId                  String             36             FK         รหัสผู้ใช้งาน
+ProfileImage            String             255            -          URL รูปโปรไฟล์
+SelfDescription         String             500            -          คำอธิบายตัวเอง
+Gender                  String             10             -          เพศของผู้ใช้งาน
+RunningExperience String                   50             -          ระดับประสบการณ์การวิ่ง
+RunningGoal             String             255            -          เป้าหมายการวิ่ง
+                                                                                          94
+
+
+
+
+ตารางที่ 36 Data Dictionary: UserGamification
+
+
+  Field Name        Data Type         Length         Key                    Description
+GamifId           String          36            PK         รหัสข้อมูล Gamification
+UserId            String          36            FK         รหัสผู้ใช้งาน
+Level             Int             -             -          ระดับของผู้ใช้งาน
+Exp               Int             -             -          คะแนนประสบการณ์สะสม
+Coin              Int             -             -          เหรียญสะสม
+Streak            Int             -             -          จำนวนวันวิ่งต่อเนื่อง
+Alias             String          50            -          ชื่อเล่นในระบบ
+
+
+ตารางที่ 37 Data Dictionary: UserTickets
+
+
+  Field Name        Data Type         Length         Key                    Description
+TicketId          String          36            PK         รหัสตั๋ว
+UserId            String          36            FK         รหัสผู้ใช้งาน
+Balance           Int             -             -          จำนวนตั๋วคงเหลือ
+UpdatedAt         DateTime        -             -          วันที่อัปเดตล่าสุด
+                                                                                                    95
+
+
+
+
+ตารางที่ 38 Data Dictionary: Club
+
+
+       Field Name           Data Type       Length            Key                    Description
+ClubId                String            36            PK                 รหัสสโมสร
+ClubName              String            100           -                  ชื่อสโมสร
+ClubDescription       String            500           -                  คำอธิบายสโมสร
+ClubIcon              String            255           -                  URL ไอคอนสโมสร
+ClubOwner             String            36            FK                 รหัสเจ้าของสโมสร
+MaxMember             Int               -             -                  จำนวนสมาชิกสูงสุด
+CurrentMember         Int               -             -                  จำนวนสมาชิกปัจจุบัน
+IsActive              Boolean           -             -                  สถานะการเปิดใช้งานสโมสร
+CreateAt              TimeStamp         -             -                  วันที่สร้างสโมสร
+
+
+ตารางที่ 39 Data Dictionary: ClubMember
+
+
+       Field Name           Data Type        Length                Key                Description
+ClubId                String            36                PK, FK           รหัสสโมสร
+UserId                String            36                PK, FK           รหัสผู้ใช้งาน
+Role                  Enum              -                 -                บทบาทในสโมสร
+MemberStatus          Enum              -                 -                สถานะการเป็นสมาชิก
+JoinedAt              TimeStamp         -                 -                วันที่เข้าร่วมสโมสร
+                                                                                                 96
+
+
+
+
+ตารางที่ 40 Data Dictionary: ClubLeaderboard
+
+
+   Field Name             Data Type       Length             Key                 Description
+ClubId              String            36            PK, FK          รหัสสโมสร
+Period              Enum              -             -               ช่วงเวลาของลีดเดอร์บอร์ด
+TotalDistance       Float             -             -               ระยะทางรวมของสโมสร
+Rank                Int               -             -               อันดับของสโมสร
+RefreshedAt         TimeStamp         -             -               วันที่อัปเดตข้อมูลล่าสุด
+
+
+ตารางที่ 41 Data Dictionary: TowerFloor
+
+
+       Field Name         Data Type        Length             Key                 Description
+FloorId              String           36            PK                รหัสชั้นของหอคอย
+FloorNumber          Int              -             -                 หมายเลขชั้น
+Name                 String           100           -                 ชื่อชั้น
+Tier                 String           50            -                 ระดับความยากของชั้น
+FloorRewardCoins Int                  -             -                 จำนวนเหรียญรางวัลของชั้น
+FloorRewardItemId Uuid                36            -                 รหัสไอเทมรางวัลของชั้น
+IsActive             Boolean          -             -                 สถานะการเปิดใช้งานชั้น
+                                                                                                      97
+
+
+
+
+ตารางที่ 42 Data Dictionary: TowerMission
+
+
+        Field Name      Data Type              Length             Key              Description
+TowerMissionId       String            36                PK               รหัสภารกิจ
+FloorId              String            36                FK               รหัสชั้นของหอคอย
+Title                String            100               -                ชื่อภารกิจ
+MissionType          String            50                -                ประเภทของภารกิจ
+TargetValue          Float             -                 -                ค่าเป้าหมายของภารกิจ
+TargetUnit           String            20                -                หน่วยของเป้าหมาย
+RequiresTicket       Boolean           -                 -                ต้องใช้ตั๋วหรือไม่
+RewardCoins          Int               -                 -                เหรียญรางวัลเมื่อสำเร็จ
+SortOrder            Int               -                 -                ลำดับการแสดงผล
+
+
+ตารางที่ 43 Data Dictionary: UserFloorProgress
+
+
+        Field Name         Data Type            Length              Key                Description
+ProgressId            String               36                PK                รหัสความคืบหน้า
+UserId                String               36                FK                รหัสผู้ใช้งาน
+FloorId               String               36                FK                รหัสชั้นของหอคอย
+Status                String               20                -                 สถานะความคืบหน้า
+CompletedAt           DateTime             -                 -                 วันที่ผ่านชั้นสำเร็จ
+RewardClaimed         Boolean              -                 -                 สถานะการรับรางวัล
+                                                                                              98
+
+
+
+
+ตารางที่ 44 Data Dictionary: UserMissionProgress
+
+
+Field Name         Data Type         Length           Key            Description
+ProgressId         String            36               PK             รหัสความคืบหน้าภารกิจ
+UserId             String            36               FK             รหัสผู้ใช้งาน
+MissionId          String            36               FK             รหัสภารกิจ
+Status             String            20               -              สถานะของภารกิจ
+CurrentValue       Float             -                -              ค่าความคืบหน้าปัจจุบัน
+AttemptCount       Int               -                -              จำนวนครั้งที่พยายาม
+CompletedAt        DateTime          -                -              วันที่สำเร็จภารกิจ
+
+
+ตารางที่ 45 Data Dictionary: TowerAttemptLog
+
+
+     Field Name          Data Type           Length            Key             Description
+Id                  Uuid                 36               PK          รหัสบันทึกการพยายาม
+UserId              Uuid                 36               FK          รหัสผู้ใช้งาน
+MissionId           Uuid                 36               FK          รหัสภารกิจ
+Description         String               255              -           คำอธิบายการพยายาม
+Result              String               20               -           ผลลัพธ์การพยายาม
+ValueAchieved       Float                -                -           ค่าที่ทำได้จริง
+TargetDistance      Float                -                -           ระยะทางเป้าหมาย
+IntensityLevel      Int                  -                -           ระดับความเข้มข้น
+AttemptedAt         DateTime             -                -           วันที่พยายาม
+                                                                                       99
+
+
+
+
+ตารางที่ 46 Data Dictionary: TicketTransaction
+
+
+  Field Name        Data Type           Length        Key          Description
+TicketId          String            36           PK         รหัสธุรกรรมตั๋ว
+UserId            String            36           FK         รหัสผู้ใช้งาน
+Amount            Int               -            -          จำนวนตั๋วที่ใช้
+Source            String            50           -          แหล่งที่มาของตั๋ว
+MissionId         String            36           FK         รหัสภารกิจที่ใช้ตั๋ว
+CreatedAt         DateTime          -            -          วันที่ทำธุรกรรม
+
+
+ตารางที่ 47 Data Dictionary: Friendship
+
+
+   Field Name           Data Type       Length        Key           Description
+FriendId           String           36           PK         รหัสความสัมพันธ์เพื่อน
+RequesterId        String           36           FK         รหัสผู้ส่งคำขอเป็นเพื่อน
+ReceiverId         String           36           FK         รหัสผู้รับคำขอเป็นเพื่อน
+RequestStatus      String           20           -          สถานะคำขอเป็นเพื่อน
+CreateAt           TimeStamp        -            -          วันที่ส่งคำขอ
+UpdateAt           TimeStamp        -            -          วันที่อัปเดตสถานะ
+                                                                                                    100
+
+
+
+
+ตารางที่ 48 Data Dictionary: FriendActivity
+
+
+     Field Name            Data Type          Length            Key            Description
+FriendId                String           36                PK         รหัสกิจกรรมเพื่อน
+OwnerActivityId         String           36                -          รหัสเจ้าของกิจกรรม
+ActorActivityId         String           36                FK         รหัสผู้ทำกิจกรรม
+ActivityId              String           36                FK         รหัสกิจกรรมการวิ่ง
+CreateAt                TimeStamp        -                 -          วันที่บันทึกกิจกรรม
+
+
+ตารางที่ 49 Data Dictionary: OutterAPI
+
+
+     Field Name           Data Type          Length             Key            Description
+SyncId                 String            36            PK             รหัสการเชื่อมต่อ API
+UserId                 String            36            FK             รหัสผู้ใช้งาน
+Provider               String            50            -              ชื่อผู้ให้บริการ API ภายนอก
+AccessToken            String            500           -              Token สำหรับเข้าถึง API
+IsConnected            Boolean           -             -              สถานะการเชื่อมต่อ
+                                                                                          101
+
+
+
+
+ตารางที่ 50 Data Dictionary: TotalStats
+
+
+ Field Name           Data Type            Length        Key          Description
+StatId          String               36             PK         รหัสสถิติรวม
+UserId          String               36             FK         รหัสผู้ใช้งาน
+GamifId         String               36             FK         รหัสข้อมูล Gamification
+                                                               ระยะทางรวม
+TotalDistance Float                  -              -
+                                                               ทั้งหมด (กม.)
+TotalTime       Int                  -              -          เวลารวมทั้งหมด (วินาที)
+TotalSessions Int                    -              -          จำนวนครั้งที่วิ่งทั้งหมด
+TotalCalories Float                  -              -          แคลอรีที่เผาผลาญรวม
+AvgPace         Float                -              -          ความเร็วเฉลี่ยโดยรวม
+
+
+ตารางที่ 51 Data Dictionary: Badge
+
+
+ Field Name           Data Type            Length        Key          Description
+BadgeId        String                36             PK         รหัส Badge
+Name           String                100            -          ชื่อ Badge
+Value          Float                 -              -          ค่าเงื่อนไขของ Badge
+Type           String                50             -          ประเภทของ Badge
+IconUrl        String                255            -          URL ไอคอน Badge
+ExpReward      Int                   -              -          คะแนน EXP ที่ได้รบั
+CoinReward Int                       -              -          เหรียญที่ได้รับ
+                                                                                                 102
+
+
+
+
+ตารางที่ 52 Data Dictionary: BadgeCondition
+
+
+        Field Name          Data Type          Length            Key            Description
+ConditionId              String           36                PK         รหัสเงื่อนไข Badge
+BadgeId                  String           36                FK         รหัส Badge
+Metric                   String           50                -          ตัวชี้วัดที่ใช้ตรวจสอบ
+Operator                 String           10                -          ตัวดำเนินการเปรียบเทียบ
+Value                    Float            -                 -          ค่าที่ใช้เปรียบเทียบ
+
+
+ตารางที่ 53 Data Dictionary: Avatar
+
+
+         Field Name           Data Type        Length            Key            Description
+AvatarId                   String             36        PK             รหัส Avatar
+UserId                     String             36        FK             รหัสผู้ใช้งาน
+HairItemId                 String             36        -              รหัสไอเทมทรงผม
+HatItemId                  String             36        -              รหัสไอเทมหมวก
+FaceItemId                 String             36        -              รหัสไอเทมใบหน้า
+TopperItemId               String             36        -              รหัสไอเทมเสื้อ
+TrouserItemId              String             36        -              รหัสไอเทมกางเกง
+BackItemId                 String             36        -              รหัสไอเทมด้านหลัง
+ShoeItemId                 String             36        -              รหัสไอเทมรองเท้า
+PictureFrameItemId         String             36        -              รหัสไอเทมกรอบรูป
+                                                                                                         103
+
+
+
+
+ตารางที่ 54 Data Dictionary: AvatarItem
+
+
+       Field Name        Data Type           Length             Key                 Description
+ItemId                 String            36            PK               รหัสไอเทม Avatar
+Name                   String            100           -                ชื่อไอเทม
+Type                   String            50            -                ประเภทไอเทม
+Slot                   String            50            -                ตำแหน่งที่ใส่ไอเทม
+UnlockType             String            50            -                วิธีการปลดล็อคไอเทม
+CoinCost               Int               -             -                ราคาในหน่วยเหรียญ
+RequiredBadgeId        String            36            FK               รหัส Badge ที่ต้องใช้ปลดล็อค
+RequiredLevel          Int               -             -                ระดับที่ต้องใช้ปลดล็อค
+ImageUrl               String            255           -                URL รูปภาพไอเทม
+IsUnlocked             Boolean           -             -                สถานะการปลดล็อค
+
+
+ตารางที่ 55 Data Dictionary: Leaderboard
+
+
+       Field Name            Data Type            Length          Key                 Description
+LeaderboardId           String                36           PK                 รหัสลีดเดอร์บอร์ด
+Name                    String                100          -                  ชื่อลีดเดอร์บอร์ด
+Type                    String                50           -                  ประเภทลีดเดอร์บอร์ด
+Period                  String                20           -                  ช่วงเวลาของลีดเดอร์บอร์ด
+RefreshedAt             DateTime              -            -                  วันที่อัปเดตข้อมูลล่าสุด
+                                                                                            104
+
+
+
+
+ตารางที่ 56 Data Dictionary: DailyWellness
+
+
+   Field Name        Data Type Length             Key                   Description
+WellnessId          String      36           PK         รหัสข้อมูลสุขภาพประจำวัน
+UserId              String      36           FK         รหัสผู้ใช้งาน
+Date                Date        -            -          วันที่บันทึกข้อมูล
+SleepQuality        Int         -            -          คุณภาพการนอนหลับ (1-10)
+SleepHours          Float       -            -          จำนวนชั่วโมงการนอน
+MuscleSoreness      Int         -            -          ระดับความเจ็บปวดกล้ามเนื้อ (1-10)
+MuscleCondition Int             -            -          สภาพกล้ามเนื้อ (1-10)
+StressLevel         Int         -            -          ระดับความเครียด (1-10)
+Mood                Int         -            -          อารมณ์ประจำวัน (1-10)
+Motivation          Int         -            -          ระดับแรงจูงใจ (1-10)
+OverallScore        Int         -            -          คะแนนสุขภาพโดยรวม (1-10)
+                                                                                                     105
+
+
+
+
+ตารางที่ 57 Data Dictionary: InjuryReport
+
+
+    Field Name       Data Type Length                    Key                      Description
+InjuryId             String       36           PK                รหัสรายงานการบาดเจ็บ
+SurveyId             String       36           FK                รหัสแบบสอบถาม
+UserId               String       36           FK                รหัสผู้ใช้งาน
+BodyPart             String       50           -                 ส่วนร่างกายที่บาดเจ็บ
+SymptomType          String       100          -                 ประเภทของอาการบาดเจ็บ
+                                                                 ระดับความรุนแรงของการบาดเจ็บ (1-
+Severity             Int          -            -
+                                                                 10)
+ReportedAt           DateTime -                -                 วันที่รายงาน
+IsOngoing            Boolean      -            -                 สถานะการบาดเจ็บยังคงมีอยู่หรือไม่
+
+
+ตารางที่ 58 Data Dictionary: TrainingPlan
+
+
+   Field Name         Data Type            Length          Key                    Description
+PlanId             String              36           PK            รหัสแผนการฝึกซ้อม
+UserId             String              36           FK            รหัสผู้ใช้งาน
+Name               String              100          -             ชื่อแผนการฝึกซ้อม
+Goal               String              100          -             เป้าหมายของแผนการฝึกซ้อม
+TotalWeeks         Int                 -            -             จำนวนสัปดาห์ทั้งหมด
+CurrentWeek        Int                 -            -             สัปดาห์ปจั จุบัน
+Status             String              20           -             สถานะแผนการฝึกซ้อม
+GeneratedAt        DateTime            -            -             วันที่สร้างแผน
+                                                                                             106
+
+
+
+
+ตารางที่ 59 Data Dictionary: PostRunSurvey
+
+
+   Field Name           Data Type       Length        Key                   Description
+SurveyId          String            36           PK         รหัสแบบสอบถามหลังวิ่ง
+ActivityId        String            36           FK         รหัสกิจกรรมการวิ่ง
+UserId            String            36           FK         รหัสผู้ใช้งาน
+StressLevel       Int               -            -          ระดับความเครียดหลังวิ่ง (1-10)
+Mood              Int               -            -          อารมณ์หลังวิ่ง (1-10)
+HasInjury         Boolean           -            -          มีการบาดเจ็บหรือไม่
+SubmittedAt       DateTime          -            -          วันที่ส่งแบบสอบถาม
+                                                                                       107
+
+
+
+
+ตารางที่ 60 Data Dictionary: TrainingSession
+
+
+  Field Name      Data Type Length             Key                   Description
+SessionId        String       36         PK          รหัส Session การฝึกซ้อม
+UserId           String       36         FK          รหัสผู้ใช้งาน
+PlanId           String       36         FK          รหัสแผนการฝึกซ้อม
+Name             String       100        -           ชื่อ Session
+StartTime        DateTime -              -           เวลาเริ่มต้น
+EndTime          DateTime -              -           เวลาสิ้นสุด
+Distance         Float        -          -           ระยะทางที่วิ่งได้จริง (กม.)
+DayOfWeek        Int          -          -           วันในสัปดาห์ (1-7)
+SessionType      String       50         -           ประเภทของ Session
+TargetDistance Float          -          -           ระยะทางเป้าหมาย (กม.)
+TargetDuration Int            -          -           เวลาเป้าหมาย (วินาที)
+TargetZone       String       20         -           โซนอัตราการเต้นของหัวใจเป้าหมาย
+Calories         Float        -          -           แคลอรีที่เผาผลาญ
+IsCompleted      Boolean      -          -           สถานะการเสร็จสิ้น
+                                                                                   108
+
+
+
+
+ตารางที่ 61 Data Dictionary: RunningActivity
+
+
+  Field Name Data Type Length                  Key                   Description
+ActivityId       String       36         PK          รหัสกิจกรรมการวิ่ง
+UserId           String       36         FK          รหัสผู้ใช้งาน
+SessionId        String       36         FK          รหัส Session การฝึกซ้อม
+StartTime        DateTime -              -           เวลาเริ่มต้นวิ่ง
+EndTime          DateTime -              -           เวลาสิ้นสุดการวิ่ง
+Distance         Float        -          -           ระยะทางที่วิ่งได้ (กม.)
+DayOfWeek        Int          -          -           วันในสัปดาห์ (1-7)
+SessionType      String       50         -           ประเภทของการวิ่ง
+TargetDistance Float          -          -           ระยะทางเป้าหมาย (กม.)
+AvgPace          Float        -          -           ความเร็วเฉลี่ย (นาที/กม.)
+AvgHeartRate     Int          -          -           อัตราการเต้นของหัวใจเฉลี่ย
+Calories         Float        -          -           แคลอรีที่เผาผลาญ
+GpxData          String       -          -           ข้อมูล GPS เส้นทางการวิ่ง
+Status           String       20         -           สถานะของกิจกรรม
+                                                                                       109
+
+
+
+
+ตารางที่ 62 Data Dictionary: PersonalRecord
+
+
+    Field Name         Data Type              Length        Key        Description
+RecordId             String         36                 PK         รหัสสถิตสิ ่วนตัว
+UserId               String         36                 FK         รหัสผู้ใช้งาน
+RecordType           String         50                 -          ประเภทของสถิติ
+Value                Float          -                  -          ค่าสถิติที่ทำได้
+Duration             Int            -                  -          ระยะเวลา (วินาที)
+AchievedAt           DateTime       -                  -          วันที่ทำสถิติได้
+                                                                  รหัส Session ที่ทำ
+SessionId            String         36                 FK
+                                                                  สถิติ
+                                                                                       110
+
+
+
+
+ตารางที่ 63 Data Dictionary: PlanRule
+
+
+    Field Name          Data Type             Length        Key       Description
+RuleId               String             36             PK         รหัสกฎการสร้างแผน
+Goal                 String             100            -          เป้าหมายของแผน
+                                                                  ระดับความฟิตของ
+FitnessLevel         String             50             -
+                                                                  ผู้ใช้งาน
+WeekNumber           Int                -              -          หมายเลขสัปดาห์
+SessionType          String             50             -          ประเภทของ Session
+                                                                  ระยะทาง
+DistanceTarget       Float              -              -
+                                                                  เป้าหมาย (กม.)
+                                                                  ระดับความเข้มข้น
+IntensityTarget      Int                -              -
+                                                                  เป้าหมาย
+                                                                  โซนอัตราการเต้นของ
+ZoneTarget           String             20             -
+                                                                  หัวใจเป้าหมาย
+                                                                  ระดับความเข้มข้น
+IntensityLevel       Int                -              -
+                                                                  โดยรวม
+                                                                                                       111
+
+
+
+
+         4.4.3.1 Database Relation Table ดังตารางที่ 64
+
+
+ตารางที่ 64 Data Relation Table
+
+
+                                                            ประเภท
+  Entity ที่ 1   ความสัมพันธ์        Entity ที่ 2                                   คำอธิบาย
+                                                          ความสัมพันธ์
+                                                                           ผู้ใช้งานหนึ่งคนมีโปรไฟล์ได้
+     User            has            UserProfile       One-to-One (1:1)
+                                                                                    หนึ่งโปรไฟล์
+                                                                             ผู้ใช้งานหนึ่งคนมี
+     User            has          UserGamification    One-to-One (1:1) ข้อมูล Gamification ได้หนึ่ง
+                                                                                    รายการ
+                                                                          ผู้ใช้งานหนึ่งคนมีกระเป๋าตั๋วได้
+     User            has            UserTickets       One-to-One (1:1)
+                                                                                       หนึ่งใบ
+                                                                          ผู้ใช้งานหนึ่งคนมี Avatar ได้
+     User            has               Avatar         One-to-One (1:1)
+                                                                                     หนึ่งตัว
+                                                                           ผู้ใช้งานหนึ่งคนมีสถิตริ วมได้
+     User            has             TotalStats       One-to-One (1:1)
+                                                                                    หนึ่งรายการ
+                                                          One-to-Many      ผู้ใช้งานหนึ่งคนสามารถเป็น
+     User           owns                Club
+                                                             (1:N)        เจ้าของสโมสรได้หลายสโมสร
+                                                          One-to-Many ผู้ใช้งานหนึ่งคนสามารถเข้าร่วม
+     User           joins          ClubMember
+                                                             (1:N)           สโมสรได้หลายสโมสร
+                                                          One-to-Many       ผู้ใช้งานหนึ่งคนมีแผนการ
+     User            has            TrainingPlan
+                                                             (1:N)              ฝึกซ้อมได้หลายแผน
+                                                          One-to-Many ผู้ใช้งานหนึ่งคนมี Session การ
+     User            has          TrainingSession
+                                                             (1:N)        ฝึกซ้อมได้หลาย Session
+                                                          One-to-Many ผู้ใช้งานหนึ่งคนมีกิจกรรมการ
+     User            has          RunningActivity
+                                                             (1:N)           วิ่งได้หลายกิจกรรม
+                                                          One-to-Many ผู้ใช้งานหนึ่งคนมีข้อมูลสุขภาพ
+     User            has           DailyWellness
+                                                             (1:N)        ประจำวันได้หลายรายการ
+                                                                                                  112
+
+
+
+
+ตารางที่ 64 Data Relation Table (ต่อ)
+
+
+                                                         ประเภท
+  Entity ที่ 1   ความสัมพันธ์           Entity ที่ 2                             คำอธิบาย
+                                                       ความสัมพันธ์
+                                                       One-to-Many ผู้ใช้งานหนึ่งคนมีสถิตสิ ่วนตัวได้
+     User            has           PersonalRecord
+                                                          (1:N)              หลายรายการ
+                                                       One-to-Many ผู้ใช้งานหนึ่งคนมีแบบสอบถาม
+     User            has           PostRunSurvey
+                                                          (1:N)          หลังวิ่งได้หลายรายการ
+                                                       One-to-Many       ผู้ใช้งานหนึ่งคนมีรายงานการ
+     User            has            InjuryReport
+                                                          (1:N)              บาดเจ็บได้หลายรายการ
+                                                       One-to-Many ผู้ใช้งานหนึ่งคนมีความคืบหน้า
+     User            has         UserFloorProgress
+                                                          (1:N)       ชั้นหอคอยได้หลายรายการ
+                                                       One-to-Many ผู้ใช้งานหนึ่งคนมีความคืบหน้า
+     User            has        UserMissionProgress
+                                                          (1:N)         ภารกิจได้หลายรายการ
+                                                       One-to-Many       ผู้ใช้งานหนึ่งคนมีบันทึกการ
+     User            has         TowerAttemptLog
+                                                          (1:N)           พยายามได้หลายรายการ
+                                                       One-to-Many ผู้ใช้งานหนึ่งคนมีธุรกรรมตั๋วได้
+     User            has          TicketTransaction
+                                                          (1:N)             หลายรายการ
+                                                                            ผู้ใช้งานหนึ่งคน
+                                                       One-to-Many
+     User            has                OutterAPI                  เชื่อมต่อ API ภายนอกได้หลาย
+                                                          (1:N)
+                                                                                 รายการ
+                                                       One-to-Many       ผู้ใช้งานหนึ่งคนส่งคำขอเป็น
+     User           sends               Friendship
+                                                          (1:N)                เพื่อนได้หลายคำขอ
+                                                       One-to-Many       ผู้ใช้งานหนึ่งคนรับคำขอเป็น
+     User         receives              Friendship
+                                                          (1:N)                เพื่อนได้หลายคำขอ
+                                                       One-to-Many ผู้ใช้งานหนึ่งคนมีกิจกรรมของ
+     User            has            FriendActivity
+                                                          (1:N)          เพื่อนได้หลายรายการ
+                                                       One-to-Many
+     Club            has            ClubMember                     สโมสรหนึ่งมีสมาชิกได้หลายคน
+                                                          (1:N)
+                                                                                                     113
+
+
+
+
+ตารางที่ 64 Data Relation Table (ต่อ)
+
+
+                                                           ประเภท
+  Entity ที่ 1   ความสัมพันธ์           Entity ที่ 2                               คำอธิบาย
+                                                         ความสัมพันธ์
+                                                                          สโมสรหนึ่งมีลีดเดอร์บอร์ดได้
+     Club            has          ClubLeaderboard      One-to-One (1:1)
+                                                                                หนึ่งรายการ
+                                                        Many-to-One       สมาชิกหลายคนสังกัดอยู่ใน
+ClubMember belongs to                      Club
+                                                           (N:1)              สโมสรเดียวกันได้
+                                                        Many-to-One สมาชิกในสโมสรหลายคน
+ClubMember belongs to                      User
+                                                           (N:1)    อ้างอิงถึงผู้ใช้งานคนเดียวกันได้
+                                                        One-to-Many ชั้นหอคอยหนึ่งชั้นมีภารกิจได้
+ TowerFloor          has            TowerMission
+                                                           (1:N)           หลายภารกิจ
+                                                                           ชั้นหอคอยหนึ่งชั้นมีความ
+                                                        One-to-Many
+ TowerFloor          has         UserFloorProgress                        คืบหน้าของผู้ใช้งานได้หลาย
+                                                           (1:N)
+                                                                                   รายการ
+                                                        One-to-Many ภารกิจหนึ่งมีความคืบหน้าของ
+TowerMission         has        UserMissionProgress
+                                                           (1:N)      ผู้ใช้งานได้หลายรายการ
+                                                        One-to-Many         ภารกิจหนึ่งมีบันทึกการ
+TowerMission         has         TowerAttemptLog
+                                                           (1:N)            พยายามได้หลายรายการ
+                                                        One-to-Many        ภารกิจหนึ่งมีธรุ กรรมตั๋วได้
+TowerMission         has          TicketTransaction
+                                                           (1:N)                หลายรายการ
+                                                        One-to-Many    แผนการฝึกซ้อมหนึ่งแผน
+ TrainingPlan        has           TrainingSession
+                                                           (1:N)    มี Session ได้หลาย Session
+
+   Training                                                                Session การฝึกซ้อมหนึ่งมี
+                                                        One-to-Many
+                     has           RunningActivity                          กิจกรรมการวิ่งได้หลาย
+   Session                                                 (1:N)
+                                                                                   กิจกรรม
+   Training                                             One-to-Many Session การฝึกซ้อมหนึ่งมีสถิติ
+                     has           PersonalRecord
+   Session                                                 (1:N)       ส่วนตัวได้หลายรายการ
+                                                                                                     114
+
+
+
+
+ตารางที่ 64 Data Relation Table (ต่อ)
+
+
+                                                             ประเภท
+  Entity ที่ 1   ความสัมพันธ์           Entity ที่ 2                                 คำอธิบาย
+                                                           ความสัมพันธ์
+
+   Running                                                                กิจกรรมการวิ่งหนึ่งกิจกรรมมี
+                      has          PostRunSurvey         One-to-One (1:1) แบบสอบถามหลังวิ่งได้หนึ่ง
+   Activity                                                                        รายการ
+
+   Running                                                                   กิจกรรมการวิ่งหนึ่งกิจกรรม
+                                                           One-to-Many
+                      has           FriendActivity                           ปรากฏในฟีดเพื่อนได้หลาย
+   Activity                                                   (1:N)
+                                                                                     รายการ
+
+   PostRun                                                               แบบสอบถามหลังวิ่งหนึ่ง
+                                                           One-to-Many
+                      has            InjuryReport                      รายการมีรายงานการบาดเจ็บ
+    Survey                                                    (1:N)
+                                                                            ได้หลายรายการ
+                                                           One-to-Many Badge หนึ่งมีเงื่อนไขได้หลาย
+    Badge             has          BadgeCondition
+                                                              (1:N)            เงื่อนไข
+                                                           One-to-Many      Badge หนึ่งใช้ปลด
+    Badge        is required by         AvatarItem
+                                                              (1:N)    ล็อค Avatar Item ได้หลายชิ้น
+
+     User                                                                  ข้อมูล Gamification หนึ่ง
+                      has               TotalStats       One-to-One (1:1) รายการเชื่อมโยงกับสถิตริ วม
+ Gamification                                                                     หนึ่งรายการ
+
+
+                  ผลการออกแบบระบบด้วย UML ทั้งหมดนี้ช่วยให้เห็นภาพรวมสถาปัตยกรรม การไหลของ
+         ข้อมูล ความสัมพันธ์ระหว่างคลาส และโครงสร้างฐานข้อมูลอย่างชัดเจนและครบถ้วน
+                    การออกแบบทั้ง UX/UI Design (จาก 4.3) และ System Design ที่ดำเนินการเสร็จสิ้นในระยะ
+         นี้ถือเป็นพื้นฐานที่มั่นคงและสามารถนำไปพัฒนาเป็นแอปพลิเคชันจริงด้วย React Native Expo ได้ทนั ที
+         โดยไม่ต้องออกแบบใหม่
+                                                                                                        115
+
+
+
+
+4.5        สรุปความก้าวหน้าและแผนงานถัดไป
+       ตารางที่ 65 สรุปสถานะความก้าวหน้าของโครงงานในแต่ละขั้นตอนตามที่กำหนดไว้ในบทที่ 3 เทียบกับ
+แผนการดำเนินงาน
+
+
+ตารางที่ 65 สรุปสถานะความก้าวหน้าของโครงงาน Pacegasus
+
+
+ ขั้นตอน           งานหลัก                                                 สถานะ            หลักฐาน
+ 1. ศึกษาทฤษฎี     ทบทวนวรรณกรรม 11 รายการ สังเคราะห์ Conceptual           เสร็จ            หัวข้อที่
+ และงานวิจัย       Framework                                               สมบูรณ์          4.1
+ 2.การเก็บและ      กำหนดกลุ่มเป้าหมายเป็นนักวิ่งระดับปานกลางและจริงจัง และ เสร็จ            หัวข้อที่
+ วิเคราะห์ความ     ได้ข้อสรุปความต้องการของระบบ (System Requirements) สมบูรณ์               3.2
+ ต้องการ           รวมถึงความต้องการเพิ่มเติมในการเชื่อมต่อข้อมูลจากแอป
+                   พลิเคชันภายนอก
+ 3. ทดสอบการ       ทดสอบการเชื่อมต่อ Strava API                            เสร็จ            หัวข้อที่
+ เชื่อมต่อข้อมูล                                                           สมบูรณ์          4.2
+ 4.การออกแบบ       UX/UI Design, System Design , Prototype Application     กำลัง            บทที่ 4
+ ระบบและ                                                                   ดำเนินการ
+ ต้นแบบ
+ 5. พัฒนาแอป       React Native, Express.js, PostgreSQL, Adaptive Engine   ยังไม่ได้เริม่   -
+ พลิเคชัน
+ 5. ทดสอบและ       Unit Test, Integration Test, Beta Test ,                ยังไม่ได้เริม่   -
+ ปรับปรุง
+ 6. ประเมินผล      วัดตัวชี้วัดเชิงปริมาณและคุณภาพ                         ยังไม่ได้เริม่   -
+                                                                                                  116
+
+
+
+
+                                              บทที่ 5
+                                    สรุปผลและข้อเสนอแนะ
+
+         บทนี้นำเสนอสรุปผลการดำเนินงานของโครงงาน Pacegasus ในระยะปัจจุบัน อภิปรายผลทีไ่ ด้รับเทียบ
+กับเป้าหมายและกรอบทฤษฎี ระบุปัญหาและอุปสรรคที่พบพร้อมแนวทางแก้ไข และนำเสนอข้อเสนอแนะสำหรับ
+การพัฒนาแอปพลิเคชันให้สมบูรณ์ในระยะถัดไป
+
+5.1     สรุปผลการดำเนินงาน
+         โครงงาน Pacegasus มีวัตถุประสงค์เพื่อออกแบบและพัฒนาแอปพลิเคชันวิ่งที่ผสาน Adaptive Training
+Engine เข้ากับระบบ Gamification และระบบสังคมบนพื้นฐานทฤษฎีการกำหนดใจตนเอง (SDT), ในระยะปัจจุบนั
+โครงงานได้ดำเนินการเสร็จสิ้นในส่วนสำคัญดังนี้
+           5.1.1 การศึกษาทฤษฎีและสังเคราะห์กรอบแนวคิด: รวบรวมและวิเคราะห์วรรณกรรม 11 รายการ
+เพื่อสร้างฐานข้อมูลด้านจิตวิทยาการออกกำลังกาย (SDT, BCTs) และวิทยาศาสตร์การกีฬา (Session-RPE, ACWR)
+        5.1.2 การวิเคราะห์ความต้องการและการทดสอบทางเทคนิค: กำหนดกลุ่มเป้าหมายนักวิ่งระดับปาน
+กลางและจริงจัง และประสบความสำเร็จในการทดสอบเชื่อมต่อข้อมูลผ่าน Strava API ด้วย OAuth 2.0 ซึ่งช่วยให้
+ระบบดึงข้อมูลกิจกรรมการวิ่งมาประมวลผลต่อได้โดยอัตโนมัติ
+        5.1.3    การออกแบบระบบเชิงรายละเอียด (System Design)
+               5.1.3.1 จัดทำ Hi-fidelity Prototype บน Figma ครบถ้วนทุกหน้าจอสำคัญ เช่น หน้า
+        Onboarding 4 ขั้นตอน และหน้าจอการวิ่งแบบเรียลไทม์
+               5.1.3.2 ออกแบบสถาปัตยกรรมระบบและฐานข้อมูลเชิงสัมพันธ์รวม 30 ตาราง พร้อมเอกสาร
+        UML (Use Case 12 แผนภาพ และ Activity Diagram 13 แผนภาพ) ที่ครอบคลุมทุกฟังก์ชันการทำงาน
+
+5.2     การอภิปรายผล
+          5.2.1 ความยืดหยุ่นในการติดตามกิจกรรม: ระบบ Pacegasus ถูกออกแบบมาให้รองรับทั้งการใช้ เซนเซอร์
+GPS และ Accelerometer ในตัวสมาร์ตโฟน ทำให้ผู้ใช้สามารถเริ่มใช้งานได้ทันทีโดยไม่ต้องพึ่งพาอุปกรณ์เสริม
+ภายนอก, นอกจากนี้การเชื่อมต่อกับ Strava API ยังช่วยสนับสนุน ความรู้สึกเป็นอิสระ (Autonomy) ตามทฤษฎี
+SDT เนื่องจากผู้ใช้สามารถเลือกใช้แอปพลิเคชันที่ตนเองถนัดในการบันทึกข้อมูลได้
+        5.2.2 การเข้าถึงเทคโนโลยีสุขภาพ: จากการวิเคราะห์เปรียบเทียบกับแอปพลิเคชันอื่นในตลาด พบว่า
+Pacegasus มีจดุ เด่นในการบูรณาการเอนจินปรับแผนฝึกเข้ากับระบบ Gamification โดยไม่จำกัดการใช้งานเฉพาะ
+สมาร์ตวอทช์ราคาสูง, ซึ่งช่วยลดอุปสรรคในการเข้าถึงและส่งเสริมพฤติกรรมสุขภาพในระดับประชากรได้ดียิ่งขึ้น
+                                                                                                        117
+
+
+
+
+         5.2.3 การออกแบบที่เน้นสมรรถภาพและความปลอดภัย: การใช้คา่ Session-RPE และ ACWR มาเป็น
+กลไกหลักในการคำนวณภาระการฝึก          ช่วยให้ระบบสามารถประเมินความเสีย่ งต่อการบาดเจ็บและปรับแผนฝึก
+รายวัน (Missions) ให้เหมาะสมกับสภาพร่างกายของผู้ใช้ในสภาวะ Flow State ได้อย่างแม่นยำ
+5.3      ปัญหาและอุปสรรคที่พบ
+       5.3.1 ความซับซ้อนของข้อมูล (Data Inconsistency): ข้อมูลกิจกรรมที่ดงึ มาจาก API ภายนอกอาจมี
+ความละเอียดของข้อมูลต่างกัน ซึ่งอาจส่งผลต่อความแม่นยำในการคำนวณภาระการฝึก
+         5.3.2 ขอบเขตงานที่กว้างขวาง: การพัฒนาทั้งโมดูล AI Coach, Gamification และระบบสังคมพร้อม
+กัน เป็นความท้าทายอย่างมากสำหรับทีมงานขนาดเล็กในการบริหารเวลา
+5.4      ข้อเสนอแนะ
+         5.4.1    ข้อเสนอแนะสำหรับการพัฒนาในระยะถัดไป
+                   5.4.1 การออกแบบ UX/UI: ควรเน้นให้หน้า Wellness Check-in ใช้งานได้รวดเร็ว (ไม่ควรเกิน
+         30 วินาที) โดยใช้ Visual Scale เพื่อเพิ่มอัตราการรักษาผูใ้ ช้งาน (Retention Rate)
+                   5.4.2 กลยุทธ์ Adaptive Training: ในช่วงแรกควรเริ่มด้วยกฎแบบ Rule-based (ACWR) ก่อน
+         แล้วจึงค่อยเปลี่ยนเป็น Machine Learning (Random Forest) เมือ่ มีข้อมูลผูใ้ ช้จริงสะสมเพียงพอ
+                      5.4.3 ระบบสังคม: ควรออกแบบกิจกรรมท้าทายสาธารณะ (Public Challenges) เพื่อแก้ปัญหา
+         ผู้ใช้ใหม่ที่ยังไม่มีเพื่อนในระบบ (Cold Start Problem)
+         5.4.2    ข้อเสนอแนะสำหรับการต่อยอดในอนาคต
+                5.4.2.1 Cross-platform: ขยายการรองรับไปยัง iOS โดยเชื่อมต่อกับ Apple HealthKit เพื่อ
+         ขยายฐานผู้ใช้งาน
+                   5.4.2.2 Gamification เชิงลึก: พัฒนา Story Mode ให้มีความซับซ้อนตามสมรรถภาพของผู้ใช้
+         ซึ่งจะมีผลต่อแรงจูงใจระยะยาวมากกว่าระบบคะแนนเพียงอย่างเดียว
+5.5      บทสรุป
+         โครงงาน Pacegasus ได้วางรากฐานทางทฤษฎีและเทคนิคไว้อย่างมัน่ คงผ่านการออกแบบระบบที่ละเอียด
+ครอบคลุม 30 ตารางฐานข้อมูลและการทดสอบเชื่อมต่อ API สำเร็จ, การบูรณาการวิทยาศาสตร์การกีฬาเข้ากับกลไก
+ทางจิตวิทยาผ่านสมาร์ตโฟนเครื่องเดียว         จะช่วยให้แอปพลิเคชันนี้เป็นเครื่องมือที่มีประสิทธิภาพในการสร้าง
+พฤติกรรมการวิ่งที่ยั่งยืนและลดความเสี่ยงจากการบาดเจ็บได้จริง
+                                                                                                      118
+
+
+
+
+                                           เอกสารอ้างอิง
+
+[1] DHULI, K., NAUREEN, Z., MEDORI, M. C., FIORETTI, F., CARUSO, P., PERRONE, M. A.,
+NODARI, S., MANGANOTTI, P., XHUFI, S., BUSHATI, M., BOZO, D., CONNELLY, S. T., HERBST, K. L., &
+BERTELLI, M. (2022). Physical activity for health. Journal of Preventive Medicine and Hygiene, 63(2
+Suppl 3), E150–E159. https://doi.org/10.15167/2421-4248/jpmh2022.63.2S3.2756
+[2] Cachón-Zagalaz, J., Carrasco-Venturelli, H., Sánchez-Zafra, M., & Zagalaz-Sánchez, M. L.
+(2023). Motivation toward Physical Activity and Healthy Habits of Adolescents: A Systematic
+Review. Children, 10(4), 659. https://doi.org/10.3390/children10040659
+[3] Fu, K., Liu, Z., Ren, X., & Zhang, S. (2024). Design and research of educational mode in context
+of teaching gamification. Entertainment Computing, 50, 100685.
+https://doi.org/10.1016/j.entcom.2024.100685
+[4] Golaszewski, N. M., LaCroix, A. Z., Hooker, S. P., & Bartholomew, J. B. (2022). Group
+exercise membership is associated with forms of social support, exercise identity, and amount of
+physical activity. International Journal of Sport and Exercise Psychology, 20(2), 630–643.
+https://doi.org/10.1080/1612197x.2021.1891121
+[5] Tong, H. L., & Laranjo, L. (2018). The use of social features in mobile health interventions to
+promote physical activity: a systematic review. Npj Digital Medicine, 1(1), 43.
+https://doi.org/10.1038/s41746-018-0051-3
+[6] Ryan, R. M., & Deci, E. L. (2020). Intrinsic and extrinsic motivation from a self determination
+theory perspective: Definitions, theory, practices, and future directions.
+ContemporaryEducationalPsychology,61,101860.
+https://doi.org/10.1016/j.cedpsych.2020.101860
+[7] Harnois, S. (2022). Perfectionism and Psychological Functioning in Sport Activity: Mediating
+Role of Basic Psychological Needs. Research & Investigations in Sports Medicine, 9(1).
+https://doi.org/10.31031/RISM.2022.09.000705
+                                                                                                   119
+
+
+
+
+                                       เอกสารอ้างอิง (ต่อ)
+
+
+[8] Milne-Ives, M., Homer, S. R., Andrade, J., & Meinert, E. (2023). Potential associations between
+behavior change techniques and engagement with mobile health apps: a systematic
+review. Frontiers in Psychology, 14, 1227443. https://doi.org/10.3389/fpsyg.2023.1227443
+[9] Kerimov, A. B. & A. (2025, November 9). Explainable Machine Learning Models to Predict
+Endurance of Athletes. https://nhsjs.com/2025/explainable-machine-learning-models
+to-predict-endurance-of-athletes/
+[10] Dai, X., Yan, J., & Bi, X. (2025). Concurrent validity and reliability of the session rating of
+perceived exertion scale among high-trained rower during training sessions. BMC Sports Science,
+Medicine and Rehabilitation, 17, 196. https://doi.org/10.1186/s13102-025-01247-7
+[11] Qin, W., Li, R., & Chen, L. (2025). Acute to chronic workload ratio (ACWR) for predicting sports
+injury risk: a systematic review and meta-analysis. BMC Sports Science, Medicine and
+Rehabilitation, 17, 285. https://doi.org/10.1186/s13102-025-01332-x
+

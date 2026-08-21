@@ -3,25 +3,25 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1}{\ignorespaces สถาปัตยกรรมระบบ (System Architecture)}}{11}{figure.caption.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2}{\ignorespaces หน้าจอการเข้าสู่ระบบและการสมัครสมาชิก}}{28}{figure.caption.13}%
-\contentsline {figure}{\numberline {3}{\ignorespaces หน้าข้อกำหนดและการยินยอม}}{29}{figure.caption.14}%
-\contentsline {figure}{\numberline {4}{\ignorespaces หน้าจอการเก็บข้อมูลสำหรับสร้างโปรไฟล์ผู้ใช้}}{30}{figure.caption.15}%
-\contentsline {figure}{\numberline {5}{\ignorespaces การกำหนดเป้าหมายและการเลือกแผนการฝึก}}{31}{figure.caption.16}%
-\contentsline {figure}{\numberline {6}{\ignorespaces รายละเอียดแผนการฝึกและการจัดตารางรายสัปดาห์}}{31}{figure.caption.17}%
-\contentsline {figure}{\numberline {7}{\ignorespaces หน้าหลักและการประเมินความพร้อมประจำวัน}}{32}{figure.caption.18}%
-\contentsline {figure}{\numberline {8}{\ignorespaces หน้าหลักและการเตรียมเริ่ม Session การวิ่ง}}{33}{figure.caption.19}%
-\contentsline {figure}{\numberline {9}{\ignorespaces หน้าจอการวิ่งและการประเมินหลังวิ่ง}}{34}{figure.caption.20}%
-\contentsline {figure}{\numberline {10}{\ignorespaces หน้าจอแสดงรางวัลหลังการวิ่ง}}{35}{figure.caption.21}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Use Case Diagram Authentication System}}{36}{figure.caption.22}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Use Case Diagram กรอกข้อมูลพื้นฐาน}}{37}{figure.caption.23}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Use Case Diagram Daily Wellness Check-in}}{38}{figure.caption.24}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Use Case Diagram Running Session}}{39}{figure.caption.25}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Use Case Diagram แบบทดสอบหลังวิ่ง}}{40}{figure.caption.26}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Use Case Diagram Mission / Chapter}}{41}{figure.caption.27}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Use Case Diagram Club Create}}{42}{figure.caption.28}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Use Case Diagram Club Member}}{43}{figure.caption.29}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Use Case Diagram Add Friends}}{44}{figure.caption.30}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Use Case Diagram Coin และ Item Shop}}{45}{figure.caption.31}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Use Case Diagram Avatar 2.5D และ Avatar Dressing}}{46}{figure.caption.32}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Use Case Diagram Leaderboard}}{47}{figure.caption.33}%
+\contentsline {figure}{\numberline {2}{\ignorespaces หน้าจอการเข้าสู่ระบบและการสมัครสมาชิก}}{27}{figure.caption.13}%
+\contentsline {figure}{\numberline {3}{\ignorespaces หน้าข้อกำหนดและการยินยอม}}{28}{figure.caption.14}%
+\contentsline {figure}{\numberline {4}{\ignorespaces หน้าจอการเก็บข้อมูลสำหรับสร้างโปรไฟล์ผู้ใช้}}{29}{figure.caption.15}%
+\contentsline {figure}{\numberline {5}{\ignorespaces การกำหนดเป้าหมายและการเลือกแผนการฝึก}}{30}{figure.caption.16}%
+\contentsline {figure}{\numberline {6}{\ignorespaces รายละเอียดแผนการฝึกและการจัดตารางรายสัปดาห์}}{30}{figure.caption.17}%
+\contentsline {figure}{\numberline {7}{\ignorespaces หน้าหลักและการประเมินความพร้อมประจำวัน}}{31}{figure.caption.18}%
+\contentsline {figure}{\numberline {8}{\ignorespaces หน้าหลักและการเตรียมเริ่ม Session การวิ่ง}}{32}{figure.caption.19}%
+\contentsline {figure}{\numberline {9}{\ignorespaces หน้าจอการวิ่งและการประเมินหลังวิ่ง}}{33}{figure.caption.20}%
+\contentsline {figure}{\numberline {10}{\ignorespaces หน้าจอแสดงรางวัลหลังการวิ่ง}}{34}{figure.caption.21}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Use Case Diagram Authentication System}}{35}{figure.caption.22}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Use Case Diagram กรอกข้อมูลพื้นฐาน}}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Use Case Diagram Daily Wellness Check-in}}{37}{figure.caption.24}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Use Case Diagram Running Session}}{38}{figure.caption.25}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Use Case Diagram แบบทดสอบหลังวิ่ง}}{39}{figure.caption.26}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Use Case Diagram Mission / Chapter}}{40}{figure.caption.27}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Use Case Diagram Club Create}}{41}{figure.caption.28}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Use Case Diagram Club Member}}{42}{figure.caption.29}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Use Case Diagram Add Friends}}{43}{figure.caption.30}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Use Case Diagram Coin และ Item Shop}}{44}{figure.caption.31}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Use Case Diagram Avatar 2.5D และ Avatar Dressing}}{45}{figure.caption.32}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Use Case Diagram Leaderboard}}{46}{figure.caption.33}%
 \addvspace {10\p@ }

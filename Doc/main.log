@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.19)  21 AUG 2026 18:56
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.19)  21 AUG 2026 19:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1054,13 +1054,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--34
  []
 
 
+Underfull \hbox (badness 1014) in paragraph at lines 34--34
+[]|\TU/Sarabun(0)/b/n/10.95 วัน ที่ วิ่ง/
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 35--35
 \TU/Sarabun(0)/m/n/10.95 เพิ่ง กลับ มา
  []
 
 
-Overfull \hbox (11.93538pt too wide) in paragraph at lines 36--36
-[]|\TU/Sarabun(0)/m/n/10.95 Intermediate| 
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\TU/Sarabun(0)/m/n/10.95 Lower
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\TU/Sarabun(0)/m/n/10.95 Interme-
  []
 
 
@@ -1070,37 +1080,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--36
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--37
-[]|\TU/Sarabun(0)/m/n/10.95 50–90
+[]|\TU/Sarabun(0)/m/n/10.95 Upper
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--37
-\TU/Sarabun(0)/m/n/10.95 Quality Session
+\TU/Sarabun(0)/m/n/10.95 Interme-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--37
-\TU/Sarabun(0)/m/n/10.95 มาราธอน หลาย ครั้ง
+[]|\TU/Sarabun(0)/m/n/10.95 50–100
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--38
-[]|\TU/Sarabun(0)/m/n/10.95 นักกีฬา
+Underfull \hbox (badness 2310) in paragraph at lines 37--37
+[]|\TU/Sarabun(0)/m/n/10.95 มี Tempo/ Interval
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--38
-[]|\TU/Sarabun(0)/m/n/10.95 100–
- []
-
-
-Underfull \hbox (badness 7256) in paragraph at lines 38--38
-[]|\TU/Sarabun(0)/m/n/10.95 6–7 วัน
- []
-
-
-Underfull \hbox (badness 6995) in paragraph at lines 38--38
-[]|\TU/Sarabun(0)/m/n/10.95 มี โค้ช คุม และ Pe-
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\TU/Sarabun(0)/m/n/10.95 1–2 ครั้ง/ สัปดาห์;
  []
 
 [8
@@ -1118,10 +1118,9 @@ Underfull \hbox (badness 1584) in paragraph at lines 109--110
 []\TU/Sarabun(0)/m/n/12 ต้นแบบ แอปพลิเคชัน ที่ พัฒนา ใน ระยะ นี้ รองรับ ฟีเจอร์ หลัก
  []
 
-[12]
 LaTeX Font Info:    Font shape `TU/DroidSansMono(0)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 117.
- [13]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 153--153
 []|\TU/Sarabun(0)/m/n/10.95 รวบรวม และ
  []
@@ -1213,7 +1212,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--157
 []|\TU/Sarabun(0)/m/n/10.95 Research Find-
  []
 
-[14]
+[13]
 Underfull \hbox (badness 2556) in paragraph at lines 194--194
 []|\TU/Sarabun(0)/m/n/10.95 ระบบ ปฏิบัติ การ สำหรับ
  []
@@ -1243,7 +1242,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--198
 \TU/Sarabun(0)/m/n/10.95 REST API ด้วย ภาษา
  []
 
-[15]
+[14] [15]
 LaTeX Font Info:    Font shape `TU/Sarabun(0)/m/n' will be
 (Font)              scaled to size 6.99997pt on input line 215.
 LaTeX Font Info:    Font shape `TU/Sarabun(0)/b/n' will be
@@ -1593,6 +1592,6 @@ Here is how much of TeX's memory you used:
  60490 multiletter control sequences out of 15000+600000
  635817 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,11n,118p,1045b,739s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,12n,118p,1045b,739s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (79 pages).

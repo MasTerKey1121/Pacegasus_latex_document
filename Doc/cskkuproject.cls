@@ -320,7 +320,6 @@
 
 \renewcommand{\tableofcontents}{
   \chapter*{\centering\Large\bfseries สารบัญ}
-  \addcontentsline{toc}{chapter}{สารบัญ}
   \@starttoc{toc}
 }
 
@@ -531,7 +530,9 @@
 % ------------------------------------------------
 \newcommand{\chapterone}{\chapter{บทนำ}\input{chapter1}}
 \newcommand{\chaptertwo}{\chapter{ทฤษฎีและงานวิจัยที่เกี่ยวข้อง}\input{chapter2}}
-\newcommand{\chapterthree}{\chapter{วิธีการดำเนินโครงงาน}\input{chapter3}}
+\newcommand{\chapterthree}{%
+  \addtocontents{toc}{\protect\clearpage}%
+  \chapter{วิธีการดำเนินโครงงาน}\input{chapter3}}
 \newcommand{\chapterfour}{\chapter{การวิเคราะห์ ออกแบบและพัฒนาระบบ}\input{chapter4}}
 \newcommand{\chapterfive}{\chapter{สรุปผลการดำเนินงาน}\input{chapter5}}
 

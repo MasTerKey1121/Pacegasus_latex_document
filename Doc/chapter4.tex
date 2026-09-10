@@ -173,105 +173,24 @@ Side Quest เป็นภารกิจเสริมที่ไม่ผู
 
 \section{ผลการออกแบบระบบ (System Design)}
 
-จัดทำเอกสารการออกแบบระบบด้วย UML อย่างครบถ้วน เพื่อให้โครงสร้างระบบมีความชัดเจนและสามารถนำไปพัฒนาได้อย่างเป็นระบบ โดยแบ่ง Use Case Diagram ออกเป็น 12 แผนภาพย่อยตามกลุ่มฟังก์ชันการทำงาน ดังนี้
-
-\newpage
+จัดทำเอกสารการออกแบบระบบด้วย UML เพื่อให้โครงสร้างและขอบเขตการทำงานของระบบมีความชัดเจน โดยสรุปฟังก์ชันหลักทั้งหมดไว้ในแผนภาพ Use Case Diagram ภาพรวม ดังนี้
 
 \subsection{Use Case Diagram}
 
-\newcommand{\UseCaseFigure}[3]{%
-\begin{figure}[H]\centering
-\includegraphics[width=0.86\textwidth]{images/#1}
-\caption{#2}\label{#3}
-\end{figure}}
-
 \begin{samepage}
-\subsubsection{Authentication System}
-แสดงกระบวนการยืนยันตัวตนของนักวิ่ง ประกอบด้วยการสมัครสมาชิก การเข้าสู่ระบบ และการออกจากระบบ โดยมี Actor หลักคือนักวิ่งและ Google
-\UseCaseFigure{usecase-01.png}{Use Case Diagram Authentication System}{fig:usecase-authentication}
-\end{samepage}
-
-\begin{samepage}
-\subsubsection{กรอกข้อมูลพื้นฐาน}
-แสดงกระบวนการกรอกข้อมูลพื้นฐาน แก้ไขโปรไฟล์ และบันทึกโปรไฟล์ของนักวิ่ง
-\UseCaseFigure{usecase-02.png}{Use Case Diagram กรอกข้อมูลพื้นฐาน}{fig:usecase-basic-profile}
-\end{samepage}
-
-\begin{samepage}
-\subsubsection{Daily Wellness Check-in}
-แสดงกระบวนการส่ง Check-in ประจำวัน การบันทึกการนอนหลับ ความเหนื่อย ความเครียด และสภาพกล้ามเนื้อ รวมถึงการแก้ไขข้อมูล ดูประวัติ Check-in ย้อนหลัง และรับรางวัลเมื่อบันทึกครบ
-\UseCaseFigure{usecase-03.png}{Use Case Diagram Daily Wellness Check-in}{fig:usecase-wellness}
-\end{samepage}
-
-\begin{samepage}
-\subsubsection{Running Session}
-แสดงกระบวนการเชื่อมต่อบัญชี Strava และนำเข้าข้อมูล Session เพื่อดูแผนที่วิ่ง ผลลัพธ์ และประวัติการวิ่งทั้งหมด
-\UseCaseFigure{usecase-04.png}{Use Case Diagram Running Session}{fig:usecase-running-session}
-\end{samepage}
-
-\newpage
-
-\begin{samepage}
-\subsubsection{แบบทดสอบหลังวิ่ง}
-แสดงกระบวนการบันทึกแบบสอบถามหลังวิ่ง ประกอบด้วยการเลือกคะแนน RPE สภาพร่างกาย ความรู้สึกหลังวิ่ง และการรับรางวัลเมื่อบันทึกครบ
-\UseCaseFigure{usecase-05.png}{Use Case Diagram แบบทดสอบหลังวิ่ง}{fig:usecase-post-run}
-\end{samepage}
-
-\begin{samepage}
-\subsubsection{Mission / Chapter}
-แสดงกระบวนการเลือก Chapter ทำ Mission จบ Mission ดูความคืบหน้าภารกิจ และรับรางวัลเมื่อทำสำเร็จ
-\UseCaseFigure{usecase-06.png}{Use Case Diagram Mission / Chapter}{fig:usecase-mission}
-\end{samepage}
-
-\newpage
-
-\begin{samepage}
-\subsubsection{Club Create}
-แสดงกระบวนการสร้าง Club ตั้งชื่อและตั้งค่า Club บันทึก แก้ไขการตั้งค่า และปิด Club
-\UseCaseFigure{usecase-07.png}{Use Case Diagram Club Create}{fig:usecase-club-create}
-\end{samepage}
-
-\newpage
-
-\begin{samepage}
-\subsubsection{Club Member}
-แสดงกระบวนการค้นหาและส่งคำขอเข้าร่วม Club การตอบรับหรือปฏิเสธคำขอโดย Club Leader การดูรายชื่อสมาชิก การออกจาก Club และการลบสมาชิก
-\UseCaseFigure{usecase-08.png}{Use Case Diagram Club Member}{fig:usecase-club-member}
-\end{samepage}
-
-\newpage
-
-\begin{samepage}
-\subsubsection{Add Friends}
-แสดงกระบวนการค้นหาผู้ใช้ ส่งและจัดการคำขอเป็นเพื่อน ดู Profile ดูรายชื่อเพื่อนทั้งหมด และลบเพื่อน โดยมี Actor สองฝ่ายคือนักวิ่ง 1 และนักวิ่ง 2
-\UseCaseFigure{usecase-09.png}{Use Case Diagram Add Friends}{fig:usecase-friends}
-\end{samepage}
-
-\newpage
-
-\begin{samepage}
-\subsubsection{Coin และ Item Shop}
-แสดงกระบวนการเข้าชม Item Shop ดูไอเทม เลือกหมวดหมู่ ตรวจสอบยอด Coin ซื้อไอเทม และดู Item ที่ซื้อแล้ว
-\UseCaseFigure{usecase-10.png}{Use Case Diagram Coin และ Item Shop}{fig:usecase-shop}
-\end{samepage}
-
-\newpage
-
-\begin{samepage}
-\subsubsection{Avatar 2.5D และ Avatar Dressing}
-แสดงกระบวนการจัดการ Avatar ของนักวิ่ง ได้แก่ การดู Avatar เลือกแต่งตัว เลือกโหมดแต่งตัว เลือกไอเทม และบันทึกการแต่งตัว
-\UseCaseFigure{usecase-11.png}{Use Case Diagram Avatar 2.5D และ Avatar Dressing}{fig:usecase-avatar}
-\end{samepage}
-
-\begin{samepage}
-\subsubsection{Leaderboard}
-แสดงกระบวนการดู Leaderboard การเลือกกลุ่มและประเภทการจัดอันดับ และการดู Profile ของผู้ใช้อื่น
-\UseCaseFigure{usecase-12.png}{Use Case Diagram Leaderboard}{fig:usecase-leaderboard}
+\subsubsection{Use Case Diagram ระบบโมบายแอปพลิเคชัน Pacegasus}
+แผนภาพแสดงภาพรวมการทำงานของระบบโมบายแอปพลิเคชัน Pacegasus โดยมีนักวิ่งเป็นผู้ใช้งานหลัก หัวหน้าชมรมดูแลสมาชิกในชมรม และมี Google กับ Strava เป็นระบบภายนอกที่เกี่ยวข้องกับการเข้าสู่ระบบและข้อมูลการวิ่งตามลำดับ ครอบคลุมฟังก์ชันด้านบัญชีผู้ใช้ สุขภาพ การวิ่ง ภารกิจ ชมรม เพื่อน ร้านค้า อวตาร์ และตารางจัดอันดับ
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.58\textwidth]{images/usecase-overview.png}
+\caption{Use Case Diagram ระบบโมบายแอปพลิเคชัน Pacegasus}
+\label{fig:usecase-overview}
+\end{figure}
 \end{samepage}
 
 \subsection{Use Case Description}
 
-จัดทำ Use Case Description เพื่ออธิบายรายละเอียดของแต่ละ Use Case ในระบบ Pacegasus โดยแสดงในรูปแบบตาราง ประกอบด้วยชื่อ Use Case คำอธิบาย Actor เงื่อนไขก่อนเริ่ม เงื่อนไขหลังเสร็จ ขั้นตอนหลัก และกรณีผิดพลาด
+จัดทำ Use Case Description เพื่ออธิบายรายละเอียดของ Use Case หลักทั้ง 15 รายการในแผนภาพภาพรวม โดยแสดงในรูปแบบตาราง ประกอบด้วยชื่อ Use Case คำอธิบาย Actor เงื่อนไขก่อนเริ่ม เงื่อนไขหลังเสร็จ ขั้นตอนหลัก และกรณีผิดพลาด
 
 \newcommand{\UseCaseTable}[7]{%
 \begin{table}[H]

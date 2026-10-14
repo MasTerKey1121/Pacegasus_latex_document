@@ -338,6 +338,111 @@ Side Quest เป็นภารกิจเสริมที่ไม่ผู
 \DataDictionaryTable{PersonalRecord}{RecordId & String & 36 & PK & รหัสสถิติส่วนตัว\\\hline UserId & String & 36 & FK & รหัสผู้ใช้งาน\\\hline RecordType & String & 50 & - & ประเภทของสถิติ\\\hline Value & Float & - & - & ค่าสถิติที่ทำได้\\\hline Duration & Int & - & - & ระยะเวลา (วินาที)\\\hline AchievedAt & DateTime & - & - & วันที่ทำสถิติได้\\\hline SessionId & String & 36 & FK & รหัสเซสชันที่ทำสถิติ\\\hline}
 \DataDictionaryTable{PlanRule}{RuleId & String & 36 & PK & รหัสกฎการสร้างแผน\\\hline Goal & String & 100 & - & เป้าหมายของแผน\\\hline FitnessLevel & String & 50 & - & ระดับความฟิตของผู้ใช้งาน\\\hline WeekNumber & Int & - & - & หมายเลขสัปดาห์\\\hline SessionType & String & 50 & - & ประเภทของเซสชัน\\\hline DistanceTarget & Float & - & - & ระยะทางเป้าหมาย (กม.)\\\hline IntensityTarget & Int & - & - & ระดับความเข้มข้นเป้าหมาย\\\hline ZoneTarget & String & 20 & - & โซนอัตราการเต้นของหัวใจ\\\hline}
 
+\section{ผลการตรวจสอบ REST API ฝั่ง Backend}
+\label{sec:backend-api-test-results}
+
+การตรวจสอบใช้หลักฐานสองระดับตามหัวข้อ~\ref{sec:backend-api-test-method} ได้แก่ ชุดทดสอบฟังก์ชันภายในด้วย Node.js test runner และคำขอ HTTP ไปยัง Backend ที่เผยแพร่บน Render ที่ \texttt{https://pacegasus-api.onrender.com/api} ผลทั้งสองระดับแยกจากกัน เพราะ Unit Test ใช้ข้อมูลจำลองและไม่ได้ยืนยันการทำงานของ HTTP endpoint หรือฐานข้อมูลจริง
+
+\subsection{ผลการทดสอบฟังก์ชันภายใน (Unit Test)}
+
+รันคำสั่ง \texttt{npm run test:coverage} ในโฟลเดอร์ \texttt{backend} ด้วยไฟล์ทดสอบ 15 ไฟล์ ผลรวมตามรายงานของ Node.js test runner คือ 126 รายการ ผ่าน 126 รายการ ไม่ผ่าน 0 รายการ และไม่ข้าม 0 รายการ จำนวนดังกล่าวนับกรณีทดสอบย่อยของระบบเพื่อนด้วย คำสั่งนี้กำหนดให้การรันทดสอบล้มเหลวเมื่อ Line Coverage ต่ำกว่าร้อยละ 80 ตารางที่~\ref{tab:backend-unit-results} ระบุไฟล์ทดสอบและพฤติกรรมที่ตรวจสอบจริง เพื่อให้ตรวจสอบย้อนกลับจากผลในเอกสารไปยังชุดทดสอบได้
+
+\begingroup
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.29\textwidth}|>{\raggedright\arraybackslash}p{0.47\textwidth}|>{\centering\arraybackslash}p{0.12\textwidth}|}
+\caption{ผลการทดสอบ Backend แยกตามไฟล์และพฤติกรรมที่ตรวจสอบ}\label{tab:backend-unit-results}\\ \hline
+\textbf{ไฟล์ใน \texttt{backend/tests}} & \textbf{พฤติกรรมและผลที่ตรวจสอบ} & \textbf{ผ่าน/ทั้งหมด} \\ \hline
+\endfirsthead
+\hline
+\textbf{ไฟล์ใน \texttt{backend/tests}} & \textbf{พฤติกรรมและผลที่ตรวจสอบ} & \textbf{ผ่าน/ทั้งหมด} \\ \hline
+\endhead
+\texttt{app}\newline\texttt{Composition}\newline\texttt{.test.js} & โหลด Express Application และ route ที่ประกอบไว้ได้โดยไม่เริ่มรับ HTTP request; เป็นการตรวจโครงสร้างเบื้องต้นเท่านั้น & 1/1 \\ \hline
+\texttt{auth}\newline\texttt{Controller}\newline\texttt{Flow}\newline\texttt{.test.js} & ขอและยืนยัน Email OTP, สมัครสมาชิก, เข้าสู่ระบบ, ต่ออายุและยกเลิก token, ดูข้อมูลผู้ใช้ และ Google sign-in; ตรวจกรณีข้อมูลผิด บัญชีไม่พบ และบัญชีถูกระงับ & 16/16 \\ \hline
+\texttt{avatar}\newline\texttt{ShopWorkflow}\newline\texttt{.test.js} & โหลด Avatar และช่องแต่งตัว, ตรวจสิทธิ์การใช้ไอเท็ม, เปลี่ยนชุด, ค้นและกรองสินค้า, ซื้อด้วยเหรียญ, บันทึกของเข้าคลัง; ตรวจเหรียญไม่พอ สินค้าไม่มี และการย้อนกลับธุรกรรมเมื่อข้อมูลซ้ำ & 10/10 \\ \hline
+\texttt{clubAvatar}\newline\texttt{Shop.test.js} & ตรวจรูปแบบข้อมูลคลับและตัวกรอง Avatar/ร้านค้า; ปฏิเสธการเตะสมาชิกที่มีสิทธิ์เท่ากัน คลับเต็ม และชื่อคลับซ้ำ; ตรวจว่าการซื้อสินค้าล็อกยอดเหรียญก่อนตรวจการครอบครอง & 7/7 \\ \hline
+\texttt{friend}\newline\texttt{Service}\newline\texttt{.test.js} & ตรวจ UID, การส่งและรับคำขอเป็นเพื่อน, การตอบรับคำขอที่ส่งสวนทาง, การปฏิเสธคำขอซ้ำหรือส่งให้ตนเอง, สิทธิ์ผู้รับ, การยกเลิกคำขอ และรายการเพื่อน; รวม 5 กรณีย่อยในหัวข้อคำขอที่ไม่ถูกต้อง & 13/13 \\ \hline
+\texttt{onboarding}\newline\texttt{Flow.test.js} & ตรวจสถานะและการบันทึกข้อมูล 4 ขั้นตอน, การห้ามข้ามขั้น, ประวัติการบาดเจ็บ, เป้าหมาย, การคำนวณระดับผู้ใช้ และการย้อนกลับธุรกรรมเมื่อบันทึกไม่สำเร็จ & 9/9 \\ \hline
+\texttt{otpService}\newline\texttt{.test.js} & ตรวจการสร้างรหัสอ้างอิงและเรียก Supabase ส่ง OTP, การลบคำขอเมื่อส่งไม่สำเร็จ, การยืนยันรหัส และการนับครั้งเมื่อรหัสผิด โดยจำลองการตอบกลับของ Supabase & 4/4 \\ \hline
+\texttt{profile}\newline\texttt{Service}\newline\texttt{.test.js} & อ่านโปรไฟล์ของตนเอง เพื่อน และผู้ที่ยังไม่เป็นเพื่อน พร้อมข้อมูลคลับ Avatar และระยะทางรวม; ตรวจรหัส UID ที่ไม่พบ & 4/4 \\ \hline
+\texttt{program}\newline\texttt{Templates}\newline\texttt{.test.js} & อ่านแม่แบบโปรแกรมพร้อมข้อมูลระยะและลำดับ, ยกเลิกโปรแกรมปัจจุบัน และบันทึกภารกิจรายวันหลายรายการในธุรกรรมเดียว & 4/4 \\ \hline
+\texttt{program}\newline\texttt{Workflow}\newline\texttt{.test.js} & ตรวจเงื่อนไขก่อนเริ่มโปรแกรม, สร้างตารางอัตโนมัติ/กำหนดเอง, อ่านสัปดาห์ปัจจุบัน, เพิ่มและลบภารกิจ, ค้นตามช่วงวัน, รับรางวัลเมื่อทำสำเร็จ และการย้อนกลับเมื่อบันทึกผิดพลาด & 11/11 \\ \hline
+\texttt{rpeWellness}\newline\texttt{Adaptive}\newline\texttt{.test.js} & ตรวจค่า RPE และระยะเวลา, คำนวณภาระการฝึกและ ACWR, บันทึกและแก้ไข Wellness, เลือกการปรับโปรแกรมตามความพร้อม; ตรวจสิทธิ์เจ้าของข้อมูล ข้อมูลซ้ำ และการย้อนกลับธุรกรรม & 14/14 \\ \hline
+\texttt{running}\newline\texttt{Controller}\newline\texttt{.test.js} & ตรวจการมี handler ของการวิ่ง, การเรียงประวัติ, การแปลงจุด GPS สำหรับบันทึก และการเชื่อม Side Quest เมื่อเริ่ม Session; การตรวจการมี handler ไม่ยืนยันผล HTTP & 5/5 \\ \hline
+\texttt{sideQuest}\newline\texttt{Controller}\newline\texttt{.test.js} & ตรวจการมี handler และการรับข้อมูลของ Controller สำหรับค้น เริ่ม อัปเดต และจบ Side Quest รวมถึงอัลบั้มภาพ; ตรวจการส่งค่าต่อให้ Service และการปฏิเสธข้อมูลผิดรูปแบบ & 6/6 \\ \hline
+\texttt{sideQuest}\newline\texttt{Lifecycle}\newline\texttt{.test.js} & สร้าง Side Quest รายวัน, เริ่มจาก instance หรือแม่แบบ, จำกัดจำนวนต่อ Session, เพิ่มความคืบหน้า, บันทึกภาพ, รับรางวัล และอ่านอัลบั้ม; ตรวจภารกิจซ้ำ/ไม่พบและ rollback & 10/10 \\ \hline
+\texttt{tokenGame}\newline\texttt{User.test.js} & ตรวจข้อมูลใน access token, การเก็บ hash และหมุน refresh token, การให้รางวัลแบบไม่ซ้ำ, การเลื่อนหลายระดับ, การใช้เหรียญ และการอ่าน/แก้ไขโปรไฟล์กับ Avatar ของผู้ใช้ & 12/12 \\ \hline
+\textbf{รวม} & \textbf{ผลจาก Node.js test runner: ไม่ผ่าน 0 และไม่ข้าม 0 รายการ} & \textbf{126/126} \\ \hline
+\end{longtable}
+\endgroup
+
+ชุดทดสอบเหล่านี้ใช้ข้อมูลจำลองสำหรับฐานข้อมูล Supabase Auth และบริการภายนอกเป็นหลัก จึงเป็นหลักฐานของตรรกะและการจัดการข้อผิดพลาดภายใน Backend ไม่ใช่หลักฐานว่าการส่ง OTP จริงหรือทุก HTTP endpoint ทำงานกับฐานข้อมูลจริงได้ครบทุกเส้นทาง รายงาน Coverage ของ Node.js สำหรับไฟล์ที่ถูกโหลดระหว่างรันชุดทดสอบระบุ Line Coverage ร้อยละ 80.11, Branch Coverage ร้อยละ 83.15 และ Function Coverage ร้อยละ 57.58 ค่า Line Coverage ผ่านเกณฑ์ร้อยละ 80 ที่กำหนดไว้ แต่ไม่ใช่การวัดทุกไฟล์ใน Backend รวมทั้งไฟล์ที่ไม่ได้ถูกโหลด เช่น จุดเริ่มเซิร์ฟเวอร์หรือ migration และไม่ใช่การทดสอบแบบ end-to-end
+
+เมื่อเทียบกับแผนในตารางที่~\ref{tab:backend-unit-test-cases} มีกรณีทดสอบสำหรับ UT-01 ถึง UT-08 แล้ว โดย UT-08 ครอบคลุมการตรวจข้อมูล Wellness, Onboarding และ RPE ที่ไม่ถูกต้องหรือเกินขอบเขตบางกรณี อย่างไรก็ตาม Coverage ไม่เท่ากันทุกโมดูล: ตัวอย่างเช่น \texttt{clubService.js} มี Line Coverage ร้อยละ 36.33 และ \texttt{runningService.js} ร้อยละ 65.38 จึงยังต้องเพิ่มกรณีทดสอบเชิงพฤติกรรมในส่วนดังกล่าว รวมถึงทดสอบการเชื่อม Supabase OTP และ API ที่ต้องยืนยันตัวตนกับสภาพแวดล้อมทดสอบจริง
+
+\subsection{ผลการทดสอบ HTTP API บนเซิร์ฟเวอร์จริง}
+
+ส่งคำขอไปยัง Render ด้วย PowerShell \texttt{Invoke-WebRequest} และตรวจ HTTP status, ค่า \texttt{success} และข้อความใน JSON response โดยใช้เฉพาะกรณีที่ไม่สร้างบัญชี ไม่ส่ง OTP และไม่แก้ข้อมูลธุรกิจของผู้ใช้ อย่างไรก็ตาม middleware ของระบบบันทึกคำขอทดสอบลงตาราง \texttt{usage\_log} ตามปกติ ผลกรณีย่อยที่รัน 16 รายการตรงตามคาด 15 รายการ และต่างจากที่คาด 1 รายการ ดังตารางที่~\ref{tab:backend-http-results} จำนวนนี้ไม่ใช่จำนวน endpoint ที่ผ่านครบทุกฟังก์ชัน
+
+\begin{table}[H]
+\centering
+\small
+\caption{ผลการทดสอบ HTTP API บน Render}
+\label{tab:backend-http-results}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{0.18\textwidth}|>{\raggedright\arraybackslash}p{0.43\textwidth}|>{\raggedright\arraybackslash}p{0.26\textwidth}|}
+\hline
+\textbf{อ้างอิงแผน} & \textbf{กรณีย่อยที่รัน} & \textbf{ผลจริง} \\ \hline
+API-01 & \texttt{GET /api/health} โดยไม่ใช้ token & 200, \texttt{success=true}; ผ่าน 1 \\ \hline
+API-02 & \texttt{GET /api/auth/me} ไม่มี token และใช้ token ไม่ถูกต้อง & 401 ทั้ง 2 กรณี; ผ่าน 2 \\ \hline
+API-03 & ขอ/ตรวจ OTP ด้วยข้อมูลไม่ครบ, refresh ด้วยข้อมูลไม่ครบ และเข้าสู่ระบบด้วยอีเมลที่ไม่มีบัญชี & 400, 400, 400, 404 ตามลำดับ; ผ่าน 4 \\ \hline
+API-04--08, API-10--12 & เรียก onboarding, users, wellness, programs, running, friends, clubs และ shop โดยไม่มี token & 401 ทั้ง 8 กลุ่ม; ผ่าน 8 เฉพาะด่านยืนยันตัวตน \\ \hline
+กรณีเสริม & \texttt{GET /api/does-not-exist} โดยไม่มี token & คาด 404 แต่ได้ 401; ไม่ผ่าน 1 \\ \hline
+\textbf{รวม} & \textbf{16 กรณีย่อย} & \textbf{ผ่าน 15; ไม่ผ่าน 1} \\ \hline
+\end{tabular}
+\end{table}
+
+กรณีเสริมที่ไม่ผ่านแสดงว่า URL ที่ไม่มี endpoint ถูก middleware ยืนยันตัวตนปฏิเสธก่อนถึงตัวจัดการ 404 ของระบบ จึงควรปรับลำดับ route หรือขอบเขต middleware แล้วทดสอบซ้ำ ทั้งนี้ผล 401 ของกลุ่ม API-04--08 และ API-10--12 ยืนยันเพียงว่าคำขอที่ไม่มี token ถูกปฏิเสธ ไม่ได้ยืนยันการอ่านหรือบันทึกข้อมูลหลังเข้าสู่ระบบ
+
+Postman collection ของโครงงานมี request ที่เตรียมไว้ 53 รายการ แต่ไม่ได้รัน collection ทั้งชุด จึงไม่นำจำนวนดังกล่าวมารวมกับผล 16 กรณีย่อยข้างต้น ผลรอบนี้เป็นการตรวจเบื้องต้นก่อนมีบัญชีทดสอบ ส่วนผลหลังเข้าสู่ระบบแสดงแยกในหัวข้อถัดไป เพื่อไม่ให้จำนวนคำขอของสองรอบถูกนับปนกัน
+
+\subsection{ผลการทดสอบ API หลังเข้าสู่ระบบด้วยบัญชีทดสอบ}
+
+ผู้ทดสอบสร้างบัญชีเฉพาะสำหรับการทดสอบบน Render โดยยอมรับนโยบายของระบบและยืนยัน Email OTP ผ่าน API จริง คำขอเตรียมระบบ ได้แก่ \texttt{GET /api/health} ได้ 200, ขอ OTP เพื่อเข้าสู่ระบบก่อนสมัครได้ 404, ขอ OTP เพื่อสมัครได้ 200 และยืนยัน OTP ได้ 200 พร้อม access token กับ refresh token หลังจากนั้นเก็บ token ไว้ในหน่วยความจำระหว่างการทดสอบ ไม่ใส่รหัส OTP หรือ token ในเอกสาร บัญชีนี้ใช้ข้อมูลโปรไฟล์จำลอง ไม่ใช่ข้อมูลสุขภาพของบุคคลจริง
+
+ส่งคำขอ HTTP ไปยัง \texttt{https://pacegasus-api.onrender.com/api} โดยใช้ token ที่ได้จากการยืนยัน OTP สำหรับ endpoint ที่ต้องเข้าสู่ระบบ ใช้รหัสทรัพยากรที่ตอบกลับจากคำขอก่อนหน้า เช่น session, quest, สินค้า และคลับ แทนการสมมติรหัสขึ้นเอง ตรวจ HTTP status, ค่า \texttt{success} และในกรณีที่มีการบันทึกข้อมูล ตรวจผลจากคำขออ่านข้อมูลกลับด้วย คำขอที่ตั้งใจทดสอบการปฏิเสธ เช่น token ผิดหรือข้อมูลซ้ำ จะนับว่าผ่านเมื่อได้ status ปฏิเสธตามที่คาด ตารางที่~\ref{tab:backend-authenticated-results} แสดงสถานะผลล่าสุดของกรณีทดสอบ 70 รายการหลังยืนยันบัญชีสำเร็จ
+
+\begingroup
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.60\textwidth}|>{\centering\arraybackslash}p{0.11\textwidth}|}
+\caption{ผลล่าสุดของกรณีทดสอบ API หลังเข้าสู่ระบบบน Render แยกตามโมดูล}\label{tab:backend-authenticated-results}\\ \hline
+\textbf{โมดูล} & \textbf{คำขอและผลที่ตรวจสอบ} & \textbf{ผ่าน/ทั้งหมด} \\ \hline
+\endfirsthead
+\hline
+\textbf{โมดูล} & \textbf{คำขอและผลที่ตรวจสอบ} & \textbf{ผ่าน/ทั้งหมด} \\ \hline
+\endhead
+Auth & \texttt{GET /auth/me} ได้ 200; หมุน refresh token ได้ 200 และใช้ตัวเก่าซ้ำได้ 401; token ผิดได้ 401; logout ได้ 200 และ refresh หลัง logout ได้ 401 & 8/8 \\ \hline
+Onboarding & สถานะเริ่มที่ขั้น 0; \texttt{PUT /onboarding/step2} ก่อนขั้น 1 ได้ 400; บันทึกขั้น 1--4 ได้ 200 ทุกขั้น; อ่านสถานะกลับได้ขั้น 4 และ \texttt{completed=true} & 9/9 \\ \hline
+Programs & อ่านแม่แบบได้ 200; เริ่มโปรแกรมอัตโนมัติได้ 201; อ่านสัปดาห์ได้ 200; ทำภารกิจหลักได้ 200 และทำซ้ำไม่มีรางวัลเพิ่ม; \texttt{GET /programs/quests} ได้ 200 และ \texttt{success=true} ทั้งสองครั้ง & 10/10 \\ \hline
+Wellness & อ่านสถานะรายวันได้ 200; สร้าง check-in ได้ 201; อ่านสถานะหลังสร้างได้ 200; สร้างซ้ำวันเดียวกันได้ 409 & 4/4 \\ \hline
+Running Sessions & เริ่ม Session สองรายการได้ 201; อ่านรายละเอียดได้ 200; ปิด Session ทั้งสองรายการได้ 200; อ่านประวัติกลับพบ Session ที่ปิดแล้ว & 6/6 \\ \hline
+RPE & คะแนนนอกช่วงได้ 400; บันทึก RPE ที่ผูกกับ Session ได้ 201; อ่านประวัติและดัชนีความเสี่ยงได้ 200 & 4/4 \\ \hline
+Side Quest & \texttt{GET /quests/side} ได้ 3 ภารกิจ; เริ่มภารกิจใน Session ได้ 201; อัปเดตความคืบหน้าและอ่านอัลบั้มได้ 200 & 4/4 \\ \hline
+Users & อ่านความก้าวหน้าและยอดเหรียญก่อน/หลังซื้อสินค้าได้ 200; หลังซื้อสินค้าราคา 20 เหรียญ ยอดลดจาก 20 เหลือ 0 & 3/3 \\ \hline
+Avatar & อ่านช่องแต่งตัว Avatar ของตนเอง และคลังไอเท็มได้ 200 ทั้งหมด & 3/3 \\ \hline
+Shop & อ่านรายการและรายละเอียดสินค้าได้ 200; ซื้อสินค้าได้ 201; ซื้อชิ้นเดิมซ้ำได้ 409; อ่านประวัติการซื้อได้ 200 & 6/6 \\ \hline
+Friends & อ่านรายชื่อและคำขอเป็นเพื่อนได้ 200; ส่งคำขอเป็นเพื่อนให้ตนเองได้ 400 & 3/3 \\ \hline
+Clubs & ค้นหาและตรวจคลับของตนได้ 200; สร้างคลับทดสอบได้ 201; อ่านรายละเอียดและสิทธิ์ได้ 200; แก้ไขและยุบคลับได้ 200; อ่านคลับที่ยุบแล้วได้ 404 & 9/9 \\ \hline
+เส้นทางที่ไม่มี & \texttt{GET /does-not-exist} เมื่อใช้ token ถูกต้องได้ 404; ต่างจากรอบก่อนที่ไม่มี token แล้วได้ 401 & 1/1 \\ \hline
+\textbf{รวม} & \textbf{กรณีทดสอบที่มีผลล่าสุดตรงตามที่คาด 70 รายการ} & \textbf{70/70} \\ \hline
+\end{longtable}
+\endgroup
+
+ตารางนี้สรุปผลล่าสุดแยกตามกรณีทดสอบ ไม่ใช่การรัน 70 คำขอพร้อมกันบน commit เดียว: 68 กรณีมีผลผ่านจากการรันชุดหลัก และอีก 2 กรณีคือ \texttt{GET /api/programs/quests} ที่ยืนยันด้วย Email OTP ใหม่แล้วตรวจซ้ำบน Render เมื่อ commit \texttt{c8b74c2} แสดงสถานะ \texttt{Live} โดยได้ HTTP 200 และ \texttt{success=true} ทั้งสองครั้ง ชุด Unit Test ของ backend ผ่าน 126/126 รายการ และ Line Coverage ร้อยละ 80.11 ทั้งนี้ยังไม่ได้รัน 70 คำขอทั้งหมดใหม่บน commit ล่าสุด
+
+ผลนี้ยืนยัน workflow สำคัญของบัญชีทดสอบได้หลายส่วน แต่ไม่ใช่ผลผ่านของทุก endpoint ในระบบ กรณีที่ยังไม่ได้ตรวจบน Render ได้แก่ Google sign-in, การเชิญและตอบรับเพื่อนระหว่างสองบัญชี, สิทธิ์เข้าถึงข้อมูลของผู้ใช้อื่น, การปรับสิทธิ์สมาชิกคลับ, การอัปโหลด Avatar และกรณีซื้อสินค้าเมื่อเหรียญไม่พอ ข้อมูลที่สร้างระหว่างทดสอบยังอยู่ในบัญชีทดสอบ ได้แก่ Onboarding, โปรแกรมฝึก, Session, RPE, Wellness, Side Quest และสินค้าที่ซื้อ; คลับทดสอบถูกยุบแล้ว
+
 \section{สรุปผลการพัฒนา}
 
 ผลการดำเนินงานในบทนี้แสดงให้เห็นว่า Pacegasus สามารถพัฒนาเป็นแอปพลิเคชันต้นแบบที่รองรับเส้นทางการใช้งานหลักได้ครบถ้วน ตั้งแต่การเข้าสู่ระบบและสมัครสมาชิก การยืนยัน OTP การกรอกข้อมูลพื้นฐานและข้อมูลสุขภาพ การกำหนดเป้าหมาย การเลือกแผนการฝึก การประเมินความพร้อมประจำวัน การเริ่ม Session การวิ่ง การประเมินหลังวิ่ง และการรับรางวัล

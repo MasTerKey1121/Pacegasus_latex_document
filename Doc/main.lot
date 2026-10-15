@@ -3,61 +3,92 @@
 \contentsline {table}{\numberline {1}{\ignorespaces การเปรียบเทียบคุณลักษณะของแอปพลิเคชันวิ่งที่เกี่ยวข้อง}}{6}{table.caption.5}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2}{\ignorespaces เกณฑ์การแบ่งระดับนักวิ่งในระบบ Pacegasus}}{9}{table.caption.6}%
-\contentsline {table}{\numberline {3}{\ignorespaces สรุปขั้นตอน เครื่องมือ และผลลัพธ์ของการวิจัย}}{14}{table.caption.8}%
-\contentsline {table}{\numberline {4}{\ignorespaces รายการฮาร์ดแวร์ที่ใช้ในการพัฒนา}}{14}{table.caption.9}%
-\contentsline {table}{\numberline {5}{\ignorespaces รายการซอฟต์แวร์ที่ใช้ในการพัฒนา}}{15}{table.caption.10}%
-\contentsline {table}{\numberline {6}{\ignorespaces แผนการดำเนินงาน (Gantt Chart)}}{15}{table.caption.11}%
+\contentsline {table}{\numberline {3}{\ignorespaces แผนกรณีทดสอบฟังก์ชันภายใน Backend (Unit Test)}}{14}{table.caption.8}%
+\contentsline {table}{\numberline {4}{\ignorespaces แผนกรณีทดสอบ REST API ฝั่ง Backend}}{15}{table.caption.9}%
+\contentsline {table}{\numberline {5}{\ignorespaces แผนการทดสอบสมัครสมาชิกและ Onboarding}}{16}{table.3.5}%
+\contentsline {table}{\numberline {6}{\ignorespaces แผนการทดสอบ Daily Wellness โปรแกรมและตารางฝึกซ้อม}}{17}{table.3.6}%
+\contentsline {table}{\numberline {7}{\ignorespaces แผนการทดสอบบันทึกวิ่ง สรุปผล ประวัติ สถิติ และอันดับ}}{19}{table.3.7}%
+\contentsline {table}{\numberline {8}{\ignorespaces แผนการทดสอบโปรไฟล์และบัญชี}}{21}{table.3.8}%
+\contentsline {table}{\numberline {9}{\ignorespaces แผนการทดสอบเพื่อน}}{21}{table.3.9}%
+\contentsline {table}{\numberline {10}{\ignorespaces แผนการทดสอบคลับ}}{22}{table.3.10}%
+\contentsline {table}{\numberline {11}{\ignorespaces แผนการทดสอบร้านค้าและ Avatar}}{23}{table.3.11}%
+\contentsline {table}{\numberline {12}{\ignorespaces สรุปขั้นตอน เครื่องมือ และผลลัพธ์ของการวิจัย}}{27}{table.caption.10}%
+\contentsline {table}{\numberline {13}{\ignorespaces รายการฮาร์ดแวร์ที่ใช้ในการพัฒนา}}{27}{table.caption.11}%
+\contentsline {table}{\numberline {14}{\ignorespaces รายการซอฟต์แวร์ที่ใช้ในการพัฒนา}}{28}{table.caption.12}%
+\contentsline {table}{\numberline {15}{\ignorespaces แผนการดำเนินงาน (Gantt Chart)}}{28}{table.caption.13}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7}{\ignorespaces สรุปทฤษฎีและแนวทางการนำมาประยุกต์ใช้ในระบบ Pacegasus}}{17}{table.caption.12}%
-\contentsline {table}{\numberline {8}{\ignorespaces ตารางข้อมูล Side Quest}}{19}{table.4.8}%
-\contentsline {table}{\numberline {9}{\ignorespaces Use Case Description: สมัครสมาชิก}}{46}{table.4.9}%
-\contentsline {table}{\numberline {10}{\ignorespaces Use Case Description: เข้าสู่ระบบ}}{47}{table.4.10}%
-\contentsline {table}{\numberline {11}{\ignorespaces Use Case Description: เข้าสู่ระบบด้วย Google}}{47}{table.4.11}%
-\contentsline {table}{\numberline {12}{\ignorespaces Use Case Description: ออกจากระบบ}}{48}{table.4.12}%
-\contentsline {table}{\numberline {13}{\ignorespaces Use Case Description: กรอกข้อมูลพื้นฐาน}}{48}{table.4.13}%
-\contentsline {table}{\numberline {14}{\ignorespaces Use Case Description: เลือกอาการบาดเจ็บและโรคประจำตัว}}{48}{table.4.14}%
-\contentsline {table}{\numberline {15}{\ignorespaces Use Case Description: กรอกประวัติการวิ่ง}}{49}{table.4.15}%
-\contentsline {table}{\numberline {16}{\ignorespaces Use Case Description: ตั้งเป้าหมายการวิ่ง}}{49}{table.4.16}%
-\contentsline {table}{\numberline {17}{\ignorespaces Use Case Description: บันทึกโปรไฟล์}}{50}{table.4.17}%
-\contentsline {table}{\numberline {18}{\ignorespaces Use Case Description: Daily Wellness Check-in}}{50}{table.4.18}%
-\contentsline {table}{\numberline {19}{\ignorespaces Use Case Description: เริ่มเซสชันการวิ่ง}}{50}{table.4.19}%
-\contentsline {table}{\numberline {20}{\ignorespaces Use Case Description: ทำภารกิจระหว่างวิ่ง}}{51}{table.4.20}%
-\contentsline {table}{\numberline {21}{\ignorespaces Use Case Description: กดจบเซสชันการวิ่ง}}{51}{table.4.21}%
-\contentsline {table}{\numberline {22}{\ignorespaces Use Case Description: ดูผลลัพธ์การวิ่ง}}{51}{table.4.22}%
-\contentsline {table}{\numberline {23}{\ignorespaces Use Case Description: ทำแบบทดสอบหลังวิ่ง}}{52}{table.4.23}%
-\contentsline {table}{\numberline {24}{\ignorespaces Use Case Description: เลือกบท}}{52}{table.4.24}%
-\contentsline {table}{\numberline {25}{\ignorespaces Use Case Description: ทำภารกิจ}}{52}{table.4.25}%
-\contentsline {table}{\numberline {26}{\ignorespaces Use Case Description: กดจบภารกิจ}}{53}{table.4.26}%
-\contentsline {table}{\numberline {27}{\ignorespaces Data Dictionary: User}}{53}{table.4.27}%
-\contentsline {table}{\numberline {28}{\ignorespaces Data Dictionary: UserProfile}}{54}{table.4.28}%
-\contentsline {table}{\numberline {29}{\ignorespaces Data Dictionary: UserGamification}}{54}{table.4.29}%
-\contentsline {table}{\numberline {30}{\ignorespaces Data Dictionary: UserTickets}}{54}{table.4.30}%
-\contentsline {table}{\numberline {31}{\ignorespaces Data Dictionary: Club}}{55}{table.4.31}%
-\contentsline {table}{\numberline {32}{\ignorespaces Data Dictionary: ClubMember}}{55}{table.4.32}%
-\contentsline {table}{\numberline {33}{\ignorespaces Data Dictionary: ClubLeaderboard}}{55}{table.4.33}%
-\contentsline {table}{\numberline {34}{\ignorespaces Data Dictionary: TowerFloor}}{55}{table.4.34}%
-\contentsline {table}{\numberline {35}{\ignorespaces Data Dictionary: TowerMission}}{56}{table.4.35}%
-\contentsline {table}{\numberline {36}{\ignorespaces Data Dictionary: UserFloorProgress}}{56}{table.4.36}%
-\contentsline {table}{\numberline {37}{\ignorespaces Data Dictionary: UserMissionProgress}}{56}{table.4.37}%
-\contentsline {table}{\numberline {38}{\ignorespaces Data Dictionary: TowerAttemptLog}}{57}{table.4.38}%
-\contentsline {table}{\numberline {39}{\ignorespaces Data Dictionary: TicketTransaction}}{57}{table.4.39}%
-\contentsline {table}{\numberline {40}{\ignorespaces Data Dictionary: Friendship}}{57}{table.4.40}%
-\contentsline {table}{\numberline {41}{\ignorespaces Data Dictionary: FriendActivity}}{57}{table.4.41}%
-\contentsline {table}{\numberline {42}{\ignorespaces Data Dictionary: OutterAPI}}{58}{table.4.42}%
-\contentsline {table}{\numberline {43}{\ignorespaces Data Dictionary: TotalStats}}{58}{table.4.43}%
-\contentsline {table}{\numberline {44}{\ignorespaces Data Dictionary: Badge}}{58}{table.4.44}%
-\contentsline {table}{\numberline {45}{\ignorespaces Data Dictionary: BadgeCondition}}{59}{table.4.45}%
-\contentsline {table}{\numberline {46}{\ignorespaces Data Dictionary: Avatar}}{59}{table.4.46}%
-\contentsline {table}{\numberline {47}{\ignorespaces Data Dictionary: AvatarItem}}{59}{table.4.47}%
-\contentsline {table}{\numberline {48}{\ignorespaces Data Dictionary: Leaderboard}}{60}{table.4.48}%
-\contentsline {table}{\numberline {49}{\ignorespaces Data Dictionary: DailyWellness}}{60}{table.4.49}%
-\contentsline {table}{\numberline {50}{\ignorespaces Data Dictionary: InjuryReport}}{60}{table.4.50}%
-\contentsline {table}{\numberline {51}{\ignorespaces Data Dictionary: TrainingPlan}}{61}{table.4.51}%
-\contentsline {table}{\numberline {52}{\ignorespaces Data Dictionary: PostRunSurvey}}{61}{table.4.52}%
-\contentsline {table}{\numberline {53}{\ignorespaces Data Dictionary: TrainingSession}}{61}{table.4.53}%
-\contentsline {table}{\numberline {54}{\ignorespaces Data Dictionary: RunningActivity}}{62}{table.4.54}%
-\contentsline {table}{\numberline {55}{\ignorespaces Data Dictionary: PersonalRecord}}{62}{table.4.55}%
-\contentsline {table}{\numberline {56}{\ignorespaces Data Dictionary: PlanRule}}{62}{table.4.56}%
+\contentsline {table}{\numberline {16}{\ignorespaces สรุปทฤษฎีและแนวทางการนำมาประยุกต์ใช้ในระบบ Pacegasus}}{30}{table.caption.14}%
+\contentsline {table}{\numberline {17}{\ignorespaces ตารางข้อมูล Side Quest}}{32}{table.4.17}%
+\contentsline {table}{\numberline {33}{\ignorespaces Use Case Description: UC-01 สมัครสมาชิกด้วย Email OTP}}{65}{table.4.33}%
+\contentsline {table}{\numberline {34}{\ignorespaces Use Case Description: UC-02 เข้าสู่ระบบด้วย Email OTP}}{66}{table.4.34}%
+\contentsline {table}{\numberline {35}{\ignorespaces Use Case Description: UC-03 เข้าสู่ระบบด้วย Google}}{67}{table.4.35}%
+\contentsline {table}{\numberline {36}{\ignorespaces Use Case Description: UC-04 ออกจากระบบ}}{68}{table.4.36}%
+\contentsline {table}{\numberline {37}{\ignorespaces Use Case Description: UC-05 จัดทำโปรไฟล์ครั้งแรก}}{69}{table.4.37}%
+\contentsline {table}{\numberline {38}{\ignorespaces Use Case Description: UC-06 แก้ไขโปรไฟล์}}{70}{table.4.38}%
+\contentsline {table}{\numberline {39}{\ignorespaces Use Case Description: UC-07 บันทึกสุขภาวะประจำวัน}}{71}{table.4.39}%
+\contentsline {table}{\numberline {40}{\ignorespaces Use Case Description: UC-08 เลือกแผนการฝึก}}{72}{table.4.40}%
+\contentsline {table}{\numberline {41}{\ignorespaces Use Case Description: UC-09 จัดตารางฝึก}}{73}{table.4.41}%
+\contentsline {table}{\numberline {42}{\ignorespaces Use Case Description: UC-10 ดูคำแนะนำและผลปรับแผน}}{74}{table.4.42}%
+\contentsline {table}{\numberline {43}{\ignorespaces Use Case Description: UC-11 เริ่มเซสชันการวิ่ง}}{75}{table.4.43}%
+\contentsline {table}{\numberline {44}{\ignorespaces Use Case Description: UC-12 ทำภารกิจระหว่างวิ่ง}}{76}{table.4.44}%
+\contentsline {table}{\numberline {45}{\ignorespaces Use Case Description: UC-13 สิ้นสุดเซสชันการวิ่ง}}{77}{table.4.45}%
+\contentsline {table}{\numberline {46}{\ignorespaces Use Case Description: UC-14 ดูผลลัพธ์และประวัติการวิ่ง}}{78}{table.4.46}%
+\contentsline {table}{\numberline {47}{\ignorespaces Use Case Description: UC-15 บันทึกการประเมินหลังวิ่ง}}{79}{table.4.47}%
+\contentsline {table}{\numberline {48}{\ignorespaces Use Case Description: UC-16 เลือกบทและเริ่มภารกิจหลัก}}{80}{table.4.48}%
+\contentsline {table}{\numberline {49}{\ignorespaces Use Case Description: UC-17 สิ้นสุดภารกิจและรับรางวัล}}{81}{table.4.49}%
+\contentsline {table}{\numberline {50}{\ignorespaces Use Case Description: UC-18 จัดการชมรม}}{82}{table.4.50}%
+\contentsline {table}{\numberline {51}{\ignorespaces Use Case Description: UC-19 เข้าร่วมหรือออกจากชมรม}}{83}{table.4.51}%
+\contentsline {table}{\numberline {52}{\ignorespaces Use Case Description: UC-20 จัดการสมาชิกในชมรม}}{84}{table.4.52}%
+\contentsline {table}{\numberline {53}{\ignorespaces Use Case Description: UC-21 จัดการรายชื่อเพื่อน}}{85}{table.4.53}%
+\contentsline {table}{\numberline {54}{\ignorespaces Use Case Description: UC-22 ซื้อไอเทม}}{86}{table.4.54}%
+\contentsline {table}{\numberline {55}{\ignorespaces Use Case Description: UC-23 จัดการอวตาร์}}{87}{table.4.55}%
+\contentsline {table}{\numberline {56}{\ignorespaces Use Case Description: UC-24 ดูตารางจัดอันดับ}}{88}{table.4.56}%
+\contentsline {table}{\numberline {57}{\ignorespaces Use Case Description: UC-25 เชื่อมต่อและนำเข้าการวิ่งจาก Strava}}{89}{table.4.57}%
+\contentsline {table}{\numberline {58}{\ignorespaces Data Dictionary: users (ผู้ใช้งาน)}}{90}{table.4.58}%
+\contentsline {table}{\numberline {59}{\ignorespaces Data Dictionary: user\_\allowbreak {}auth\_\allowbreak {}providers (ช่องทางยืนยันตัวตนของผู้ใช้)}}{90}{table.4.59}%
+\contentsline {table}{\numberline {60}{\ignorespaces Data Dictionary: otp\_\allowbreak {}codes (รหัส OTP)}}{91}{table.4.60}%
+\contentsline {table}{\numberline {61}{\ignorespaces Data Dictionary: refresh\_\allowbreak {}tokens (โทเคนต่ออายุการเข้าสู่ระบบ)}}{91}{table.4.61}%
+\contentsline {table}{\numberline {62}{\ignorespaces Data Dictionary: user\_\allowbreak {}basic\_\allowbreak {}info (ข้อมูลพื้นฐานของผู้ใช้)}}{92}{table.4.62}%
+\contentsline {table}{\numberline {63}{\ignorespaces Data Dictionary: user\_\allowbreak {}running\_\allowbreak {}history (ประวัติการวิ่งก่อนใช้ระบบ)}}{92}{table.4.63}%
+\contentsline {table}{\numberline {64}{\ignorespaces Data Dictionary: user\_\allowbreak {}injury\_\allowbreak {}summary (สรุปประวัติบาดเจ็บและโรคประจำตัว)}}{93}{table.4.64}%
+\contentsline {table}{\numberline {65}{\ignorespaces Data Dictionary: user\_\allowbreak {}injuries (รายการบาดเจ็บและโรคประจำตัว)}}{93}{table.4.65}%
+\contentsline {table}{\numberline {66}{\ignorespaces Data Dictionary: user\_\allowbreak {}goals (เป้าหมายการวิ่งของผู้ใช้)}}{93}{table.4.66}%
+\contentsline {table}{\numberline {67}{\ignorespaces Data Dictionary: experience\_\allowbreak {}level\_\allowbreak {}ranks (ลำดับระดับประสบการณ์)}}{93}{table.4.67}%
+\contentsline {table}{\numberline {68}{\ignorespaces Data Dictionary: program\_\allowbreak {}templates (แม่แบบแผนการฝึก)}}{94}{table.4.68}%
+\contentsline {table}{\numberline {69}{\ignorespaces Data Dictionary: program\_\allowbreak {}phases (ช่วงของแผนการฝึก)}}{94}{table.4.69}%
+\contentsline {table}{\numberline {70}{\ignorespaces Data Dictionary: session\_\allowbreak {}type\_\allowbreak {}specs (เกณฑ์ของประเภทการฝึกในแต่ละแผน)}}{94}{table.4.70}%
+\contentsline {table}{\numberline {71}{\ignorespaces Data Dictionary: program\_\allowbreak {}sequencing\_\allowbreak {}rules (กฎลำดับการฝึก)}}{95}{table.4.71}%
+\contentsline {table}{\numberline {72}{\ignorespaces Data Dictionary: user\_\allowbreak {}programs (แผนการฝึกที่ผู้ใช้ลงทะเบียน)}}{96}{table.4.72}%
+\contentsline {table}{\numberline {73}{\ignorespaces Data Dictionary: user\_\allowbreak {}program\_\allowbreak {}baselines (ค่าฐานของผู้ใช้ในแต่ละแผน)}}{96}{table.4.73}%
+\contentsline {table}{\numberline {74}{\ignorespaces Data Dictionary: user\_\allowbreak {}program\_\allowbreak {}completion (ความคืบหน้าหน่วยกิตของแผน)}}{96}{table.4.74}%
+\contentsline {table}{\numberline {75}{\ignorespaces Data Dictionary: main\_\allowbreak {}quest\_\allowbreak {}instances (ภารกิจหลักตามตารางฝึก)}}{97}{table.4.75}%
+\contentsline {table}{\numberline {76}{\ignorespaces Data Dictionary: running\_\allowbreak {}sessions (เซสชันการวิ่ง)}}{97}{table.4.76}%
+\contentsline {table}{\numberline {77}{\ignorespaces Data Dictionary: rpe\_\allowbreak {}logs (บันทึกการประเมินหลังวิ่ง)}}{98}{table.4.77}%
+\contentsline {table}{\numberline {78}{\ignorespaces Data Dictionary: daily\_\allowbreak {}wellness\_\allowbreak {}checkins (Check-in สุขภาวะประจำวัน)}}{99}{table.4.78}%
+\contentsline {table}{\numberline {79}{\ignorespaces Data Dictionary: side\_\allowbreak {}quest\_\allowbreak {}templates (แม่แบบภารกิจเสริม)}}{99}{table.4.79}%
+\contentsline {table}{\numberline {80}{\ignorespaces Data Dictionary: user\_\allowbreak {}side\_\allowbreak {}quest\_\allowbreak {}instances (ภารกิจเสริมของผู้ใช้)}}{100}{table.4.80}%
+\contentsline {table}{\numberline {81}{\ignorespaces Data Dictionary: quest\_\allowbreak {}album\_\allowbreak {}photos (รูปในอัลบั้มภารกิจเสริม)}}{100}{table.4.81}%
+\contentsline {table}{\numberline {82}{\ignorespaces Data Dictionary: user\_\allowbreak {}environment\_\allowbreak {}progress (ความคืบหน้าแยกตามสภาพแวดล้อม)}}{101}{table.4.82}%
+\contentsline {table}{\numberline {83}{\ignorespaces Data Dictionary: user\_\allowbreak {}game\_\allowbreak {}progress (ความคืบหน้าเกมของผู้ใช้)}}{101}{table.4.83}%
+\contentsline {table}{\numberline {84}{\ignorespaces Data Dictionary: game\_\allowbreak {}reward\_\allowbreak {}events (เหตุการณ์การให้รางวัล)}}{101}{table.4.84}%
+\contentsline {table}{\numberline {85}{\ignorespaces Data Dictionary: user\_\allowbreak {}badges (เหรียญตราที่ผู้ใช้ได้รับ)}}{102}{table.4.85}%
+\contentsline {table}{\numberline {86}{\ignorespaces Data Dictionary: avatar\_\allowbreak {}slots (ช่องแต่งตัวของอวตาร์)}}{102}{table.4.86}%
+\contentsline {table}{\numberline {87}{\ignorespaces Data Dictionary: avatar\_\allowbreak {}items (ไอเท็มแต่งตัว)}}{102}{table.4.87}%
+\contentsline {table}{\numberline {88}{\ignorespaces Data Dictionary: user\_\allowbreak {}avatars (อวตาร์ของผู้ใช้)}}{103}{table.4.88}%
+\contentsline {table}{\numberline {89}{\ignorespaces Data Dictionary: user\_\allowbreak {}avatar\_\allowbreak {}items (ไอเท็มที่ผู้ใช้เป็นเจ้าของ)}}{103}{table.4.89}%
+\contentsline {table}{\numberline {90}{\ignorespaces Data Dictionary: user\_\allowbreak {}avatar\_\allowbreak {}equipment (ชุดที่ผู้ใช้สวมใส่อยู่)}}{104}{table.4.90}%
+\contentsline {table}{\numberline {91}{\ignorespaces Data Dictionary: shop\_\allowbreak {}listings (รอบขายไอเท็ม)}}{104}{table.4.91}%
+\contentsline {table}{\numberline {92}{\ignorespaces Data Dictionary: shop\_\allowbreak {}purchases (ประวัติการซื้อไอเท็ม)}}{104}{table.4.92}%
+\contentsline {table}{\numberline {93}{\ignorespaces Data Dictionary: clubs (ชมรม)}}{105}{table.4.93}%
+\contentsline {table}{\numberline {94}{\ignorespaces Data Dictionary: club\_\allowbreak {}members (สมาชิกชมรม)}}{105}{table.4.94}%
+\contentsline {table}{\numberline {95}{\ignorespaces Data Dictionary: club\_\allowbreak {}role\_\allowbreak {}permissions (สิทธิ์ของแต่ละยศในชมรม)}}{106}{table.4.95}%
+\contentsline {table}{\numberline {96}{\ignorespaces Data Dictionary: club\_\allowbreak {}join\_\allowbreak {}requests (คำขอและคำเชิญเข้าชมรม)}}{106}{table.4.96}%
+\contentsline {table}{\numberline {97}{\ignorespaces Data Dictionary: friendships (ความสัมพันธ์เพื่อน)}}{106}{table.4.97}%
+\contentsline {table}{\numberline {98}{\ignorespaces Data Dictionary: usage\_\allowbreak {}log (บันทึกการเรียก API)}}{107}{table.4.98}%
+\contentsline {table}{\numberline {99}{\ignorespaces ผลการทดสอบ Backend แยกตามไฟล์และพฤติกรรมที่ตรวจสอบ}}{108}{table.4.99}%
+\contentsline {table}{\numberline {100}{\ignorespaces ผลการทดสอบ HTTP API บน Render}}{110}{table.caption.36}%
+\contentsline {table}{\numberline {101}{\ignorespaces ผลล่าสุดของกรณีทดสอบ API หลังเข้าสู่ระบบบน Render แยกตามโมดูล}}{111}{table.4.101}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {57}{\ignorespaces สรุปผลเทียบกับวัตถุประสงค์}}{64}{table.caption.34}%
-\contentsline {table}{\numberline {58}{\ignorespaces ปัญหาอุปสรรคและแนวทางแก้ไข}}{65}{table.caption.35}%
+\contentsline {table}{\numberline {102}{\ignorespaces สรุปผลเทียบกับวัตถุประสงค์}}{113}{table.caption.37}%
+\contentsline {table}{\numberline {103}{\ignorespaces สรุปผลการทดสอบ Backend}}{114}{table.caption.38}%
+\contentsline {table}{\numberline {104}{\ignorespaces ปัญหาอุปสรรคและแนวทางแก้ไข}}{116}{table.caption.39}%

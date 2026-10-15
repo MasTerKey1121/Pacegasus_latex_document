@@ -1,7 +1,6 @@
 \contentsline {chapter}{บทคัดย่อ}{\relax ก}{Doc-Start}%
 \contentsline {chapter}{ABSTRACT}{ข}{Doc-Start}%
 \contentsline {chapter}{กิตติกรรมประกาศ}{ค}{chapter*.1}%
-\contentsline {chapter}{สารบัญ}{ง}{chapter*.2}%
 \contentsline {chapter}{สารบัญภาพ}{ช}{chapter*.3}%
 \contentsline {chapter}{สารบัญตาราง}{ซ}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}บทนำ}{1}{chapter.1}%
@@ -9,7 +8,7 @@
 \contentsline {section}{\numberline {1.2}วัตถุประสงค์}{2}{section.1.2}%
 \contentsline {section}{\numberline {1.3}ขอบเขตและข้อจำกัดของระบบ}{2}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}ขอบเขต}{2}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}ข้อจำกัดของโครงงาน}{3}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.2}ข้อจำกัดของโครงงาน}{2}{subsection.1.3.2}%
 \contentsline {section}{\numberline {1.4}ประโยชน์ที่คาดว่าจะได้รับ}{3}{section.1.4}%
 \contentsline {chapter}{\numberline {2}ทฤษฎีและงานวิจัยที่เกี่ยวข้อง}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}ทฤษฎีและงานวิจัยด้านพฤติกรรมและแรงจูงใจ}{4}{section.2.1}%
@@ -27,6 +26,7 @@
 \contentsline {subsection}{\numberline {2.3.3}Acute-to-Chronic Workload Ratio}{6}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}เทคโนโลยีและแอปพลิเคชันที่เกี่ยวข้อง}{6}{section.2.4}%
 \contentsline {section}{\numberline {2.5}สรุปกรอบแนวคิดการวิจัย}{6}{section.2.5}%
+\clearpage 
 \contentsline {chapter}{\numberline {3}วิธีการดำเนินโครงงาน}{8}{chapter.3}%
 \contentsline {section}{\numberline {3.1}ขั้นตอนการดำเนินงาน}{8}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}การศึกษาทฤษฎีและงานวิจัยที่เกี่ยวข้อง}{8}{subsection.3.1.1}%
@@ -35,71 +35,78 @@
 \contentsline {subsection}{\numberline {3.1.2}การเก็บและวิเคราะห์ความต้องการ}{8}{subsection.3.1.2}%
 \contentsline {subsubsection}{\numberline {(1)}กลุ่มเป้าหมายและเกณฑ์การแบ่งระดับ}{8}{subsubsection.3.1.2.1}%
 \contentsline {subsubsection}{\numberline {(2)}วิธีการสุ่มตัวอย่างและขนาดตัวอย่าง}{9}{subsubsection.3.1.2.2}%
-\contentsline {subsubsection}{\numberline {(3)}เครื่องมือและวิธีการเก็บข้อมูล}{10}{subsubsection.3.1.2.3}%
-\contentsline {subsubsection}{\numberline {(4)}วิธีการวิเคราะห์ข้อมูล}{10}{subsubsection.3.1.2.4}%
-\contentsline {subsection}{\numberline {3.1.3}การออกแบบและพัฒนาแอปพลิเคชันต้นแบบ}{10}{subsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {(1)}การออกแบบประสบการณ์และส่วนติดต่อผู้ใช้(UX/UI Design)}{10}{subsubsection.3.1.3.1}%
-\contentsline {subsubsection}{\numberline {(2)}สถาปัตยกรรมระบบ}{10}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {(3)}เครื่องมือและวิธีการเก็บข้อมูล}{11}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {(4)}วิธีการวิเคราะห์ข้อมูล}{11}{subsubsection.3.1.2.4}%
+\contentsline {subsection}{\numberline {3.1.3}การออกแบบและพัฒนาแอปพลิเคชันต้นแบบ}{11}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {(1)}การออกแบบประสบการณ์และส่วนติดต่อผู้ใช้(UX/UI Design)}{11}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {(2)}สถาปัตยกรรมระบบ}{11}{subsubsection.3.1.3.2}%
 \contentsline {subsubsection}{\numberline {(3)}การพัฒนา Adaptive Training Engine}{12}{subsubsection.3.1.3.3}%
-\contentsline {subsubsection}{\numberline {(4)}ระดับต้นแบบที่พัฒนา}{12}{subsubsection.3.1.3.4}%
-\contentsline {subsection}{\numberline {3.1.4}การทดสอบและปรับปรุงระบบ}{12}{subsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {(1)}การทดสอบระบบในเชิงเทคนิค}{12}{subsubsection.3.1.4.1}%
-\contentsline {subsubsection}{\numberline {(2)}การทดสอบแบบ Beta Test}{12}{subsubsection.3.1.4.2}%
-\contentsline {subsection}{\numberline {3.1.5}การประเมินผล}{13}{subsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {(1)}ตัวชี้วัดเชิงปริมาณ}{13}{subsubsection.3.1.5.1}%
-\contentsline {subsubsection}{\numberline {(2)}ตัวชี้วัดเชิงคุณภาพ}{13}{subsubsection.3.1.5.2}%
-\contentsline {subsubsection}{\numberline {(3)}วิธีการวิเคราะห์และการอภิปรายผล}{13}{subsubsection.3.1.5.3}%
-\contentsline {subsubsection}{\numberline {(4)}สถานที่ดำเนินการวิจัย}{13}{subsubsection.3.1.5.4}%
-\contentsline {subsection}{\numberline {3.1.6}สรุปขั้นตอนการวิจัย}{13}{subsection.3.1.6}%
-\contentsline {section}{\numberline {3.2}เครื่องมือที่ใช้ในการดำเนินงาน}{14}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}ฮาร์ดแวร์}{14}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}ซอฟต์แวร์}{14}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}แผนการดำเนินงาน}{15}{section.3.3}%
-\contentsline {chapter}{\numberline {4}การวิเคราะห์ ออกแบบและพัฒนาระบบ}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}กรอบแนวคิดของระบบ}{16}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}ความสัมพันธ์ระหว่างกรอบแนวคิดกับฟังก์ชันของระบบ}{17}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}แผนการฝึกและการปลดล็อกระดับ}{17}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}ระดับของแผนการฝึก}{17}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}เกณฑ์หน่วยกิตและข้อจำกัดรายสัปดาห์}{18}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}กฎการลงทะเบียนและการบังคับใช้โดยระบบ}{18}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}ตารางข้อมูล Side Quest}{19}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}ผลการพัฒนาแอปพลิเคชัน}{27}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}การเข้าสู่ระบบและการสมัครสมาชิก}{27}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}การเก็บข้อมูลพื้นฐานและข้อมูลสุขภาพ}{28}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}การกำหนดเป้าหมายการวิ่ง}{29}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}หน้าหลักและ Daily Wellness Check-in}{31}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}การวิ่งและผลลัพธ์หลังวิ่ง}{32}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}ระบบรางวัลและ Gamification}{33}{subsection.4.3.6}%
-\contentsline {section}{\numberline {4.4}ผลการออกแบบระบบ (System Design)}{34}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Use Case Diagram}{34}{subsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {(1)}Authentication System}{34}{subsubsection.4.4.1.1}%
-\contentsline {subsubsection}{\numberline {(2)}กรอกข้อมูลพื้นฐาน}{35}{subsubsection.4.4.1.2}%
-\contentsline {subsubsection}{\numberline {(3)}Daily Wellness Check-in}{36}{subsubsection.4.4.1.3}%
-\contentsline {subsubsection}{\numberline {(4)}Running Session}{37}{subsubsection.4.4.1.4}%
-\contentsline {subsubsection}{\numberline {(5)}แบบทดสอบหลังวิ่ง}{38}{subsubsection.4.4.1.5}%
-\contentsline {subsubsection}{\numberline {(6)}Mission / Chapter}{39}{subsubsection.4.4.1.6}%
-\contentsline {subsubsection}{\numberline {(7)}Club Create}{40}{subsubsection.4.4.1.7}%
-\contentsline {subsubsection}{\numberline {(8)}Club Member}{41}{subsubsection.4.4.1.8}%
-\contentsline {subsubsection}{\numberline {(9)}Add Friends}{42}{subsubsection.4.4.1.9}%
-\contentsline {subsubsection}{\numberline {(10)}Coin และ Item Shop}{43}{subsubsection.4.4.1.10}%
-\contentsline {subsubsection}{\numberline {(11)}Avatar 2.5D และ Avatar Dressing}{44}{subsubsection.4.4.1.11}%
-\contentsline {subsubsection}{\numberline {(12)}Leaderboard}{45}{subsubsection.4.4.1.12}%
-\contentsline {subsection}{\numberline {4.4.2}Use Case Description}{46}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Entity Relationship Diagram (ERD)}{53}{subsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {(1)}Data Dictionary}{53}{subsubsection.4.4.3.1}%
-\contentsline {section}{\numberline {4.5}สรุปผลการพัฒนา}{63}{section.4.5}%
-\contentsline {chapter}{\numberline {5}สรุปผลการดำเนินงาน}{64}{chapter.5}%
-\contentsline {section}{\numberline {5.1}สรุปผลการดำเนินโครงงาน}{64}{section.5.1}%
-\contentsline {section}{\numberline {5.2}ข้อจำกัดของระบบ}{65}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}ข้อจำกัดด้านการทำงาน}{65}{subsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {(1)}ความแม่นยำของข้อมูลการวิ่งขึ้นอยู่กับคุณภาพสัญญาณ GPS และเซนเซอร์ของอุปกรณ์}{65}{subsubsection.5.2.1.1}%
-\contentsline {subsubsection}{\numberline {(2)}การปรับแผนการฝึกอาศัยข้อมูลที่ผู้ใช้บันทึกและประเมินตนเอง จึงอาจแตกต่างตามความถูกต้องของข้อมูลที่ผู้ใช้ให้}{65}{subsubsection.5.2.1.2}%
-\contentsline {subsection}{\numberline {5.2.2}ข้อจำกัดด้านฮาร์ดแวร์และซอฟต์แวร์}{65}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {(1)}แอปพลิเคชันต้นแบบมุ่งใช้งานบนระบบปฏิบัติการ Android}{65}{subsubsection.5.2.2.1}%
-\contentsline {subsubsection}{\numberline {(2)}ประสิทธิภาพในการติดตามการวิ่งอาจแตกต่างกันตามรุ่นและประสิทธิภาพของสมาร์ตโฟน}{65}{subsubsection.5.2.2.2}%
-\contentsline {section}{\numberline {5.3}ปัญหาอุปสรรค และแนวทางแก้ไข}{65}{section.5.3}%
-\contentsline {section}{\numberline {5.4}ข้อเสนอแนะ ในการพัฒนาต่อไป}{65}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}การปรับปรุงฟังก์ชันการทำงาน}{65}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}แนวทางการวิจัยต่อยอด}{65}{subsection.5.4.2}%
-\contentsline {chapter}{เอกสารอ้างอิง}{66}{subsection.5.4.2}%
-\contentsline {chapter}{ประวัติผู้เขียน}{68}{chapter*.37}%
+\contentsline {subsubsection}{\numberline {(4)}ระดับต้นแบบที่พัฒนา}{13}{subsubsection.3.1.3.4}%
+\contentsline {subsection}{\numberline {3.1.4}การทดสอบและปรับปรุงระบบ}{13}{subsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {(1)}การทดสอบระบบในเชิงเทคนิค}{13}{subsubsection.3.1.4.1}%
+\contentsline {subsubsection}{\numberline {(2)}วิธีการทดสอบ Unit Test และ REST API ฝั่ง Backend}{13}{subsubsection.3.1.4.2}%
+\contentsline {subsubsection}{\numberline {(3)}วิธีการทดสอบ Flutter ฝั่ง Frontend}{15}{subsubsection.3.1.4.3}%
+\contentsline {subsubsection}{\numberline {(4)}การทดสอบแบบ Beta Test}{24}{subsubsection.3.1.4.4}%
+\contentsline {subsection}{\numberline {3.1.5}การประเมินผล}{25}{subsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {(1)}ตัวชี้วัดเชิงปริมาณ (เกณฑ์อ้างอิงเชิงพรรณนา)}{25}{subsubsection.3.1.5.1}%
+\contentsline {subsubsection}{\numberline {(2)}ตัวชี้วัดเชิงคุณภาพ}{25}{subsubsection.3.1.5.2}%
+\contentsline {subsubsection}{\numberline {(3)}ตัวชี้วัดสำหรับ Adaptive Training Engine}{25}{subsubsection.3.1.5.3}%
+\contentsline {subsubsection}{\numberline {(4)}วิธีการวิเคราะห์และการอภิปรายผล}{25}{subsubsection.3.1.5.4}%
+\contentsline {subsubsection}{\numberline {(5)}ข้อจำกัดของการประเมินผล}{26}{subsubsection.3.1.5.5}%
+\contentsline {subsubsection}{\numberline {(6)}สถานที่ดำเนินการวิจัย}{26}{subsubsection.3.1.5.6}%
+\contentsline {subsection}{\numberline {3.1.6}สรุปขั้นตอนการวิจัย}{26}{subsection.3.1.6}%
+\contentsline {section}{\numberline {3.2}เครื่องมือที่ใช้ในการดำเนินงาน}{27}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}ฮาร์ดแวร์}{27}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}ซอฟต์แวร์}{27}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}แผนการดำเนินงาน}{28}{section.3.3}%
+\contentsline {chapter}{\numberline {4}การวิเคราะห์ ออกแบบและพัฒนาระบบ}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}กรอบแนวคิดของระบบ}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}ความสัมพันธ์ระหว่างกรอบแนวคิดกับฟังก์ชันของระบบ}{30}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}แผนการฝึกและการปลดล็อกระดับ}{30}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}ระดับของแผนการฝึก}{30}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}เกณฑ์หน่วยกิตและข้อจำกัดรายสัปดาห์}{31}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}กฎการลงทะเบียนและการบังคับใช้โดยระบบ}{31}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}ตารางข้อมูล Side Quest}{32}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}ผลการพัฒนาแอปพลิเคชัน}{47}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}การเข้าสู่ระบบและการสมัครสมาชิก}{47}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}การเก็บข้อมูลพื้นฐานและข้อมูลสุขภาพ}{49}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}การกำหนดเป้าหมายการวิ่ง}{49}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}หน้าโปรไฟล์}{51}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}หน้าหลักและ Daily Wellness Check-in}{51}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}การวิ่งและผลลัพธ์หลังวิ่ง}{52}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7}ระบบรางวัลและ Gamification}{53}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}หน้าจัดอันดับ (Leaderboard)}{54}{subsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.3.9}เพื่อนและการเพิ่มเพื่อน}{55}{subsection.4.3.9}%
+\contentsline {subsection}{\numberline {4.3.10}หน้าแต่งตัวและร้านค้า}{57}{subsection.4.3.10}%
+\contentsline {subsection}{\numberline {4.3.11}หน้าคลับและการจัดการคลับ}{57}{subsection.4.3.11}%
+\contentsline {section}{\numberline {4.4}ผลการออกแบบระบบ (System Design)}{59}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Use Case Diagram}{60}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Use Case Description}{63}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Entity Relationship Diagram (ERD)}{89}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {(1)}Data Dictionary}{89}{subsubsection.4.4.3.1}%
+\contentsline {section}{\numberline {4.5}ผลการตรวจสอบ REST API ฝั่ง Backend}{107}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}ผลการทดสอบฟังก์ชันภายใน (Unit Test)}{108}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}ผลการทดสอบ HTTP API บนเซิร์ฟเวอร์จริง}{110}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}ผลการทดสอบ API หลังเข้าสู่ระบบด้วยบัญชีทดสอบ}{110}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}สรุปผลการพัฒนา}{112}{section.4.6}%
+\contentsline {chapter}{\numberline {5}สรุปผลการดำเนินงาน}{113}{chapter.5}%
+\contentsline {section}{\numberline {5.1}สรุปผลการดำเนินโครงงาน}{113}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}สรุปผลการทดสอบ Backend}{114}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}ข้อจำกัดของระบบ}{115}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}ข้อจำกัดด้านการทำงาน}{115}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {(1)}ความแม่นยำของข้อมูลการวิ่งขึ้นอยู่กับคุณภาพสัญญาณ GPS และเซนเซอร์ของอุปกรณ์}{115}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {(2)}การปรับแผนการฝึกอาศัยข้อมูลที่ผู้ใช้บันทึกและประเมินตนเอง จึงอาจแตกต่างตามความถูกต้องของข้อมูลที่ผู้ใช้ให้}{115}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {(3)}ผลการทดสอบยังไม่ครอบคลุมทุกเส้นทาง ได้แก่ Google sign-in การเชิญและตอบรับเพื่อนระหว่างสองบัญชี สิทธิ์เข้าถึงข้อมูลของผู้ใช้อื่น การปรับสิทธิ์สมาชิกชมรม การอัปโหลด Avatar การซื้อสินค้าเมื่อเหรียญไม่พอ และตารางจัดอันดับ}{115}{subsubsection.5.2.1.3}%
+\contentsline {subsubsection}{\numberline {(4)}ระบบยังไม่ได้พัฒนาการเชื่อมต่อและนำเข้าข้อมูลการวิ่งจาก Strava ผู้ใช้จึงบันทึกการวิ่งผ่านแอปพลิเคชันของระบบเท่านั้น}{115}{subsubsection.5.2.1.4}%
+\contentsline {subsubsection}{\numberline {(5)}การปรับแผนด้วย Machine Learning ยังไม่ได้พัฒนา ไม่ใช่ฟังก์ชันที่ทดสอบแล้ว}{115}{subsubsection.5.2.1.5}%
+\contentsline {subsection}{\numberline {5.2.2}ข้อจำกัดด้านฮาร์ดแวร์และซอฟต์แวร์}{115}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {(1)}แอปพลิเคชันต้นแบบมุ่งใช้งานบนระบบปฏิบัติการ Android}{115}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {(2)}ประสิทธิภาพในการติดตามการวิ่งอาจแตกต่างกันตามรุ่นและประสิทธิภาพของสมาร์ตโฟน}{115}{subsubsection.5.2.2.2}%
+\contentsline {subsubsection}{\numberline {(3)}Line Coverage ของชุดทดสอบไม่เท่ากันทุกโมดูล เช่น \texttt {clubService.js} ร้อยละ 36.33 และ \texttt {runningService.js} ร้อยละ 65.38}{115}{subsubsection.5.2.2.3}%
+\contentsline {section}{\numberline {5.3}ปัญหาอุปสรรค และแนวทางแก้ไข}{115}{section.5.3}%
+\contentsline {section}{\numberline {5.4}ข้อเสนอแนะ ในการพัฒนาต่อไป}{116}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}การปรับปรุงฟังก์ชันการทำงาน}{116}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}การทดสอบและการประกันคุณภาพ}{117}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}แนวทางการวิจัยต่อยอด}{117}{subsection.5.4.3}%
+\contentsline {chapter}{เอกสารอ้างอิง}{118}{subsection.5.4.3}%
+\contentsline {chapter}{ประวัติผู้เขียน}{120}{chapter*.41}%

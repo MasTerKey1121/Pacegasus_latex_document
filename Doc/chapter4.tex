@@ -330,19 +330,7 @@ Side Quest เป็นภารกิจเสริมที่ไม่ผู
 
 เพื่อให้การนำเสนอรายละเอียดของฐานข้อมูลเป็นมาตรฐาน ตารางต่อไปนี้กำหนดชื่อฟิลด์ ชนิดข้อมูล ความยาว คีย์ และคำอธิบายของแต่ละตาราง
 
-\newcommand{\DataDictionaryTable}[2]{%
-\begin{longtable}{|p{0.20\textwidth}|p{0.14\textwidth}|p{0.09\textwidth}|p{0.10\textwidth}|p{0.32\textwidth}|}
-\caption{Data Dictionary: #1}\\
-\hline
-\textbf{Field Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Key} & \textbf{Description}\\
-\hline
-\endfirsthead
-\hline
-\textbf{Field Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Key} & \textbf{Description}\\
-\hline
-\endhead
-#2
-\end{longtable}}
+\
 
 \DataDictionaryTable{User}{UserId & String & 36 & PK & รหัสผู้ใช้งาน\\\hline Username & String & 50 & - & ชื่อผู้ใช้งาน\\\hline Email & String & 100 & - & อีเมลผู้ใช้งาน\\\hline Password & String & 255 & - & รหัสผ่านที่เข้ารหัสแล้ว\\\hline Role & String & 20 & - & บทบาทของผู้ใช้งาน\\\hline CreatedAt & DateTime & - & - & วันที่สร้างบัญชี\\\hline UpdateAt & DateTime & - & - & วันที่อัปเดตล่าสุด\\\hline}
 \DataDictionaryTable{UserProfile}{ProfileId & String & 36 & PK & รหัสโปรไฟล์\\\hline UserId & String & 36 & FK & รหัสผู้ใช้งาน\\\hline ProfileImage & String & 255 & - & URL รูปโปรไฟล์\\\hline SelfDescription & String & 500 & - & คำอธิบายตัวเอง\\\hline Gender & String & 10 & - & เพศของผู้ใช้งาน\\\hline RunningExperience & String & 50 & - & ระดับประสบการณ์การวิ่ง\\\hline RunningGoal & String & 255 & - & เป้าหมายการวิ่ง\\\hline}

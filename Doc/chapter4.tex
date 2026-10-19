@@ -137,15 +137,24 @@ Side Quest เป็นภารกิจเสริมที่ไม่ผู
 \begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-schedule-builder-progress.png}\caption{ความคืบหน้าตารางฝึก}\end{subfigure}
 \caption{รายละเอียดแผนการฝึกและการจัดตารางรายสัปดาห์}\label{fig:app-plans}\end{figure}
 
-\subsection{หน้าหลักและ Daily Wellness Check-in}
+\subsection{หน้าโปรไฟล์}
 
-หน้าหลักแสดงข้อมูลผู้ใช้ คะแนน เหรียญ กิจกรรมที่ต้องทำ Session การวิ่ง และแผนการฝึก ส่วน Daily Wellness Check-in ใช้ให้ผู้ใช้ประเมินคุณภาพการนอน จำนวนชั่วโมงนอน ความเมื่อยล้ากล้ามเนื้อ ระดับพลังกล้ามเนื้อ และระดับความเครียด เพื่อนำไปปรับความเหมาะสมของการฝึกในวันนั้น
+ผู้ใช้สามารถเปลี่ยนรูปโปรไฟล์และชื่อผู้ใช้ได้จากหน้าโปรไฟล์ โดยหน้านี้แสดงระยะทางวิ่งสะสมและจำนวนครั้งที่วิ่งทั้งในสัปดาห์ปัจจุบันและโดยรวมทั้งหมด
 
 \begin{figure}[H]\centering
-\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-home-locked-updated.jpg}\caption{หน้าหลักก่อนปลดล็อก}\end{subfigure}\hfill
-\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-daily-wellness-check-in.png}\caption{Daily Wellness Check-in}\end{subfigure}\hfill
-\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-home-training-required-updated.jpg}\caption{หน้าหลักหลังการเช็กอิน}\end{subfigure}
-\caption{หน้าหลักและการประเมินความพร้อมประจำวัน}\label{fig:app-home-wellness}\end{figure}
+\includegraphics[width=0.31\textwidth]{images/pegasus-user-profile.jpg}
+\caption{หน้าจอโปรไฟล์และสถิติการวิ่งของผู้ใช้}\label{fig:app-user-profile}\end{figure}
+
+\subsection{หน้าหลักและ Daily Wellness Check-in}
+
+หน้าหลักแสดงข้อมูลผู้ใช้ คะแนน เหรียญ กิจกรรมที่ต้องทำ Session การวิ่ง และแผนการฝึก ส่วน Daily Wellness Check-in ใช้ให้ผู้ใช้ประเมินคุณภาพการนอน จำนวนชั่วโมงนอน ความเมื่อยล้ากล้ามเนื้อ ระดับพลังกล้ามเนื้อ และระดับความเครียด เพื่อนำไปปรับความเหมาะสมของการฝึกในวันนั้น และผู้ใช้ยังสามารถดูผลการวิ่งย้อนหลังได้ที่หน้าสถิติ
+
+\begin{figure}[H]\centering
+\begin{subfigure}[t]{0.23\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-home-locked-updated.jpg}\caption{หน้าหลักก่อนปลดล็อก}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.23\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-daily-wellness-check-in.png}\caption{Daily Wellness Check-in}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.23\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-home-training-required-updated.jpg}\caption{หน้าหลักหลังการเช็กอิน}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.23\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-running-history.jpg}\caption{ประวัติการวิ่ง}\end{subfigure}
+\caption{หน้าหลัก การประเมินความพร้อมประจำวัน และประวัติการวิ่ง}\label{fig:app-home-wellness}\end{figure}
 
 \begin{figure}[H]\centering
 \begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-home-training-scheduled-updated.jpg}\caption{หน้าหลักพร้อมแผนฝึก}\end{subfigure}\hfill
@@ -178,6 +187,46 @@ Side Quest เป็นภารกิจเสริมที่ไม่ผู
 \begin{figure}[H]\centering
 \includegraphics[width=0.31\textwidth]{images/pegasus-weekly-leaderboard.jpg}
 \caption{หน้าจัดอันดับระยะทางวิ่งสะสมรายสัปดาห์แบบรายบุคคล}\label{fig:app-leaderboard}\end{figure}
+
+\subsection{เพื่อนและการเพิ่มเพื่อน}
+
+ผู้ใช้สามารถดูรายชื่อเพื่อนและเพิ่มเพื่อนได้โดยส่งคำขอผ่าน UID หรือกดเพิ่มเพื่อนจากหน้าโปรไฟล์ของผู้ใช้อื่น เมื่อผู้รับยอมรับคำขอ ระบบจะแสดงรายชื่อในหน้าเพื่อน นอกจากนี้ ผู้ใช้สามารถเลือกผู้ใช้อื่นเพื่อดูโปรไฟล์ ซึ่งแสดงอุปกรณ์แต่งกายของตัวละครและระยะทางวิ่งสะสมของผู้ใช้คนนั้นได้
+
+\begin{figure}[H]\centering
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-friends-empty.jpg}\caption{หน้าเพื่อน}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-friends-add-uid.jpg}\caption{เพิ่มเพื่อนด้วย UID}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-friends-request.jpg}\caption{ตอบรับคำขอเป็นเพื่อน}\end{subfigure}
+\caption{หน้าจอเพื่อนและการส่งคำขอเพิ่มเพื่อน}\label{fig:app-friends-request}\end{figure}
+
+\begin{figure}[H]\centering
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-friends-list.jpg}\caption{รายชื่อหลังตอบรับคำขอ}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-friends-profile.jpg}\caption{โปรไฟล์ผู้ใช้อื่น}\end{subfigure}
+\caption{หน้าจอรายชื่อเพื่อนและโปรไฟล์ผู้ใช้อื่น}\label{fig:app-friends-profile}\end{figure}
+
+\subsection{หน้าแต่งตัวและร้านค้า}
+
+ผู้ใช้สามารถแต่งตัวให้ตัวละครด้วยเครื่องแต่งกายที่มีอยู่ และสามารถเลือกซื้อเครื่องแต่งกายเพิ่มเติมได้จากหน้าร้านค้า โดยใช้เหรียญที่ได้รับจากการทำภารกิจและการตอบแบบสอบถามประจำวัน
+
+\begin{figure}[H]\centering
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-avatar-dress-up.jpg}\caption{หน้าแต่งตัว}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-avatar-shop.jpg}\caption{หน้าร้านค้า}\end{subfigure}
+\caption{หน้าจอแต่งตัวและร้านค้าเครื่องแต่งกาย}\label{fig:app-avatar-shop}\end{figure}
+
+\subsection{หน้าคลับและการจัดการคลับ}
+
+ผู้ใช้สามารถเลือกเข้าร่วมคลับหรือสร้างคลับใหม่ผ่านปุ่มสร้างคลับ โดยผู้สร้างจะได้รับสิทธิ์เป็นเจ้าของคลับ ซึ่งสามารถอนุมัติคำขอเข้าร่วมและจัดการบทบาทและสิทธิ์ของสมาชิกได้ นอกจากนี้ เจ้าของคลับสามารถดูโปรไฟล์ของสมาชิกในคลับ และจัดการสิทธิ์หรือนำสมาชิกออกจากคลับผ่านหน้าโปรไฟล์ได้โดยตรง
+
+\begin{figure}[H]\centering
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-club-discover.jpg}\caption{หน้าคลับ}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-club-create.jpg}\caption{สร้างคลับ}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-club-owner.jpg}\caption{จัดการคลับสำหรับเจ้าของ}\end{subfigure}
+\caption{หน้าจอคลับ การสร้างคลับ และการจัดการคลับ}\label{fig:app-club-create}\end{figure}
+
+\begin{figure}[H]\centering
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-club-join-requests.jpg}\caption{คำขอเข้าร่วมคลับ}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-club-permissions.jpg}\caption{บทบาทและสิทธิ์}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.31\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-club-member-profile.jpg}\caption{โปรไฟล์และการจัดการสมาชิก}\end{subfigure}
+\caption{หน้าจอคำขอเข้าร่วมคลับและการจัดการสิทธิ์สมาชิก}\label{fig:app-club-members}\end{figure}
 
 \section{ผลการออกแบบระบบ (System Design)}
 
@@ -301,6 +350,8 @@ Clubs & ค้นหาและตรวจคลับของตนได้
 ตารางนี้สรุปผลล่าสุดแยกตามกรณีทดสอบ ไม่ใช่การรัน 70 คำขอพร้อมกันบน commit เดียว: 68 กรณีมีผลผ่านจากการรันชุดหลัก และอีก 2 กรณีคือ \texttt{GET /api/programs/quests} ที่ยืนยันด้วย Email OTP ใหม่แล้วตรวจซ้ำบน Render เมื่อ commit \texttt{c8b74c2} แสดงสถานะ \texttt{Live} โดยได้ HTTP 200 และ \texttt{success=true} ทั้งสองครั้ง ชุด Unit Test ของ backend ผ่าน 126/126 รายการ และ Line Coverage ร้อยละ 80.11 ทั้งนี้ยังไม่ได้รัน 70 คำขอทั้งหมดใหม่บน commit ล่าสุด
 
 ผลนี้ยืนยัน workflow สำคัญของบัญชีทดสอบได้หลายส่วน แต่ไม่ใช่ผลผ่านของทุก endpoint ในระบบ กรณีที่ยังไม่ได้ตรวจบน Render ได้แก่ Google sign-in, การเชิญและตอบรับเพื่อนระหว่างสองบัญชี, สิทธิ์เข้าถึงข้อมูลของผู้ใช้อื่น, การปรับสิทธิ์สมาชิกคลับ, การอัปโหลด Avatar และกรณีซื้อสินค้าเมื่อเหรียญไม่พอ ข้อมูลที่สร้างระหว่างทดสอบยังอยู่ในบัญชีทดสอบ ได้แก่ Onboarding, โปรแกรมฝึก, Session, RPE, Wellness, Side Quest และสินค้าที่ซื้อ; คลับทดสอบถูกยุบแล้ว
+
+\input{frontend_test_results}
 
 \section{ผลการประเมินหลังทดลองใช้งานหนึ่งรอบ}
 \label{sec:single-session-results}

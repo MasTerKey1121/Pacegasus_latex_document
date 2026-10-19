@@ -46,9 +46,7 @@ M.~Milne-Ives, S.~R. Homer, J.~Andrade, and E.~Meinert, ``Potential
 
 \bibitem{kerimov2025}
 A.~B. Kerimov, ``Explainable machine learning models to predict endurance of
-  athletes.''
-  \url{https://nhsjs.com/2025/explainable-machine-learning-models-to-predict-endurance-of-athletes/},
-  2025.
+  athletes,'' 2025.
 \newblock Accessed: 2026-08-19.
 
 \bibitem{dai2025}
@@ -62,8 +60,39 @@ W.~Qin, R.~Li, and L.~Chen, ``Acute to chronic workload ratio (acwr) for
   predicting sports injury risk: a systematic review and meta-analysis,'' {\em
   BMC Sports Science, Medicine and Rehabilitation}, vol.~17, p.~285, 2025.
 
+\bibitem{childs2014}
+E.~Childs and H.~de~Wit, ``Regular exercise is associated with emotional
+  resilience to acute stress in healthy adults,'' {\em Frontiers in
+  Physiology}, vol.~5, p.~161, 2014.
+
 \bibitem{cochran1977}
 W.~G. Cochran, {\em Sampling Techniques}.
 \newblock John Wiley \& Sons, 3~ed., 1977.
+
+\bibitem{nielsen1993}
+J.~Nielsen and T.~K. Landauer, ``A mathematical model of the finding of
+  usability problems,'' in {\em Proceedings of the INTERCHI''''93 Conference on
+  Human Factors in Computing Systems}, (Amsterdam, Netherlands), pp.~206--213,
+  ACM, 1993.
+
+\bibitem{julious2005}
+S.~A. Julious, ``Sample size of 12 per group rule of thumb for a pilot study,''
+  {\em Pharmaceutical Statistics}, vol.~4, no.~4, pp.~287--291, 2005.
+
+\bibitem{mcguigan2023}
+H.~E. McGuigan, P.~Hassmén, N.~Rosic, H.~R. Thornton, and C.~J. Stevens,
+  ``Does education improve adherence to a training monitoring program in
+  recreational athletes?,'' {\em International Journal of Sports Science \&
+  Coaching}, vol.~18, no.~1, pp.~101--113, 2023.
+
+\bibitem{nilsson2023}
+F.~Nilsson, S.~Södergård, J.~Rogestedt, C.~M. Mattsson, and F.~J. Larsen,
+  ``Transforming the performance of runners with {AI}-driven training planning
+  and daily adaptivity.'' bioRxiv preprint, 2023.
+
+\bibitem{xia2025}
+X.~Xia, Q.~Chen, and Z.~Wang, ``Deep reinforcement learning-driven personalized
+  training load control algorithm for competitive sports performance
+  optimization,'' {\em Scientific Reports}, vol.~16, p.~845, 2025.
 
 \end{thebibliography}

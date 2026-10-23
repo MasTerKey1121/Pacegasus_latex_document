@@ -538,6 +538,8 @@ T06 & ตรวจความก้าวหน้าของภารกิ�
 \end{tabular}
 \end{table}
 
+% Keep the work-plan heading and its table together on the next page.
+\clearpage
 \section{แผนการดำเนินงาน}
 
 แผนการดำเนินงานของโครงงานกำหนดระยะเวลา 10 เดือน โดยลำดับกิจกรรมและช่วงเวลาดำเนินงานแสดงดังตารางที่~\ref{tab:gantt-chart}
@@ -546,16 +548,29 @@ T06 & ตรวจความก้าวหน้าของภารกิ�
 \centering
 \caption{แผนการดำเนินงาน (Gantt Chart)}
 \label{tab:gantt-chart}
-\scriptsize
-\begin{tabular}{|c|p{3.6cm}|*{10}{c|}}
+\begingroup
+\small
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.5}
+% Wider label columns; continuous bars preserve the original ten-month schedule.
+% Extend each segment to its cell borders so adjacent months form one bar.
+\newcommand{\pacegasusMonthBar}{%
+  \makebox[\linewidth][c]{%
+    \rule{\dimexpr\linewidth+2\tabcolsep+\arrayrulewidth\relax}{1.2ex}}%
+}
+\newlength{\pacegasusMonthWidth}
+\setlength{\pacegasusMonthWidth}{\dimexpr(\textwidth-5.5cm-24\tabcolsep-13\arrayrulewidth)/10\relax}
+\begin{tabular}{|>{\centering\arraybackslash}m{1.1cm}|>{\raggedright\arraybackslash}m{4.4cm}|*{10}{>{\centering\arraybackslash}m{\pacegasusMonthWidth}|}}
 \hline
-\textbf{ลำดับ} & \textbf{กิจกรรม} & \rotatebox{90}{\textbf{เดือน 1}} & \rotatebox{90}{\textbf{เดือน 2}} & \rotatebox{90}{\textbf{เดือน 3}} & \rotatebox{90}{\textbf{เดือน 4}} & \rotatebox{90}{\textbf{เดือน 5}} & \rotatebox{90}{\textbf{เดือน 6}} & \rotatebox{90}{\textbf{เดือน 7}} & \rotatebox{90}{\textbf{เดือน 8}} & \rotatebox{90}{\textbf{เดือน 9}} & \rotatebox{90}{\textbf{เดือน 10}} \\ \hline
-1 & ศึกษาทฤษฎีและงานวิจัย & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  &  &  &  &  &  &  &  \\ \hline
-2 & การเก็บและวิเคราะห์ความต้องการ &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  &  &  &  &  &  &  \\ \hline
-3 & ทดสอบการเชื่อมต่อข้อมูล &  &  &  & \rule{0.35cm}{1.2ex} &  &  &  &  &  &  \\ \hline
-4 & การออกแบบระบบและต้นแบบ &  &  &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  &  &  &  \\ \hline
-5 & พัฒนาแอปพลิเคชัน &  &  &  &  &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  &  \\ \hline
-6 & ทดสอบและปรับปรุง &  &  &  &  &  &  &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  \\ \hline
-7 & ประเมินผล &  &  &  &  &  &  &  &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} \\ \hline
+\textbf{ลำดับ} & \textbf{กิจกรรม} & \multicolumn{10}{c|}{\textbf{ระยะเวลาดำเนินงาน (เดือน)}} \\ \cline{3-12}
+ & & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\ \hline
+1 & ศึกษาทฤษฎีและงานวิจัย & \pacegasusMonthBar & \pacegasusMonthBar &  &  &  &  &  &  &  &  \\ \hline
+2 & การเก็บและวิเคราะห์ความต้องการ &  & \pacegasusMonthBar & \pacegasusMonthBar &  &  &  &  &  &  &  \\ \hline
+3 & ทดสอบการเชื่อมต่อข้อมูล &  &  &  & \pacegasusMonthBar &  &  &  &  &  &  \\ \hline
+4 & การออกแบบระบบและต้นแบบ &  &  &  & \pacegasusMonthBar & \pacegasusMonthBar & \pacegasusMonthBar &  &  &  &  \\ \hline
+5 & พัฒนาแอปพลิเคชัน &  &  &  &  &  & \pacegasusMonthBar & \pacegasusMonthBar & \pacegasusMonthBar &  &  \\ \hline
+6 & ทดสอบและปรับปรุง &  &  &  &  &  &  &  & \pacegasusMonthBar & \pacegasusMonthBar &  \\ \hline
+7 & ประเมินผล &  &  &  &  &  &  &  &  & \pacegasusMonthBar & \pacegasusMonthBar \\ \hline
 \end{tabular}
+\endgroup
 \end{table}

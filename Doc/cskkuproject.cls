@@ -486,7 +486,8 @@
 }
 \vspace{1cm}
 
-{\large อาจารย์ที่ปรึกษา : \@advisorTH \\}
+\par
+{\raggedright\large\noindent อาจารย์ที่ปรึกษา : \@advisorTH\par}
 
 \vfill
 

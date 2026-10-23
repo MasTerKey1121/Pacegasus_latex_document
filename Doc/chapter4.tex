@@ -152,7 +152,7 @@ Side Quest เป็นภารกิจเสริมที่ไม่ผู
 \begin{figure}[H]\centering
 \begin{subfigure}[t]{0.23\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-home-locked-updated.jpg}\caption{หน้าหลักก่อนปลดล็อก}\end{subfigure}\hfill
 \begin{subfigure}[t]{0.23\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-daily-wellness-check-in.png}\caption{Daily Wellness Check-in}\end{subfigure}\hfill
-\begin{subfigure}[t]{0.23\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-home-training-required-updated.jpg}\caption{หน้าหลักหลังการ\\เช็กอิน}\end{subfigure}\hfill
+\begin{subfigure}[t]{0.23\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-home-training-required-updated.jpg}\caption{หลังเช็กอิน}\end{subfigure}\hfill
 \begin{subfigure}[t]{0.23\textwidth}\centering\includegraphics[width=\textwidth]{images/pegasus-running-history.jpg}\caption{ประวัติการวิ่ง}\end{subfigure}
 \caption{หน้าหลัก การประเมินความพร้อมประจำวัน และประวัติการวิ่ง}\label{fig:app-home-wellness}\end{figure}
 
@@ -258,6 +258,7 @@ Side Quest เป็นภารกิจเสริมที่ไม่ผู
 \begingroup
 \footnotesize
 \renewcommand{\arraystretch}{1.15}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.29\textwidth}|>{\raggedright\arraybackslash}p{0.47\textwidth}|>{\centering\arraybackslash}p{0.12\textwidth}|}
 \caption{ผลการทดสอบ Backend แยกตามไฟล์และพฤติกรรมที่ตรวจสอบ}\label{tab:backend-unit-results}\\ \hline
 \textbf{ไฟล์ใน \texttt{backend/tests}} & \textbf{พฤติกรรมและผลที่ตรวจสอบ} & \textbf{ผ่าน/ทั้งหมด} \\ \hline
@@ -323,6 +324,7 @@ Postman collection ของโครงงานมี request ที่เต�
 \begingroup
 \footnotesize
 \renewcommand{\arraystretch}{1.15}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.60\textwidth}|>{\centering\arraybackslash}p{0.11\textwidth}|}
 \caption{ผลล่าสุดของกรณีทดสอบ API หลังเข้าสู่ระบบบน Render แยกตามโมดูล}\label{tab:backend-authenticated-results}\\ \hline
 \textbf{โมดูล} & \textbf{คำขอและผลที่ตรวจสอบ} & \textbf{ผ่าน/ทั้งหมด} \\ \hline
@@ -347,7 +349,7 @@ Clubs & ค้นหาและตรวจคลับของตนได้
 \end{longtable}
 \endgroup
 
-ตารางนี้สรุปผลล่าสุดแยกตามกรณีทดสอบ ไม่ใช่การรัน 70 คำขอพร้อมกันบน commit เดียว: 68 กรณีมีผลผ่านจากการรันชุดหลัก และอีก 2 กรณีคือ \texttt{GET /api/programs/quests} ที่ยืนยันด้วย Email OTP ใหม่แล้วตรวจซ้ำบน Render เมื่อ commit \texttt{c8b74c2} แสดงสถานะ \texttt{Live} โดยได้ HTTP 200 และ \texttt{success=true} ทั้งสองครั้ง ชุด Unit Test ของ backend ผ่าน 126/126 รายการ และ Line Coverage ร้อยละ 80.11 ทั้งนี้ยังไม่ได้รัน 70 คำขอทั้งหมดใหม่บน commit ล่าสุด
+ตารางที่~\ref{tab:backend-authenticated-results} สรุปผลล่าสุดแยกตามกรณีทดสอบ ไม่ใช่การรัน 70 คำขอพร้อมกันบน commit เดียว: 68 กรณีมีผลผ่านจากการรันชุดหลัก และอีก 2 กรณีคือ \texttt{GET /api/programs/quests} ที่ยืนยันด้วย Email OTP ใหม่แล้วตรวจซ้ำบน Render เมื่อ commit \texttt{c8b74c2} แสดงสถานะ \texttt{Live} โดยได้ HTTP 200 และ \texttt{success=true} ทั้งสองครั้ง ชุด Unit Test ของ backend ผ่าน 126/126 รายการ และ Line Coverage ร้อยละ 80.11 ทั้งนี้ยังไม่ได้รัน 70 คำขอทั้งหมดใหม่บน commit ล่าสุด
 
 ผลนี้ยืนยัน workflow สำคัญของบัญชีทดสอบได้หลายส่วน แต่ไม่ใช่ผลผ่านของทุก endpoint ในระบบ กรณีที่ยังไม่ได้ตรวจบน Render ได้แก่ Google sign-in, การเชิญและตอบรับเพื่อนระหว่างสองบัญชี, สิทธิ์เข้าถึงข้อมูลของผู้ใช้อื่น, การปรับสิทธิ์สมาชิกคลับ, การอัปโหลด Avatar และกรณีซื้อสินค้าเมื่อเหรียญไม่พอ ข้อมูลที่สร้างระหว่างทดสอบยังอยู่ในบัญชีทดสอบ ได้แก่ Onboarding, โปรแกรมฝึก, Session, RPE, Wellness, Side Quest และสินค้าที่ซื้อ; คลับทดสอบถูกยุบแล้ว
 
@@ -401,6 +403,7 @@ P3 & Beginner & 1 & ไม่เคย & 19/10/2569 \\ \hline
 
 \begingroup\footnotesize
 \setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.16}
+\KeepTableStart
 \begin{longtable}{|l|>{\raggedright\arraybackslash}p{0.31\textwidth}|c|c|c|c|c|c|c|}
 \caption{คะแนนประเมินหลังทดลองใช้รายคนและสถิติเชิงพรรณนา}\label{tab:user-eval-item-scores}\\ \hline
 \textbf{ข้อ} & \textbf{ประเด็นประเมิน} & \textbf{P1} & \textbf{P2} & \textbf{P3} & $n$ & \textbf{มัธยฐาน} & \textbf{ช่วง} & \textbf{เฉลี่ย} \\ \hline

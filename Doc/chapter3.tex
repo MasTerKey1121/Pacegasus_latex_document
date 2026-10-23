@@ -51,17 +51,17 @@ Upper Intermediate & 2--4 ปีขึ้นไป & 50--100 กม. & 4--5 ว�
 
 เนื่องจากไม่มีบัญชีรายชื่อประชากรนักวิ่งทั้งหมด (sampling frame) จึงกำหนดขนาดตัวอย่างโดยอ้างอิงสูตร Cochran สำหรับการประมาณสัดส่วน \cite{cochran1977} ดังนี้
 
-\begin{center}
-    $n_0 = \dfrac{Z^2p(1-p)}{d^2}$
-\end{center}
+\begin{equation}\label{eq:cochran-initial}
+    n_0 = \dfrac{Z^2p(1-p)}{d^2}
+\end{equation}
 
 และปรับขนาดตัวอย่างสำหรับประชากรจำกัดด้วยสูตร
 
-\begin{center}
-    $n = \dfrac{n_0}{1+\dfrac{n_0-1}{N}}$
-\end{center}
+\begin{equation}\label{eq:cochran-finite}
+    n = \dfrac{n_0}{1+\dfrac{n_0-1}{N}}
+\end{equation}
 
-โดย $n_0$ คือขนาดตัวอย่างเริ่มต้น $n$ คือขนาดตัวอย่างหลังปรับตามจำนวนประชากร $N$ คือจำนวนประชากรโดยประมาณ $Z$ คือค่ามาตรฐานตามระดับความเชื่อมั่น $p$ คือสัดส่วนที่คาดการณ์ และ $d$ คือค่าความคลาดเคลื่อน
+โดยสมการที่~\eqref{eq:cochran-initial} ใช้คำนวณขนาดตัวอย่างเริ่มต้น และสมการที่~\eqref{eq:cochran-finite} ใช้ปรับตามจำนวนประชากร ทั้งนี้ $n_0$ คือขนาดตัวอย่างเริ่มต้น $n$ คือขนาดตัวอย่างหลังปรับตามจำนวนประชากร $N$ คือจำนวนประชากรโดยประมาณ $Z$ คือค่ามาตรฐานตามระดับความเชื่อมั่น $p$ คือสัดส่วนที่คาดการณ์ และ $d$ คือค่าความคลาดเคลื่อน
 
 สำหรับการคำนวณอ้างอิงนี้กำหนด $Z=1.96$ และ $p=0.50$ ซึ่งให้ความแปรปรวนสูงสุดเมื่อยังไม่มีค่าประมาณสัดส่วนล่วงหน้า และกำหนด $d=0.25$ เพื่อประกอบการวางแผนสำรวจเบื้องต้นตามข้อจำกัดของโครงงาน ค่าที่กำหนดเป็นสมมติฐานในการคำนวณ ไม่ใช่การรับรองว่าการเก็บตัวอย่างแบบไม่อาศัยความน่าจะเป็นมีระดับความเชื่อมั่นร้อยละ 95 หรือคลาดเคลื่อนไม่เกินร้อยละ 25 และไม่ใช้แนวทางผู้ทดสอบประมาณ 5 คนสำหรับค้นหาปัญหา usability เป็นเหตุผลยืนยันความแม่นยำของแบบสำรวจความต้องการ \cite{cochran1977,budiu2021five}
 
@@ -144,7 +144,7 @@ Adaptive Training Engine เป็นองค์ประกอบที่ม�
 \small
 \caption{แผนกรณีทดสอบฟังก์ชันภายใน Backend (Unit Test)}
 \label{tab:backend-unit-test-cases}
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular}{|>{\raggedright\arraybackslash}p{0.09\textwidth}|>{\raggedright\arraybackslash}p{0.40\textwidth}|>{\raggedright\arraybackslash}p{0.38\textwidth}|}
 \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบและข้อมูลนำเข้า} & \textbf{ผลที่คาดหวัง} \\ \hline
@@ -164,7 +164,7 @@ UT-08 & ตรวจข้อมูล Wellness, Onboarding และ RPE ที
 \small
 \caption{แผนกรณีทดสอบ REST API ฝั่ง Backend}
 \label{tab:backend-api-test-cases}
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular}{|>{\raggedright\arraybackslash}p{0.09\textwidth}|>{\raggedright\arraybackslash}p{0.40\textwidth}|>{\raggedright\arraybackslash}p{0.38\textwidth}|}
 \hline
 \textbf{รหัส} & \textbf{คำขอและเงื่อนไขทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
@@ -202,12 +202,13 @@ API-12 & อ่านรายการร้านค้า ซื้อสิ�
 
 \begingroup
 \small
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.2}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.30\textwidth}|>{\raggedright\arraybackslash}p{0.40\textwidth}|}
 \caption{แผนการทดสอบสมัครสมาชิกและ Onboarding}\label{tab:frontend-SFT-plan-1}\\ \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endfirsthead
-\multicolumn{3}{c}{แผนการทดสอบสมัครสมาชิกและ Onboarding (ต่อ)} \\ \hline
+\multicolumn{3}{c}{\textbf{ตารางที่~\ref{tab:frontend-SFT-plan-1}} แผนการทดสอบสมัครสมาชิกและ Onboarding (ต่อ)} \\\noalign{\vskip12pt} \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endhead
 \endfoot
@@ -231,12 +232,13 @@ SFT-01-014 & บันทึก Onboarding ตอนเน็ตขัดข้�
 
 \begingroup
 \small
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.2}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.30\textwidth}|>{\raggedright\arraybackslash}p{0.40\textwidth}|}
 \caption{แผนการทดสอบ Daily Wellness โปรแกรมและตารางฝึกซ้อม}\label{tab:frontend-SFT-plan-2}\\ \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endfirsthead
-\multicolumn{3}{c}{แผนการทดสอบ Daily Wellness โปรแกรมและตารางฝึกซ้อม (ต่อ)} \\ \hline
+\multicolumn{3}{c}{\textbf{ตารางที่~\ref{tab:frontend-SFT-plan-2}} แผนการทดสอบ Daily Wellness โปรแกรมและตารางฝึกซ้อม (ต่อ)} \\\noalign{\vskip12pt} \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endhead
 \endfoot
@@ -260,12 +262,13 @@ SFT-02-014 & ยกเลิกโปรแกรมและเริ่มใ�
 
 \begingroup
 \small
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.2}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.30\textwidth}|>{\raggedright\arraybackslash}p{0.40\textwidth}|}
 \caption{แผนการทดสอบบันทึกวิ่ง สรุปผล ประวัติ สถิติ และอันดับ}\label{tab:frontend-SFT-plan-3}\\ \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endfirsthead
-\multicolumn{3}{c}{แผนการทดสอบบันทึกวิ่ง สรุปผล ประวัติ สถิติ และอันดับ (ต่อ)} \\ \hline
+\multicolumn{3}{c}{\textbf{ตารางที่~\ref{tab:frontend-SFT-plan-3}} แผนการทดสอบบันทึกวิ่ง สรุปผล ประวัติ สถิติ และอันดับ (ต่อ)} \\\noalign{\vskip12pt} \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endhead
 \endfoot
@@ -297,12 +300,13 @@ SFT-03-022 & โหลดประวัติ/สถิติ/อันดั�
 
 \begingroup
 \small
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.2}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.30\textwidth}|>{\raggedright\arraybackslash}p{0.40\textwidth}|}
 \caption{แผนการทดสอบโปรไฟล์และบัญชี}\label{tab:frontend-SFT-plan-4}\\ \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endfirsthead
-\multicolumn{3}{c}{แผนการทดสอบโปรไฟล์และบัญชี (ต่อ)} \\ \hline
+\multicolumn{3}{c}{\textbf{ตารางที่~\ref{tab:frontend-SFT-plan-4}} แผนการทดสอบโปรไฟล์และบัญชี (ต่อ)} \\\noalign{\vskip12pt} \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endhead
 \endfoot
@@ -319,12 +323,13 @@ SFT-04-007 & สลับบัญชีและ session หมดอายุ 
 
 \begingroup
 \small
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.2}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.30\textwidth}|>{\raggedright\arraybackslash}p{0.40\textwidth}|}
 \caption{แผนการทดสอบเพื่อน}\label{tab:frontend-SFT-plan-5}\\ \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endfirsthead
-\multicolumn{3}{c}{แผนการทดสอบเพื่อน (ต่อ)} \\ \hline
+\multicolumn{3}{c}{\textbf{ตารางที่~\ref{tab:frontend-SFT-plan-5}} แผนการทดสอบเพื่อน (ต่อ)} \\\noalign{\vskip12pt} \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endhead
 \endfoot
@@ -342,12 +347,13 @@ SFT-05-008 & สิทธิ์คำขอและโหลดล้มเห�
 
 \begingroup
 \small
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.2}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.30\textwidth}|>{\raggedright\arraybackslash}p{0.40\textwidth}|}
 \caption{แผนการทดสอบคลับ}\label{tab:frontend-SFT-plan-6}\\ \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endfirsthead
-\multicolumn{3}{c}{แผนการทดสอบคลับ (ต่อ)} \\ \hline
+\multicolumn{3}{c}{\textbf{ตารางที่~\ref{tab:frontend-SFT-plan-6}} แผนการทดสอบคลับ (ต่อ)} \\\noalign{\vskip12pt} \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endhead
 \endfoot
@@ -369,12 +375,13 @@ SFT-06-012 & ยุบคลับและโหลดข้อมูลให�
 
 \begingroup
 \small
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.2}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.30\textwidth}|>{\raggedright\arraybackslash}p{0.40\textwidth}|}
 \caption{แผนการทดสอบร้านค้าและ Avatar}\label{tab:frontend-SFT-plan-7}\\ \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endfirsthead
-\multicolumn{3}{c}{แผนการทดสอบร้านค้าและ Avatar (ต่อ)} \\ \hline
+\multicolumn{3}{c}{\textbf{ตารางที่~\ref{tab:frontend-SFT-plan-7}} แผนการทดสอบร้านค้าและ Avatar (ต่อ)} \\\noalign{\vskip12pt} \hline
 \textbf{รหัส} & \textbf{กรณีทดสอบ} & \textbf{ผลที่คาดหวัง} \\ \hline
 \endhead
 \endfoot
@@ -407,6 +414,7 @@ SFT-07-011 & โหลดร้าน/คลัง/บันทึกชุด�
 \begingroup
 \small
 \renewcommand{\arraystretch}{1.12}
+\KeepTableStart
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.08\textwidth}|>{\raggedright\arraybackslash}p{0.43\textwidth}|>{\raggedright\arraybackslash}p{0.35\textwidth}|}
 \caption{ภารกิจสำหรับทดลองใช้งานต้นแบบหนึ่งรอบ}\label{tab:single-session-tasks}\\ \hline
 \textbf{รหัส} & \textbf{สถานการณ์ที่ให้ผู้เข้าร่วมทำ} & \textbf{หลักฐานความสำเร็จ} \\ \hline
@@ -540,12 +548,12 @@ T06 & ตรวจความก้าวหน้าของภารกิ�
 \begin{tabular}{|c|p{3.6cm}|*{10}{c|}}
 \hline
 \textbf{ลำดับ} & \textbf{กิจกรรม} & \rotatebox{90}{\textbf{เดือน 1}} & \rotatebox{90}{\textbf{เดือน 2}} & \rotatebox{90}{\textbf{เดือน 3}} & \rotatebox{90}{\textbf{เดือน 4}} & \rotatebox{90}{\textbf{เดือน 5}} & \rotatebox{90}{\textbf{เดือน 6}} & \rotatebox{90}{\textbf{เดือน 7}} & \rotatebox{90}{\textbf{เดือน 8}} & \rotatebox{90}{\textbf{เดือน 9}} & \rotatebox{90}{\textbf{เดือน 10}} \\ \hline
-1 & ศึกษาทฤษฎีและงานวิจัย & $\bullet$ & $\bullet$ &  &  &  &  &  &  &  &  \\ \hline
-2 & การเก็บและวิเคราะห์ความต้องการ &  & $\bullet$ & $\bullet$ &  &  &  &  &  &  &  \\ \hline
-3 & ทดสอบการเชื่อมต่อข้อมูล &  &  &  & $\bullet$ &  &  &  &  &  &  \\ \hline
-4 & การออกแบบระบบและต้นแบบ &  &  &  & $\bullet$ & $\bullet$ & $\bullet$ &  &  &  &  \\ \hline
-5 & พัฒนาแอปพลิเคชัน &  &  &  &  &  & $\bullet$ & $\bullet$ & $\bullet$ &  &  \\ \hline
-6 & ทดสอบและปรับปรุง &  &  &  &  &  &  &  & $\bullet$ & $\bullet$ &  \\ \hline
-7 & ประเมินผล &  &  &  &  &  &  &  &  & $\bullet$ & $\bullet$ \\ \hline
+1 & ศึกษาทฤษฎีและงานวิจัย & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  &  &  &  &  &  &  &  \\ \hline
+2 & การเก็บและวิเคราะห์ความต้องการ &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  &  &  &  &  &  &  \\ \hline
+3 & ทดสอบการเชื่อมต่อข้อมูล &  &  &  & \rule{0.35cm}{1.2ex} &  &  &  &  &  &  \\ \hline
+4 & การออกแบบระบบและต้นแบบ &  &  &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  &  &  &  \\ \hline
+5 & พัฒนาแอปพลิเคชัน &  &  &  &  &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  &  \\ \hline
+6 & ทดสอบและปรับปรุง &  &  &  &  &  &  &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} &  \\ \hline
+7 & ประเมินผล &  &  &  &  &  &  &  &  & \rule{0.35cm}{1.2ex} & \rule{0.35cm}{1.2ex} \\ \hline
 \end{tabular}
 \end{table}

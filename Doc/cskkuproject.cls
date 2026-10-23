@@ -222,6 +222,13 @@
 % ใช้ \endfirsthead, \endhead, \endfoot ของ longtable มาตรฐาน
 % ------------------------------------------------
 \RequirePackage{longtable}
+% อย่าเริ่มตารางยาวเมื่อพื้นที่ที่เหลือรองรับได้เพียงหัวตารางหรือไม่กี่แถว
+\newcommand{\KeepTableStart}{%
+  \par
+  \ifdim\dimexpr\pagegoal-\pagetotal\relax<.4\textheight
+    \newpage
+  \fi
+}
 
 \makeatletter
 \newcommand{\IfEmptyTF}[3]{%
@@ -464,9 +471,9 @@
 
 \includegraphics[scale=0.5]{./theme/kku-logo.png}
 
-{\Large\bfseries รายงานความก้าวหน้าโครงงาน ครั้งที่ #1}
+{\Large\bfseries \IfEmptyTF{#1}{รายงานฉบับสมบูรณ์}{รายงานความก้าวหน้าโครงงาน ครั้งที่ #1}}
 
-\vfill
+\vspace{0.9cm}
 
 {\Large \@titleTH \\[0.5cm] \@titleEN}
 
@@ -490,6 +497,7 @@
 
 \end{titlepage}
 }
+\newcommand{\makefinalcover}{\makeprogresscover{}}
 \makeatother
 
 

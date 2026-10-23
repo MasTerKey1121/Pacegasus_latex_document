@@ -45,6 +45,17 @@
 \keywordsEN{Running Application, Gamification, Adaptive Training, Exercise Motivation, Social Interaction}
 
 
+% Add a dash before displayed equation numbers; keep references unchanged.
+\makeatletter
+\let\pacegasusOriginalTagForm\tagform@
+\renewcommand{\tagform@}[1]{%
+  \maketag@@@{\textnormal{\textemdash}\enspace(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\renewcommand{\eqref}[1]{%
+  \textup{\normalfont\pacegasusOriginalTagForm{\ref{#1}}}%
+}
+\makeatother
+
 \begin{document}
 
 % ==========================================

@@ -137,6 +137,8 @@ Adaptive Training Engine เป็นองค์ประกอบที่ม�
 
 ก่อนทดสอบ endpoint ให้เริ่มเซิร์ฟเวอร์และฐานข้อมูล PostgreSQL ที่ผ่านการสร้าง schema และ migration แล้ว กำหนด \texttt{baseUrl} ของ Postman ให้ตรงกับเซิร์ฟเวอร์ทดสอบ และใช้บัญชีทดสอบที่ไม่มีข้อมูลจริง สำหรับ endpoint ที่ต้องยืนยันตัวตน ให้รับ access token จากกระบวนการเข้าสู่ระบบแล้วส่งในส่วนหัว \texttt{Authorization: Bearer <token>} กรณีทดสอบที่สร้างหรือแก้ไขข้อมูลต้องตรวจสอบสถานะที่ตอบกลับและเรียก endpoint อ่านข้อมูลที่เกี่ยวข้องซ้ำ เพื่อยืนยันว่าการเปลี่ยนแปลงถูกบันทึกจริง การทดสอบกรณีผิดพลาดใช้ข้อมูลไม่ครบ รูปแบบไม่ถูกต้อง ไม่มี token หรือใช้สิทธิ์ไม่ตรงกับทรัพยากร โดยตรวจสอบว่า API ตอบรหัสข้อผิดพลาดตามข้อกำหนดและไม่เปลี่ยนข้อมูลโดยไม่ตั้งใจ
 
+% Keep the final line of this paragraph on the current page.
+\enlargethispage{\baselineskip}
 ตารางที่~\ref{tab:backend-unit-test-cases} และ~\ref{tab:backend-api-test-cases} เป็นแผนกรณีทดสอบ ไม่ใช่ผลการทดสอบที่ผ่านแล้ว Unit Test ใช้ข้อมูลจำลองเพื่อแยกตรรกะออกจากฐานข้อมูลและ Supabase Auth ส่วน API Test ส่ง HTTP request ไปยังเซิร์ฟเวอร์ทดสอบและตรวจผลที่บันทึกจริง กรณีที่สร้างหรือแก้ไขข้อมูลใช้รหัสทรัพยากรจากผลของคำขอก่อนหน้า เช่น \texttt{sessionId} และ \texttt{friendshipId} แทนค่าคงที่
 
 \begin{table}[H]

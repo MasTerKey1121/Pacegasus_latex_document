@@ -111,9 +111,9 @@ Upper Intermediate & 2--4 ปีขึ้นไป & 50--100 กม. & 4--5 ว�
 \subsubsection{ข้อกำหนด REST API (API Specification)}
 \label{sec:api-specification}
 
-การสื่อสารระหว่างแอปพลิเคชันกับ Backend ใช้ HTTP REST API โดยกำหนด prefix ของเส้นทางเป็น \texttt{/api} และรับส่งข้อมูลทั่วไปในรูปแบบ JSON ตารางที่~\ref{tab:api-spec-endpoints} สรุปเส้นทางที่ตรวจสอบจากไฟล์ \texttt{backend/src/routes} และ \texttt{backend/src/app.js} ตามหมวดงาน เครื่องหมาย \texttt{:id}, \texttt{:uid}, \texttt{:clubId} และชื่อในลักษณะเดียวกันหมายถึง path parameter ที่ผู้เรียกต้องแทนด้วยรหัสของทรัพยากรจริง ส่วนค่าที่ใช้กรองรายการหรือกำหนดช่วงเวลาให้ส่งเป็น query parameter ตามเส้นทางนั้น
+การสื่อสารระหว่างแอปพลิเคชันกับ Backend ใช้ HTTP REST API โดยกำหนด prefix ของเส้นทางเป็น /api และรับส่งข้อมูลทั่วไปในรูปแบบ JSON ตารางที่~\ref{tab:api-spec-endpoints} สรุปเส้นทางที่ตรวจสอบจากไฟล์ backend/src/routes และ backend/src/app.js ตามหมวดงาน เครื่องหมาย :id, :uid, :clubId และชื่อในลักษณะเดียวกันหมายถึง path parameter ที่ผู้เรียกต้องแทนด้วยรหัสของทรัพยากรจริง ส่วนค่าที่ใช้กรองรายการหรือกำหนดช่วงเวลาให้ส่งเป็น query parameter ตามเส้นทางนั้น
 
-ยกเว้น \texttt{GET /api/health} และเส้นทางในหมวดการยืนยันตัวตนที่ใช้เริ่มหรือจัดการ session แล้ว API ส่วนใหญ่ต้องส่งส่วนหัว \texttt{Authorization: Bearer <accessToken>} โดย middleware ตรวจ token ก่อนส่งคำขอให้ controller หากไม่มี token หรือ token ใช้ไม่ได้จะตอบ HTTP 401 คำขอที่มี body แบบ JSON ต้องส่ง \texttt{Content-Type: application/json} ทั้งนี้เส้นทางอัปโหลดรูปโปรไฟล์ใช้ข้อมูลแบบ \mbox{multipart/form-data} ตามข้อกำหนดของเส้นทางนั้น
+ยกเว้น GET /api/health และเส้นทางในหมวดการยืนยันตัวตนที่ใช้เริ่มหรือจัดการ session แล้ว API ส่วนใหญ่ต้องส่งส่วนหัว Authorization: Bearer <accessToken> โดย middleware ตรวจ token ก่อนส่งคำขอให้ controller หากไม่มี token หรือ token ใช้ไม่ได้จะตอบ HTTP 401 คำขอที่มี body แบบ JSON ต้องส่ง \Content-Type: application/json ทั้งนี้เส้นทางอัปโหลดรูปโปรไฟล์ใช้ข้อมูลแบบ \mbox{multipart/form-data} ตามข้อกำหนดของเส้นทางนั้น
 
 \begin{table}[H]
 \centering
@@ -245,11 +245,11 @@ Upper Intermediate & 2--4 ปีขึ้นไป & 50--100 กม. & 4--5 ว�
 \end{tabular}
 \end{table}
 
-เส้นทางภารกิจเสริมมี alias ภายใต้ \texttt{/quests} และเส้นทาง \texttt{/club-images/:id} กับ \texttt{/user-avatars/:id} ส่งข้อมูลภาพตาม Content-Type ของไฟล์\par
+เส้นทางภารกิจเสริมมี alias ภายใต้ /quests และเส้นทาง /club-images/:id กับ /user-avatars/:id ส่งข้อมูลภาพตาม Content-Type ของไฟล์\par
 
 \clearpage
 
-ตารางที่~\ref{tab:api-spec-contract} แสดงตัวอย่างข้อกำหนดระดับคำขอและคำตอบของเส้นทางหลักที่เชื่อมกระบวนการใช้งาน ผู้ใช้ต้องใช้ \texttt{otpRef} ที่ได้รับจากคำขอ OTP คู่กับรหัส OTP ในขั้นยืนยันตัวตน และใช้ \texttt{accessToken} จากผลยืนยันตัวตนในการเรียก API ที่ต้องเข้าสู่ระบบ
+ตารางที่~\ref{tab:api-spec-contract} แสดงตัวอย่างข้อกำหนดระดับคำขอและคำตอบของเส้นทางหลักที่เชื่อมกระบวนการใช้งาน ผู้ใช้ต้องใช้ otpRef ที่ได้รับจากคำขอ OTP คู่กับรหัส OTP ในขั้นยืนยันตัวตน และใช้ accessToken จากผลยืนยันตัวตนในการเรียก API ที่ต้องเข้าสู่ระบบ
 
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.27\textwidth}|>{\raggedright\arraybackslash}p{0.56\textwidth}|}
 \caption{ตัวอย่างข้อกำหนดข้อมูลเข้าและผลตอบกลับของ API หลัก}\label{tab:api-spec-contract}\\
@@ -292,13 +292,13 @@ Adaptive Training Engine เป็นองค์ประกอบที่ม�
 \subsubsection{วิธีการทดสอบ Unit Test และ REST API ฝั่ง Backend}
 \label{sec:backend-api-test-method}
 
-การตรวจสอบ Backend แยกเป็นการทดสอบฟังก์ชันภายในและการทดสอบ HTTP endpoint เพื่อไม่ให้ผลการทดสอบสองประเภทถูกนับรวมกัน การทดสอบฟังก์ชันภายในใช้ \texttt{node:test} และ \texttt{node:assert} รันไฟล์ \texttt{backend/tests/*.test.js} โดยจำลองการตอบกลับจากฐานข้อมูล เพื่อตรวจสอบตรรกะและการตรวจสอบข้อมูลก่อนเชื่อมต่อระบบจริง ส่วนการทดสอบ endpoint ใช้ Postman collection ของโครงงานส่งคำขอไปยัง REST API ภายใต้ prefix \texttt{/api} และตรวจสอบ HTTP status กับข้อมูลสำคัญใน JSON response ด้วย test script ของแต่ละคำขอ
+การตรวจสอบ Backend แยกเป็นการทดสอบฟังก์ชันภายในและการทดสอบ HTTP endpoint เพื่อไม่ให้ผลการทดสอบสองประเภทถูกนับรวมกัน การทดสอบฟังก์ชันภายในใช้ node:test และ node:assert รันไฟล์ backend/tests/*.test.js โดยจำลองการตอบกลับจากฐานข้อมูล เพื่อตรวจสอบตรรกะและการตรวจสอบข้อมูลก่อนเชื่อมต่อระบบจริง ส่วนการทดสอบ endpoint ใช้ Postman collection ของโครงงานส่งคำขอไปยัง REST API ภายใต้ prefix /api และตรวจสอบ HTTP status กับข้อมูลสำคัญใน JSON response ด้วย test script ของแต่ละคำขอ
 
-ก่อนทดสอบ endpoint ให้เริ่มเซิร์ฟเวอร์และฐานข้อมูล PostgreSQL ที่ผ่านการสร้าง schema และ migration แล้ว กำหนด \texttt{baseUrl} ของ Postman ให้ตรงกับเซิร์ฟเวอร์ทดสอบ และใช้บัญชีทดสอบที่ไม่มีข้อมูลจริง สำหรับ endpoint ที่ต้องยืนยันตัวตน ให้รับ access token จากกระบวนการเข้าสู่ระบบแล้วส่งในส่วนหัว \texttt{Authorization: Bearer <token>} กรณีทดสอบที่สร้างหรือแก้ไขข้อมูลต้องตรวจสอบสถานะที่ตอบกลับและเรียก endpoint อ่านข้อมูลที่เกี่ยวข้องซ้ำ เพื่อยืนยันว่าการเปลี่ยนแปลงถูกบันทึกจริง การทดสอบกรณีผิดพลาดใช้ข้อมูลไม่ครบ รูปแบบไม่ถูกต้อง ไม่มี token หรือใช้สิทธิ์ไม่ตรงกับทรัพยากร โดยตรวจสอบว่า API ตอบรหัสข้อผิดพลาดตามข้อกำหนดและไม่เปลี่ยนข้อมูลโดยไม่ตั้งใจ
+ก่อนทดสอบ endpoint ให้เริ่มเซิร์ฟเวอร์และฐานข้อมูล PostgreSQL ที่ผ่านการสร้าง schema และ migration แล้ว กำหนด baseUrl ของ Postman ให้ตรงกับเซิร์ฟเวอร์ทดสอบ และใช้บัญชีทดสอบที่ไม่มีข้อมูลจริง สำหรับ endpoint ที่ต้องยืนยันตัวตน ให้รับ access token จากกระบวนการเข้าสู่ระบบแล้วส่งในส่วนหัว Authorization: Bearer <token> กรณีทดสอบที่สร้างหรือแก้ไขข้อมูลต้องตรวจสอบสถานะที่ตอบกลับและเรียก endpoint อ่านข้อมูลที่เกี่ยวข้องซ้ำ เพื่อยืนยันว่าการเปลี่ยนแปลงถูกบันทึกจริง การทดสอบกรณีผิดพลาดใช้ข้อมูลไม่ครบ รูปแบบไม่ถูกต้อง ไม่มี token หรือใช้สิทธิ์ไม่ตรงกับทรัพยากร โดยตรวจสอบว่า API ตอบรหัสข้อผิดพลาดตามข้อกำหนดและไม่เปลี่ยนข้อมูลโดยไม่ตั้งใจ
 
 % Keep the final line of this paragraph on the current page.
 \enlargethispage{\baselineskip}
-ตารางที่~\ref{tab:backend-unit-test-cases} และ~\ref{tab:backend-api-test-cases} เป็นแผนกรณีทดสอบ ไม่ใช่ผลการทดสอบที่ผ่านแล้ว Unit Test ใช้ข้อมูลจำลองเพื่อแยกตรรกะออกจากฐานข้อมูลและ Supabase Auth ส่วน API Test ส่ง HTTP request ไปยังเซิร์ฟเวอร์ทดสอบและตรวจผลที่บันทึกจริง กรณีที่สร้างหรือแก้ไขข้อมูลใช้รหัสทรัพยากรจากผลของคำขอก่อนหน้า เช่น \texttt{sessionId} และ \texttt{friendshipId} แทนค่าคงที่
+ตารางที่~\ref{tab:backend-unit-test-cases} และ~\ref{tab:backend-api-test-cases} เป็นแผนกรณีทดสอบ ไม่ใช่ผลการทดสอบที่ผ่านแล้ว Unit Test ใช้ข้อมูลจำลองเพื่อแยกตรรกะออกจากฐานข้อมูลและ Supabase Auth ส่วน API Test ส่ง HTTP request ไปยังเซิร์ฟเวอร์ทดสอบและตรวจผลที่บันทึกจริง กรณีที่สร้างหรือแก้ไขข้อมูลใช้รหัสทรัพยากรจากผลของคำขอก่อนหน้า เช่น sessionId และ friendshipId แทนค่าคงที่
 
 \begin{table}[H]
 \centering

@@ -100,7 +100,7 @@ HTTP API บน Render หลังเข้าสู่ระบบ & 70 กร
 \subsection{ข้อจำกัดด้านฮาร์ดแวร์และซอฟต์แวร์}
 \subsubsection{แอปพลิเคชันต้นแบบมุ่งใช้งานบนระบบปฏิบัติการ Android}
 \subsubsection{ประสิทธิภาพในการติดตามการวิ่งอาจแตกต่างกันตามรุ่นและประสิทธิภาพของสมาร์ตโฟน}
-\subsubsection{Line Coverage ของชุดทดสอบไม่เท่ากันทุกโมดูล เช่น \texttt{clubService.js} ร้อยละ 36.33 และ \texttt{runningService.js} ร้อยละ 65.38}
+\subsubsection{Line Coverage ของชุดทดสอบไม่เท่ากันทุกโมดูล เช่น clubService.js ร้อยละ 36.33 และ runningService.js ร้อยละ 65.38}
 
 \subsection{ข้อจำกัดด้านการประเมินกับผู้ใช้}
 
@@ -149,7 +149,7 @@ HTTP API บน Render หลังเข้าสู่ระบบ & 70 กร
 \subsection{การทดสอบและการประกันคุณภาพ}
 
 \begin{enumerate}[label=\arabic*)]
-    \item เพิ่มกรณีทดสอบเชิงพฤติกรรมให้โมดูลที่ Coverage ต่ำ เช่น \texttt{clubService.js} และ \texttt{runningService.js}
+    \item เพิ่มกรณีทดสอบเชิงพฤติกรรมให้โมดูลที่ Coverage ต่ำ เช่น clubService.js และ runningService.js
     \item ทดสอบ API ด้วยสองบัญชีขึ้นไป ได้แก่ การเชิญและตอบรับเพื่อน การเข้าร่วมและการจัดการสมาชิกชมรม และสิทธิ์เข้าถึงข้อมูลของผู้ใช้อื่น
     \item ทดสอบ Google sign-in การอัปโหลด Avatar และกรณีซื้อสินค้าเมื่อเหรียญไม่พอบนสภาพแวดล้อมทดสอบจริง
     \item รัน Postman collection ทั้งชุดซ้ำบน commit ล่าสุด และทดสอบเส้นทางที่ไม่มีใน API หลังปรับลำดับ middleware

@@ -113,7 +113,7 @@ Upper Intermediate & 2--4 ปีขึ้นไป & 50--100 กม. & 4--5 ว�
 
 การสื่อสารระหว่างแอปพลิเคชันกับ Backend ใช้ HTTP REST API โดยกำหนด prefix ของเส้นทางเป็น /api และรับส่งข้อมูลทั่วไปในรูปแบบ JSON ตารางที่~\ref{tab:api-spec-endpoints} สรุปเส้นทางที่ตรวจสอบจากไฟล์ backend/src/routes และ backend/src/app.js ตามหมวดงาน เครื่องหมาย :id, :uid, :clubId และชื่อในลักษณะเดียวกันหมายถึง path parameter ที่ผู้เรียกต้องแทนด้วยรหัสของทรัพยากรจริง ส่วนค่าที่ใช้กรองรายการหรือกำหนดช่วงเวลาให้ส่งเป็น query parameter ตามเส้นทางนั้น
 
-ยกเว้น GET /api/health และเส้นทางในหมวดการยืนยันตัวตนที่ใช้เริ่มหรือจัดการ session แล้ว API ส่วนใหญ่ต้องส่งส่วนหัว Authorization: Bearer <accessToken> โดย middleware ตรวจ token ก่อนส่งคำขอให้ controller หากไม่มี token หรือ token ใช้ไม่ได้จะตอบ HTTP 401 คำขอที่มี body แบบ JSON ต้องส่ง \Content-Type: application/json ทั้งนี้เส้นทางอัปโหลดรูปโปรไฟล์ใช้ข้อมูลแบบ \mbox{multipart/form-data} ตามข้อกำหนดของเส้นทางนั้น
+ยกเว้น GET /api/health และเส้นทางในหมวดการยืนยันตัวตนที่ใช้เริ่มหรือจัดการ session แล้ว API ส่วนใหญ่ต้องส่งส่วนหัว Authorization: Bearer <accessToken> โดย middleware ตรวจ token ก่อนส่งคำขอให้ controller หากไม่มี token หรือ token ใช้ไม่ได้จะตอบ HTTP 401 คำขอที่มี body แบบ JSON ต้องส่ง Content-Type: application/json ทั้งนี้เส้นทางอัปโหลดรูปโปรไฟล์ใช้ข้อมูลแบบ \mbox{multipart/form-data} ตามข้อกำหนดของเส้นทางนั้น
 
 \begin{table}[H]
 \centering

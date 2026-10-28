@@ -108,9 +108,168 @@ Upper Intermediate & 2--4 ปีขึ้นไป & 50--100 กม. & 4--5 ว�
 \label{fig:system-architecture}
 \end{figure}
 
+\subsubsection{ข้อกำหนด REST API (API Specification)}
+\label{sec:api-specification}
+
+การสื่อสารระหว่างแอปพลิเคชันกับ Backend ใช้ HTTP REST API โดยกำหนด prefix ของเส้นทางเป็น \texttt{/api} และรับส่งข้อมูลทั่วไปในรูปแบบ JSON ตารางที่~\ref{tab:api-spec-endpoints} สรุปเส้นทางที่ตรวจสอบจากไฟล์ \texttt{backend/src/routes} และ \texttt{backend/src/app.js} ตามหมวดงาน เครื่องหมาย \texttt{:id}, \texttt{:uid}, \texttt{:clubId} และชื่อในลักษณะเดียวกันหมายถึง path parameter ที่ผู้เรียกต้องแทนด้วยรหัสของทรัพยากรจริง ส่วนค่าที่ใช้กรองรายการหรือกำหนดช่วงเวลาให้ส่งเป็น query parameter ตามเส้นทางนั้น
+
+ยกเว้น \texttt{GET /api/health} และเส้นทางในหมวดการยืนยันตัวตนที่ใช้เริ่มหรือจัดการ session แล้ว API ส่วนใหญ่ต้องส่งส่วนหัว \texttt{Authorization: Bearer <accessToken>} โดย middleware ตรวจ token ก่อนส่งคำขอให้ controller หากไม่มี token หรือ token ใช้ไม่ได้จะตอบ HTTP 401 คำขอที่มี body แบบ JSON ต้องส่ง \texttt{Content-Type: application/json} ทั้งนี้เส้นทางอัปโหลดรูปโปรไฟล์ใช้ข้อมูลแบบ \mbox{multipart/form-data} ตามข้อกำหนดของเส้นทางนั้น
+
+\begin{table}[H]
+\centering
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\caption{สรุปเส้นทาง REST API ของระบบ Pacegasus}\label{tab:api-spec-endpoints}
+\begin{tabular}{|>{\raggedright\arraybackslash\normalsize}p{0.16\textwidth}|>{\raggedright\arraybackslash\normalsize}p{0.11\textwidth}|>{\raggedright\arraybackslash\fontsize{9.25}{11.5}\selectfont}p{0.67\textwidth}|}
+\hline
+\textbf{หมวด} & \textbf{Method} & \textbf{Path ภายใต้ prefix \texttt{/api}} \\ \hline
+สถานะ & \texttt{GET} & \texttt{/health} \\
+บัญชี & \texttt{POST} & \texttt{/auth/otp/request} \\
+บัญชี & \texttt{POST} & \texttt{/auth/otp/verify} \\
+บัญชี & \texttt{POST} & \texttt{/auth/google} \\
+บัญชี & \texttt{POST} & \texttt{/auth/refresh} \\
+บัญชี & \texttt{POST} & \texttt{/auth/logout} \\
+บัญชี & \texttt{GET} & \texttt{/auth/me} \\
+เริ่มใช้งาน & \texttt{GET} & \texttt{/onboarding/status} \\
+เริ่มใช้งาน & \texttt{PUT} & \texttt{/onboarding/step1} \\
+เริ่มใช้งาน & \texttt{PUT} & \texttt{/onboarding/step2} \\
+เริ่มใช้งาน & \texttt{PUT} & \texttt{/onboarding/step3} \\
+เริ่มใช้งาน & \texttt{PUT} & \texttt{/onboarding/step4} \\
+ผู้ใช้ & \texttt{GET} & \texttt{/users/me} \\
+ผู้ใช้ & \texttt{PATCH} & \texttt{/users/me} \\
+ผู้ใช้ & \texttt{DELETE} & \texttt{/users/me} \\
+ผู้ใช้ & \texttt{GET} & \texttt{/users/me/profile} \\
+ผู้ใช้ & \texttt{PATCH} & \texttt{/users/me/profile} \\
+ผู้ใช้ & \texttt{GET} & \texttt{/users/me/full} \\
+ผู้ใช้ & \texttt{GET} & \texttt{/users/me/progress} \\
+ผู้ใช้ & \texttt{GET} & \texttt{/users/profile/:uid} \\
+ผู้ใช้ & \texttt{PUT} & \texttt{/users/me/avatar} \\
+ผู้ใช้ & \texttt{DELETE} & \texttt{/users/me/avatar} \\
+สุขภาวะ & \texttt{GET} & \texttt{/wellness-checkin/today} \\
+สุขภาวะ & \texttt{POST} & \texttt{/wellness-checkin} \\
+สุขภาวะ & \texttt{PUT} & \texttt{/wellness-checkin} \\
+สุขภาวะ & \texttt{GET} & \texttt{/wellness-checkin/history} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\captionsetup{justification=centering,singlelinecheck=true}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\caption*{\textbf{ตารางที่~\ref{tab:api-spec-endpoints}} สรุปเส้นทาง REST API ของระบบ Pacegasus (ต่อ)}
+\begin{tabular}{|>{\raggedright\arraybackslash\normalsize}p{0.16\textwidth}|>{\raggedright\arraybackslash\normalsize}p{0.11\textwidth}|>{\raggedright\arraybackslash\fontsize{9.25}{11.5}\selectfont}p{0.67\textwidth}|}
+\hline
+\textbf{หมวด} & \textbf{Method} & \textbf{Path ภายใต้ prefix \texttt{/api}} \\ \hline
+แผนฝึก & \texttt{GET} & \texttt{/programs/templates} \\
+แผนฝึก & \texttt{POST} & \texttt{/programs/start} \\
+แผนฝึก & \texttt{DELETE} & \texttt{/programs/current} \\
+แผนฝึก & \texttt{GET} & \texttt{/programs/current/week} \\
+แผนฝึก & \texttt{GET} & \texttt{/programs/quests} \\
+แผนฝึก & \texttt{POST} & \texttt{/programs/quests} \\
+แผนฝึก & \texttt{POST} & \texttt{/programs/quests/batch} \\
+แผนฝึก & \texttt{PATCH} & \texttt{/programs/quests/:questId/complete} \\
+แผนฝึก & \texttt{DELETE} & \texttt{/programs/quests/:questId} \\
+การวิ่ง/RPE & \texttt{POST} & \texttt{/running-sessions} \\
+การวิ่ง/RPE & \texttt{GET} & \texttt{/running-sessions/history} \\
+การวิ่ง/RPE & \texttt{GET} & \texttt{/running-sessions/:id} \\
+การวิ่ง/RPE & \texttt{PATCH} & \texttt{/running-sessions/:id/complete} \\
+การวิ่ง/RPE & \texttt{PATCH} & \texttt{/running-sessions/:id/abandon} \\
+การวิ่ง/RPE & \texttt{POST} & \texttt{/rpe} \\
+การวิ่ง/RPE & \texttt{GET} & \texttt{/rpe/history} \\
+การวิ่ง/RPE & \texttt{GET} & \texttt{/rpe/risk-index} \\
+ภารกิจเสริม & \texttt{GET} & \texttt{/side} \\
+ภารกิจเสริม & \texttt{POST} & \texttt{/running-sessions/:id/side-quests} \\
+ภารกิจเสริม & \texttt{PATCH} & \texttt{/side-quests/:id/progress} \\
+ภารกิจเสริม & \texttt{PATCH} & \texttt{/side-quests/:id/finish} \\
+ภารกิจเสริม & \texttt{GET} & \texttt{/side-quests/:id/album} \\
+เพื่อน & \texttt{GET} & \texttt{/friends} \\
+เพื่อน & \texttt{GET} & \texttt{/friends/lookup/:uid} \\
+เพื่อน & \texttt{GET} & \texttt{/friends/requests} \\
+เพื่อน & \texttt{POST} & \texttt{/friends/requests} \\
+เพื่อน & \texttt{PATCH} & \texttt{/friends/requests/:friendshipId/accept} \\
+เพื่อน & \texttt{DELETE} & \texttt{/friends/requests/:friendshipId} \\
+เพื่อน & \texttt{DELETE} & \texttt{/friends/:friendshipId} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\captionsetup{justification=centering,singlelinecheck=true}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\caption*{\textbf{ตารางที่~\ref{tab:api-spec-endpoints}} สรุปเส้นทาง REST API ของระบบ Pacegasus (ต่อ)}
+\begin{tabular}{|>{\raggedright\arraybackslash\normalsize}p{0.16\textwidth}|>{\raggedright\arraybackslash\normalsize}p{0.11\textwidth}|>{\raggedright\arraybackslash\fontsize{9.25}{11.5}\selectfont}p{0.67\textwidth}|}
+\hline
+\textbf{หมวด} & \textbf{Method} & \textbf{Path ภายใต้ prefix \texttt{/api}} \\ \hline
+คลับ & \texttt{POST} & \texttt{/clubs/images} \\
+คลับ & \texttt{GET} & \texttt{/clubs} \\
+คลับ & \texttt{POST} & \texttt{/clubs} \\
+คลับ & \texttt{GET} & \texttt{/clubs/me} \\
+คลับ & \texttt{GET} & \texttt{/clubs/:clubId} \\
+คลับ & \texttt{PATCH} & \texttt{/clubs/:clubId} \\
+คลับ & \texttt{DELETE} & \texttt{/clubs/:clubId} \\
+คลับ & \texttt{POST} & \texttt{/clubs/:clubId/leave} \\
+คลับ & \texttt{POST} & \texttt{/clubs/:clubId/transfer-leadership} \\
+คลับ & \texttt{PATCH} & \texttt{/clubs/:clubId/members/:userId/role} \\
+คลับ & \texttt{DELETE} & \texttt{/clubs/:clubId/members/:userId} \\
+คลับ & \texttt{GET} & \texttt{/clubs/:clubId/permissions} \\
+คลับ & \texttt{PATCH} & \texttt{/clubs/:clubId/permissions/:role} \\
+คลับ & \texttt{GET} & \texttt{/clubs/me/join-requests} \\
+คลับ & \texttt{PATCH} & \texttt{/clubs/me/join-requests/:requestId/accept} \\
+คลับ & \texttt{DELETE} & \texttt{/clubs/me/join-requests/:requestId} \\
+คลับ & \texttt{GET} & \texttt{/clubs/:clubId/join-requests} \\
+คลับ & \texttt{POST} & \texttt{/clubs/:clubId/join-requests} \\
+คลับ & \texttt{PATCH} & \texttt{/clubs/:clubId/join-requests/:requestId/approve} \\
+คลับ & \texttt{DELETE} & \texttt{/clubs/:clubId/join-requests/:requestId} \\
+คลับ & \texttt{POST} & \texttt{/clubs/:clubId/invites} \\
+อวตาร/ร้านค้า & \texttt{GET} & \texttt{/avatar/slots} \\
+อวตาร/ร้านค้า & \texttt{GET} & \texttt{/avatar/me} \\
+อวตาร/ร้านค้า & \texttt{PUT} & \texttt{/avatar/me} \\
+อวตาร/ร้านค้า & \texttt{GET} & \texttt{/avatar/inventory} \\
+อวตาร/ร้านค้า & \texttt{GET} & \texttt{/avatar/users/:uid} \\
+อวตาร/ร้านค้า & \texttt{GET} & \texttt{/shop/items} \\
+อวตาร/ร้านค้า & \texttt{GET} & \texttt{/shop/items/:listingId} \\
+อวตาร/ร้านค้า & \texttt{POST} & \texttt{/shop/items/:listingId/purchase} \\
+อวตาร/ร้านค้า & \texttt{GET} & \texttt{/shop/purchases} \\
+อันดับ/ภาพ & \texttt{GET} & \texttt{/leaderboard} \\
+อันดับ/ภาพ & \texttt{GET} & \texttt{/club-images/:id} \\
+อันดับ/ภาพ & \texttt{GET} & \texttt{/user-avatars/:id} \\
+\hline
+\end{tabular}
+\end{table}
+
+เส้นทางภารกิจเสริมมี alias ภายใต้ \texttt{/quests} และเส้นทาง \texttt{/club-images/:id} กับ \texttt{/user-avatars/:id} ส่งข้อมูลภาพตาม Content-Type ของไฟล์\par
+
+\clearpage
+
+ตารางที่~\ref{tab:api-spec-contract} แสดงตัวอย่างข้อกำหนดระดับคำขอและคำตอบของเส้นทางหลักที่เชื่อมกระบวนการใช้งาน ผู้ใช้ต้องใช้ \texttt{otpRef} ที่ได้รับจากคำขอ OTP คู่กับรหัส OTP ในขั้นยืนยันตัวตน และใช้ \texttt{accessToken} จากผลยืนยันตัวตนในการเรียก API ที่ต้องเข้าสู่ระบบ
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.27\textwidth}|>{\raggedright\arraybackslash}p{0.56\textwidth}|}
+\caption{ตัวอย่างข้อกำหนดข้อมูลเข้าและผลตอบกลับของ API หลัก}\label{tab:api-spec-contract}\\
+\hline
+\textbf{Method และ Path} & \textbf{ข้อมูลเข้าและผลตอบกลับ} \\ \hline
+\endfirsthead
+\hline
+\textbf{Method และ Path} & \textbf{ข้อมูลเข้าและผลตอบกลับ} \\ \hline
+\endhead
+\texttt{POST /auth/otp/request} & Body: \texttt{email} (อีเมล, บังคับ), \texttt{purpose} (\texttt{login} หรือ \texttt{register}); สำเร็จ HTTP 200 คืน \texttt{success}, \texttt{message} และ \texttt{data} ที่มี \texttt{email}, \texttt{expiresInMinutes}, \texttt{otpRef}; ข้อมูลไม่ถูกต้อง HTTP 400, ขอซ้ำเร็วเกินไป HTTP 429 \\ \hline
+\texttt{POST /auth/otp/verify} & Body: \texttt{email}, \texttt{otp} และ \texttt{otpRef} (บังคับ), \texttt{displayName} (ไม่บังคับ); สำเร็จ HTTP 200 คืน \texttt{data.accessToken}, \texttt{data.refreshToken} และ \texttt{data.user}; รหัสหรือข้อมูลอ้างอิงไม่ถูกต้องถูกปฏิเสธ \\ \hline
+\texttt{POST /wellness-checkin} & ต้องมี access token; Body: \texttt{sleepQuality}, \texttt{energyLevel}, \texttt{muscleSoreness}, \texttt{stressLevel}, \texttt{motivation} เป็นจำนวนเต็ม 1--5 ทุกค่า และ \texttt{note} ยาวไม่เกิน 500 อักขระ (ไม่บังคับ); สำเร็จ HTTP 201 คืน \texttt{data.status} และ \texttt{data.record}; ข้อมูลไม่ถูกต้อง HTTP 400, บันทึกซ้ำในวันเดียวกัน HTTP 409 \\ \hline
+\texttt{GET /wellness-checkin/today} & ต้องมี access token; ไม่มี body; สำเร็จ HTTP 200 คืน \texttt{success} และ \texttt{data} ที่บอกสถานะการบันทึกสุขภาวะของวันปัจจุบัน \\ \hline
+\end{longtable}
+
+คำตอบทั่วไปเมื่อสำเร็จเป็น JSON ที่มีค่า success เป็น true และมีข้อมูลผลลัพธ์ในฟิลด์ data ตามชนิดของเส้นทาง เมื่อเกิดข้อผิดพลาด ค่า success เป็น false พร้อมข้อความในฟิลด์ message โดยบางกรณีมีรายละเอียดการตรวจข้อมูลเข้าในฟิลด์ details หรือ errors รหัสที่พบตามเงื่อนไขได้แก่ 400 (ข้อมูลไม่ถูกต้อง), 401 (ไม่มีหรือใช้ token ไม่ได้), 404 (ไม่พบทรัพยากรหรือเส้นทาง), 409 (ข้อมูลขัดแย้งหรือทำรายการซ้ำ) และ 500 (ข้อผิดพลาดภายใน) ทั้งนี้รหัสตอบกลับเฉพาะของแต่ละเส้นทางขึ้นกับเงื่อนไขใน controller ไม่ควรตีความว่าทุกเส้นทางส่งได้ทุกรหัส
+
 \subsubsection{การพัฒนา Adaptive Training Engine}
 
-Adaptive Training Engine เป็นองค์ประกอบที่มีความซับซ้อนสูงสุดในระบบ ประกอบด้วย 3 ส่วนหลัก 
+Adaptive Training Engine เป็นองค์ประกอบที่มีความซับซ้อนสูงสุดในระบบ ประกอบด้วย 3 ส่วนหลัก
 
 ส่วนที่ 1 คือ Daily Wellness Check-in รับข้อมูลจากผู้ใช้ทุกเช้าในรูปแบบระดับ 1--5 ได้แก่ ระดับความเหนื่อยล้าสะสม คุณภาพการนอนหลับ ความเจ็บปวดของกล้ามเนื้อ ระดับความเครียด และระดับแรงจูงใจในวันนั้น
 
